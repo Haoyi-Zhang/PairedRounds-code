@@ -1,0 +1,2967 @@
+{
+  "finding": "Single-call process CPU samples frequently read zero and approximately 4 ms ticks; these are not latency estimates. Corrected timing uses elapsed wall time. No speedup claim is made.",
+  "summary": {
+    "certificate_nodes": 505,
+    "checker_obligations_once": 15495,
+    "counts": {
+      "checker_obligations": 77475,
+      "search_states": 76922
+    },
+    "cpu_seconds": 3.0647049229999994,
+    "groups": {
+      "asymmetric": {
+        "bnb_states": 114,
+        "greedy_optimal": 0,
+        "instances": 4,
+        "max_frontier": 2,
+        "oracle_leaves": 4264,
+        "transitions": 74
+      },
+      "compute-heavy": {
+        "bnb_states": 56,
+        "greedy_optimal": 4,
+        "instances": 4,
+        "max_frontier": 1,
+        "oracle_leaves": 4264,
+        "transitions": 54
+      },
+      "link-heavy": {
+        "bnb_states": 50,
+        "greedy_optimal": 4,
+        "instances": 4,
+        "max_frontier": 2,
+        "oracle_leaves": 4264,
+        "transitions": 100
+      },
+      "mixed-rational": {
+        "bnb_states": 774,
+        "greedy_optimal": 2,
+        "instances": 4,
+        "max_frontier": 3,
+        "oracle_leaves": 4264,
+        "transitions": 88
+      },
+      "reset": {
+        "bnb_states": 46,
+        "greedy_optimal": 4,
+        "instances": 4,
+        "max_frontier": 2,
+        "oracle_leaves": 4264,
+        "transitions": 100
+      },
+      "sharp": {
+        "bnb_states": 58,
+        "greedy_optimal": 0,
+        "instances": 4,
+        "max_frontier": 13,
+        "oracle_leaves": 4264,
+        "transitions": 254
+      },
+      "source-inspired": {
+        "bnb_states": 196,
+        "greedy_optimal": 11,
+        "instances": 12,
+        "max_frontier": 2,
+        "oracle_leaves": 1020,
+        "transitions": 170
+      }
+    },
+    "heuristics": {
+      "bottom-level": {
+        "max_gap": "73/358",
+        "mean_gap": "9855056924186388709686817648537/206395205267187725244714589312800",
+        "optimal_cases": 10
+      },
+      "earliest-release": {
+        "max_gap": "3/52",
+        "mean_gap": "271444992369167962961277007/43098545632360246671479316480",
+        "optimal_cases": 25
+      },
+      "fixed12": {
+        "max_gap": "17/137",
+        "mean_gap": "3291439764530586971882585238292338029/136560041014247291100661397673976258560",
+        "optimal_cases": 15
+      },
+      "fixed21": {
+        "max_gap": "7/20",
+        "mean_gap": "356394097682816942636977072796526309970651/6640171525581265169522594722984477956710400",
+        "optimal_cases": 14
+      },
+      "greedy-makespan": {
+        "max_gap": "3/52",
+        "mean_gap": "271444992369167962961277007/43098545632360246671479316480",
+        "optimal_cases": 25
+      }
+    },
+    "instances": 36,
+    "max_certificate_bytes": 17535,
+    "max_endpoint_bits": 18,
+    "max_frontier": 13,
+    "max_state_bits": 21,
+    "merge_transitions_once": 840,
+    "oracle_agreement": 36,
+    "oracle_leaves": 26604,
+    "oracle_repeats": 1,
+    "oracle_tree_states": 53172,
+    "peak_rss_kib": 95280,
+    "repeats": 5,
+    "timing": {
+      "bottom-level": {
+        "max_case_us": 0.0,
+        "max_sample_us": 4012.804,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.016036666
+      },
+      "branch-bound": {
+        "max_case_us": 7999.86,
+        "max_sample_us": 8005.299,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.051996055
+      },
+      "checker": {
+        "max_case_us": 3998.393,
+        "max_sample_us": 4008.258,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.078440264
+      },
+      "earliest-release": {
+        "max_case_us": 0.0,
+        "max_sample_us": 0.0,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.0
+      },
+      "fixed12": {
+        "max_case_us": 0.0,
+        "max_sample_us": 4003.13,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.007988503000000001
+      },
+      "fixed21": {
+        "max_case_us": 0.0,
+        "max_sample_us": 4001.107,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.004001107
+      },
+      "greedy-makespan": {
+        "max_case_us": 0.0,
+        "max_sample_us": 4017.371,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.023428265
+      },
+      "merge": {
+        "max_case_us": 0.0,
+        "max_sample_us": 4401.051,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.026085849
+      },
+      "oracle": {
+        "max_case_us": 459977.395,
+        "max_sample_us": 459977.395,
+        "median_case_us": 3987.0110000000004,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 2.803156092
+      },
+      "sort": {
+        "max_case_us": 0.0,
+        "max_sample_us": 4567.277,
+        "median_case_us": 0.0,
+        "min_case_us": 0.0,
+        "min_sample_us": 0.0,
+        "total_measured_cpu_seconds": 0.037106468999999996
+      }
+    },
+    "whole_frontier_agreement": 36,
+    "workers": 1
+  },
+  "cases": [
+    {
+      "id": "schema-01",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          4012804,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 605,
+        "search_states": 172
+      },
+      "cpu_seconds": 0.004012803999999925,
+      "peak_rss_kib": 93744
+    },
+    {
+      "id": "schema-02",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          3723495
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1315,
+        "search_states": 376
+      },
+      "cpu_seconds": 0.003723495000000021,
+      "peak_rss_kib": 93744
+    },
+    {
+      "id": "schema-03",
+      "timing_ns": {
+        "bottom-level": [
+          4005915,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          2212032,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          3990010
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2025,
+        "search_states": 712
+      },
+      "cpu_seconds": 0.01020795699999999,
+      "peak_rss_kib": 93744
+    },
+    {
+      "id": "schema-04",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          3999624,
+          0
+        ],
+        "checker": [
+          3194721,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          15986092
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          3990020
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2735,
+        "search_states": 1346
+      },
+      "cpu_seconds": 0.02717045699999998,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-05",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          1746572,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 405,
+        "search_states": 152
+      },
+      "cpu_seconds": 0.0017465719999999463,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-06",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          2832833,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1005,
+        "search_states": 336
+      },
+      "cpu_seconds": 0.0028328330000000346,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-07",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          4017371,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          1508919
+        ],
+        "oracle": [
+          3984012
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1715,
+        "search_states": 652
+      },
+      "cpu_seconds": 0.009510302000000026,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-08",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          3512262,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          3999495,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          15996255
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          3977532
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2425,
+        "search_states": 1266
+      },
+      "cpu_seconds": 0.02748554400000003,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-09",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 405,
+        "search_states": 152
+      },
+      "cpu_seconds": 0.0,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-10",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          631868,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 805,
+        "search_states": 316
+      },
+      "cpu_seconds": 0.004615888999999984,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-11",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          3985373,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          3910763
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1205,
+        "search_states": 552
+      },
+      "cpu_seconds": 0.007896135999999943,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "schema-12",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          3989290,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          2563704,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          15983967
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1605,
+        "search_states": 1076
+      },
+      "cpu_seconds": 0.02253696099999991,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "stress-01",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          1990533,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1205,
+        "search_states": 290
+      },
+      "cpu_seconds": 0.00199053299999985,
+      "peak_rss_kib": 93872
+    },
+    {
+      "id": "stress-02",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          4007777
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          3984322,
+          0,
+          0
+        ],
+        "merge": [
+          623395,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2780,
+        "search_states": 618
+      },
+      "cpu_seconds": 0.008615494000000057,
+      "peak_rss_kib": 94000
+    },
+    {
+      "id": "stress-03",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          3560414,
+          0,
+          0,
+          0,
+          3984132
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          4003130,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          7991478
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 4975,
+        "search_states": 1170
+      },
+      "cpu_seconds": 0.01953915400000006,
+      "peak_rss_kib": 94000
+    },
+    {
+      "id": "stress-04",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          4008258,
+          3984673,
+          0,
+          3998743,
+          3998393
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          3999234,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          2372501,
+          0,
+          0,
+          3970621,
+          0
+        ],
+        "oracle": [
+          459977395
+        ],
+        "sort": [
+          0,
+          0,
+          4000036,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 13175,
+        "search_states": 10356
+      },
+      "cpu_seconds": 0.49030985399999993,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-05",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          2501602
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 960,
+        "search_states": 250
+      },
+      "cpu_seconds": 0.002501602000000158,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-06",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          4007416,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          2291471,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1670,
+        "search_states": 458
+      },
+      "cpu_seconds": 0.006298887000000031,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-07",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          3399694,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          4007497,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          7994402
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2380,
+        "search_states": 870
+      },
+      "cpu_seconds": 0.015401592999999991,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-08",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          4000466,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          3986375
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          3505922
+        ],
+        "oracle": [
+          427955360
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 4155,
+        "search_states": 9256
+      },
+      "cpu_seconds": 0.4394481229999998,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-09",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 605,
+        "search_states": 220
+      },
+      "cpu_seconds": 0.0,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-10",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          676854,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          4004432
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1005,
+        "search_states": 418
+      },
+      "cpu_seconds": 0.00468128599999984,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-11",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          2423937,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          7992470
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1405,
+        "search_states": 750
+      },
+      "cpu_seconds": 0.014423383000000012,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-12",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          4000557
+        ],
+        "checker": [
+          0,
+          3812226,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          447809450
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2405,
+        "search_states": 9036
+      },
+      "cpu_seconds": 0.45562223300000015,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-13",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          1198268,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 960,
+        "search_states": 270
+      },
+      "cpu_seconds": 0.0011982680000000023,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-14",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          688622,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          4007586
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1670,
+        "search_states": 458
+      },
+      "cpu_seconds": 0.004696207999999924,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-15",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          1285628,
+          0,
+          0
+        ],
+        "oracle": [
+          7992680
+        ],
+        "sort": [
+          0,
+          4005093,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2380,
+        "search_states": 870
+      },
+      "cpu_seconds": 0.017763148999999867,
+      "peak_rss_kib": 94512
+    },
+    {
+      "id": "stress-16",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          2890909,
+          0,
+          0,
+          0,
+          4006475
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          4001107,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          4401051,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          443943966
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 4155,
+        "search_states": 9256
+      },
+      "cpu_seconds": 0.45924350800000013,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-17",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          1560897,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 805,
+        "search_states": 260
+      },
+      "cpu_seconds": 0.001560897000000061,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-18",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          1258117,
+          0
+        ],
+        "oracle": [
+          4013866
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1360,
+        "search_states": 478
+      },
+      "cpu_seconds": 0.005271983000000091,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-19",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          4010531,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          1669618
+        ],
+        "oracle": [
+          7992440
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1760,
+        "search_states": 800
+      },
+      "cpu_seconds": 0.013672589000000013,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-20",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          4001418
+        ],
+        "checker": [
+          3133740,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          439984329
+        ],
+        "sort": [
+          0,
+          3980216,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 3180,
+        "search_states": 9376
+      },
+      "cpu_seconds": 0.4510997029999997,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-21",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          1316854
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 605,
+        "search_states": 230
+      },
+      "cpu_seconds": 0.0013168539999997009,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-22",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          3420346,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          977611,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          0
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          4567277,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 1515,
+        "search_states": 468
+      },
+      "cpu_seconds": 0.008965234000000155,
+      "peak_rss_kib": 94640
+    },
+    {
+      "id": "stress-23",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "checker": [
+          0,
+          3428928,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          11978354
+        ],
+        "sort": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 2380,
+        "search_states": 950
+      },
+      "cpu_seconds": 0.015407281999999967,
+      "peak_rss_kib": 94768
+    },
+    {
+      "id": "stress-24",
+      "timing_ns": {
+        "bottom-level": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branch-bound": [
+          8000031,
+          3999164,
+          7999860,
+          4000346,
+          8005299
+        ],
+        "checker": [
+          3988368,
+          0,
+          0,
+          0,
+          0
+        ],
+        "earliest-release": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed12": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fixed21": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "greedy-makespan": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "merge": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "oracle": [
+          459950876
+        ],
+        "sort": [
+          3999304,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "counts": {
+        "checker_obligations": 3735,
+        "search_states": 12706
+      },
+      "cpu_seconds": 0.5039381560000002,
+      "peak_rss_kib": 95280
+    }
+  ]
+}

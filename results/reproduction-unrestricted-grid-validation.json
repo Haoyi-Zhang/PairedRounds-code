@@ -1,0 +1,2134 @@
+{
+  "cases": [
+    {
+      "absolute_gap": "0",
+      "cells": 9,
+      "checker_obligations": 181,
+      "coverage_pointers": 16,
+      "full_shuffle_words": 6,
+      "generated_transitions": 16,
+      "group": "source-inspired",
+      "id": "schema-01",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 13,
+      "paired_value": "15",
+      "relative_gap": "0",
+      "rounds": 2,
+      "terminal_frontier": [
+        [
+          "12",
+          "15"
+        ],
+        [
+          "15",
+          "12"
+        ]
+      ],
+      "unrestricted_value": "15",
+      "word": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 25,
+      "checker_obligations": 685,
+      "coverage_pointers": 65,
+      "full_shuffle_words": 70,
+      "generated_transitions": 65,
+      "group": "source-inspired",
+      "id": "schema-02",
+      "improved": false,
+      "max_frontier": 3,
+      "nodes": 43,
+      "paired_value": "30",
+      "relative_gap": "0",
+      "rounds": 4,
+      "terminal_frontier": [
+        [
+          "25",
+          "34"
+        ],
+        [
+          "27",
+          "30"
+        ],
+        [
+          "30",
+          "27"
+        ]
+      ],
+      "unrestricted_value": "30",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 49,
+      "checker_obligations": 1639,
+      "coverage_pointers": 161,
+      "full_shuffle_words": 924,
+      "generated_transitions": 161,
+      "group": "source-inspired",
+      "id": "schema-03",
+      "improved": false,
+      "max_frontier": 3,
+      "nodes": 97,
+      "paired_value": "44",
+      "relative_gap": "0",
+      "rounds": 6,
+      "terminal_frontier": [
+        [
+          "39",
+          "47"
+        ],
+        [
+          "41",
+          "44"
+        ],
+        [
+          "45",
+          "40"
+        ]
+      ],
+      "unrestricted_value": "44",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 81,
+      "checker_obligations": 3133,
+      "coverage_pointers": 312,
+      "full_shuffle_words": null,
+      "generated_transitions": 312,
+      "group": "source-inspired",
+      "id": "schema-04",
+      "improved": false,
+      "max_frontier": 4,
+      "nodes": 181,
+      "paired_value": "60",
+      "relative_gap": "0",
+      "rounds": 8,
+      "terminal_frontier": [
+        [
+          "51",
+          "63"
+        ],
+        [
+          "54",
+          "60"
+        ],
+        [
+          "60",
+          "57"
+        ],
+        [
+          "65",
+          "56"
+        ]
+      ],
+      "unrestricted_value": "60",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 9,
+      "checker_obligations": 129,
+      "coverage_pointers": 12,
+      "full_shuffle_words": 6,
+      "generated_transitions": 12,
+      "group": "source-inspired",
+      "id": "schema-05",
+      "improved": false,
+      "max_frontier": 1,
+      "nodes": 9,
+      "paired_value": "14",
+      "relative_gap": "0",
+      "rounds": 2,
+      "terminal_frontier": [
+        [
+          "10",
+          "14"
+        ]
+      ],
+      "unrestricted_value": "14",
+      "word": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 25,
+      "checker_obligations": 461,
+      "coverage_pointers": 44,
+      "full_shuffle_words": 70,
+      "generated_transitions": 44,
+      "group": "source-inspired",
+      "id": "schema-06",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 29,
+      "paired_value": "30",
+      "relative_gap": "0",
+      "rounds": 4,
+      "terminal_frontier": [
+        [
+          "26",
+          "30"
+        ],
+        [
+          "30",
+          "29"
+        ]
+      ],
+      "unrestricted_value": "30",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 49,
+      "checker_obligations": 1097,
+      "coverage_pointers": 108,
+      "full_shuffle_words": 924,
+      "generated_transitions": 108,
+      "group": "source-inspired",
+      "id": "schema-07",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 65,
+      "paired_value": "46",
+      "relative_gap": "0",
+      "rounds": 6,
+      "terminal_frontier": [
+        [
+          "41",
+          "46"
+        ],
+        [
+          "48",
+          "45"
+        ]
+      ],
+      "unrestricted_value": "46",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 81,
+      "checker_obligations": 2057,
+      "coverage_pointers": 205,
+      "full_shuffle_words": null,
+      "generated_transitions": 205,
+      "group": "source-inspired",
+      "id": "schema-08",
+      "improved": false,
+      "max_frontier": 3,
+      "nodes": 119,
+      "paired_value": "60",
+      "relative_gap": "0",
+      "rounds": 8,
+      "terminal_frontier": [
+        [
+          "52",
+          "62"
+        ],
+        [
+          "54",
+          "60"
+        ],
+        [
+          "61",
+          "59"
+        ]
+      ],
+      "unrestricted_value": "60",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 9,
+      "checker_obligations": 129,
+      "coverage_pointers": 12,
+      "full_shuffle_words": 6,
+      "generated_transitions": 12,
+      "group": "source-inspired",
+      "id": "schema-09",
+      "improved": false,
+      "max_frontier": 1,
+      "nodes": 9,
+      "paired_value": "20",
+      "relative_gap": "0",
+      "rounds": 2,
+      "terminal_frontier": [
+        [
+          "20",
+          "15"
+        ]
+      ],
+      "unrestricted_value": "20",
+      "word": [
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 25,
+      "checker_obligations": 409,
+      "coverage_pointers": 40,
+      "full_shuffle_words": 70,
+      "generated_transitions": 40,
+      "group": "source-inspired",
+      "id": "schema-10",
+      "improved": false,
+      "max_frontier": 1,
+      "nodes": 25,
+      "paired_value": "44",
+      "relative_gap": "0",
+      "rounds": 4,
+      "terminal_frontier": [
+        [
+          "44",
+          "39"
+        ]
+      ],
+      "unrestricted_value": "44",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 49,
+      "checker_obligations": 861,
+      "coverage_pointers": 85,
+      "full_shuffle_words": 924,
+      "generated_transitions": 85,
+      "group": "source-inspired",
+      "id": "schema-11",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 51,
+      "paired_value": "67",
+      "relative_gap": "0",
+      "rounds": 6,
+      "terminal_frontier": [
+        [
+          "67",
+          "60"
+        ],
+        [
+          "70",
+          "58"
+        ]
+      ],
+      "unrestricted_value": "67",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 81,
+      "checker_obligations": 1631,
+      "coverage_pointers": 162,
+      "full_shuffle_words": null,
+      "generated_transitions": 162,
+      "group": "source-inspired",
+      "id": "schema-12",
+      "improved": false,
+      "max_frontier": 3,
+      "nodes": 95,
+      "paired_value": "89",
+      "relative_gap": "0",
+      "rounds": 8,
+      "terminal_frontier": [
+        [
+          "89",
+          "79"
+        ],
+        [
+          "92",
+          "78"
+        ],
+        [
+          "94",
+          "76"
+        ]
+      ],
+      "unrestricted_value": "89",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 16,
+      "checker_obligations": 444,
+      "coverage_pointers": 40,
+      "full_shuffle_words": 20,
+      "generated_transitions": 40,
+      "group": "sharp",
+      "id": "stress-01",
+      "improved": false,
+      "max_frontier": 4,
+      "nodes": 30,
+      "paired_value": "13",
+      "relative_gap": "0",
+      "rounds": 3,
+      "terminal_frontier": [
+        [
+          "19/2",
+          "55/4"
+        ],
+        [
+          "21/2",
+          "53/4"
+        ],
+        [
+          "12",
+          "13"
+        ],
+        [
+          "55/4",
+          "51/4"
+        ]
+      ],
+      "unrestricted_value": "13",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 36,
+      "checker_obligations": 1471,
+      "coverage_pointers": 140,
+      "full_shuffle_words": 252,
+      "generated_transitions": 140,
+      "group": "sharp",
+      "id": "stress-02",
+      "improved": false,
+      "max_frontier": 6,
+      "nodes": 91,
+      "paired_value": "31",
+      "relative_gap": "0",
+      "rounds": 5,
+      "terminal_frontier": [
+        [
+          "191/8",
+          "511/16"
+        ],
+        [
+          "199/8",
+          "503/16"
+        ],
+        [
+          "211/8",
+          "499/16"
+        ],
+        [
+          "225/8",
+          "497/16"
+        ],
+        [
+          "30",
+          "31"
+        ],
+        [
+          "511/16",
+          "495/16"
+        ]
+      ],
+      "unrestricted_value": "31",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 64,
+      "checker_obligations": 3438,
+      "coverage_pointers": 336,
+      "full_shuffle_words": 3432,
+      "generated_transitions": 336,
+      "group": "sharp",
+      "id": "stress-03",
+      "improved": false,
+      "max_frontier": 8,
+      "nodes": 204,
+      "paired_value": "57",
+      "relative_gap": "0",
+      "rounds": 7,
+      "terminal_frontier": [
+        [
+          "1471/32",
+          "3711/64"
+        ],
+        [
+          "1503/32",
+          "3679/64"
+        ],
+        [
+          "1551/32",
+          "3663/64"
+        ],
+        [
+          "1607/32",
+          "3655/64"
+        ],
+        [
+          "1667/32",
+          "3651/64"
+        ],
+        [
+          "1729/32",
+          "3649/64"
+        ],
+        [
+          "56",
+          "57"
+        ],
+        [
+          "3711/64",
+          "3647/64"
+        ]
+      ],
+      "unrestricted_value": "57",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 169,
+      "checker_obligations": 14463,
+      "coverage_pointers": 1456,
+      "full_shuffle_words": null,
+      "generated_transitions": 1456,
+      "group": "sharp",
+      "id": "stress-04",
+      "improved": false,
+      "max_frontier": 13,
+      "nodes": 819,
+      "paired_value": "157",
+      "relative_gap": "0",
+      "rounds": 12,
+      "terminal_frontier": [
+        [
+          "139263/1024",
+          "323583/2048"
+        ],
+        [
+          "140287/1024",
+          "322559/2048"
+        ],
+        [
+          "141823/1024",
+          "322047/2048"
+        ],
+        [
+          "143615/1024",
+          "321791/2048"
+        ],
+        [
+          "145535/1024",
+          "321663/2048"
+        ],
+        [
+          "147519/1024",
+          "321599/2048"
+        ],
+        [
+          "149535/1024",
+          "321567/2048"
+        ],
+        [
+          "151567/1024",
+          "321551/2048"
+        ],
+        [
+          "153607/1024",
+          "321543/2048"
+        ],
+        [
+          "155651/1024",
+          "321539/2048"
+        ],
+        [
+          "157697/1024",
+          "321537/2048"
+        ],
+        [
+          "156",
+          "157"
+        ],
+        [
+          "323583/2048",
+          "321535/2048"
+        ]
+      ],
+      "unrestricted_value": "157",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 16,
+      "checker_obligations": 522,
+      "coverage_pointers": 46,
+      "full_shuffle_words": 20,
+      "generated_transitions": 46,
+      "group": "reset",
+      "id": "stress-05",
+      "improved": false,
+      "max_frontier": 5,
+      "nodes": 36,
+      "paired_value": "41",
+      "relative_gap": "0",
+      "rounds": 3,
+      "terminal_frontier": [
+        [
+          "27",
+          "52"
+        ],
+        [
+          "31",
+          "46"
+        ],
+        [
+          "36",
+          "41"
+        ],
+        [
+          "42",
+          "33"
+        ],
+        [
+          "48",
+          "27"
+        ]
+      ],
+      "unrestricted_value": "41",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 36,
+      "checker_obligations": 2176,
+      "coverage_pointers": 205,
+      "full_shuffle_words": 252,
+      "generated_transitions": 205,
+      "group": "reset",
+      "id": "stress-06",
+      "improved": false,
+      "max_frontier": 9,
+      "nodes": 136,
+      "paired_value": "64",
+      "relative_gap": "0",
+      "rounds": 5,
+      "terminal_frontier": [
+        [
+          "41",
+          "87"
+        ],
+        [
+          "43",
+          "81"
+        ],
+        [
+          "44",
+          "74"
+        ],
+        [
+          "51",
+          "68"
+        ],
+        [
+          "56",
+          "64"
+        ],
+        [
+          "64",
+          "58"
+        ],
+        [
+          "69",
+          "56"
+        ],
+        [
+          "74",
+          "52"
+        ],
+        [
+          "81",
+          "47"
+        ]
+      ],
+      "unrestricted_value": "64",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 64,
+      "checker_obligations": 5878,
+      "coverage_pointers": 570,
+      "full_shuffle_words": 3432,
+      "generated_transitions": 570,
+      "group": "reset",
+      "id": "stress-07",
+      "improved": false,
+      "max_frontier": 14,
+      "nodes": 352,
+      "paired_value": "92",
+      "relative_gap": "0",
+      "rounds": 7,
+      "terminal_frontier": [
+        [
+          "58",
+          "121"
+        ],
+        [
+          "59",
+          "114"
+        ],
+        [
+          "62",
+          "109"
+        ],
+        [
+          "69",
+          "105"
+        ],
+        [
+          "77",
+          "101"
+        ],
+        [
+          "83",
+          "97"
+        ],
+        [
+          "87",
+          "93"
+        ],
+        [
+          "92",
+          "85"
+        ],
+        [
+          "95",
+          "81"
+        ],
+        [
+          "98",
+          "74"
+        ],
+        [
+          "103",
+          "71"
+        ],
+        [
+          "108",
+          "69"
+        ],
+        [
+          "113",
+          "67"
+        ],
+        [
+          "120",
+          "65"
+        ]
+      ],
+      "unrestricted_value": "92",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 169,
+      "checker_obligations": 27358,
+      "coverage_pointers": 2750,
+      "full_shuffle_words": null,
+      "generated_transitions": 2750,
+      "group": "reset",
+      "id": "stress-08",
+      "improved": false,
+      "max_frontier": 22,
+      "nodes": 1552,
+      "paired_value": "170",
+      "relative_gap": "0",
+      "rounds": 12,
+      "terminal_frontier": [
+        [
+          "117",
+          "212"
+        ],
+        [
+          "119",
+          "207"
+        ],
+        [
+          "126",
+          "203"
+        ],
+        [
+          "130",
+          "197"
+        ],
+        [
+          "137",
+          "191"
+        ],
+        [
+          "140",
+          "186"
+        ],
+        [
+          "146",
+          "183"
+        ],
+        [
+          "155",
+          "178"
+        ],
+        [
+          "159",
+          "175"
+        ],
+        [
+          "163",
+          "171"
+        ],
+        [
+          "170",
+          "164"
+        ],
+        [
+          "175",
+          "160"
+        ],
+        [
+          "177",
+          "152"
+        ],
+        [
+          "180",
+          "148"
+        ],
+        [
+          "185",
+          "146"
+        ],
+        [
+          "189",
+          "141"
+        ],
+        [
+          "196",
+          "136"
+        ],
+        [
+          "201",
+          "134"
+        ],
+        [
+          "207",
+          "128"
+        ],
+        [
+          "212",
+          "122"
+        ],
+        [
+          "217",
+          "117"
+        ],
+        [
+          "224",
+          "111"
+        ]
+      ],
+      "unrestricted_value": "170",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "2",
+      "cells": 16,
+      "checker_obligations": 250,
+      "coverage_pointers": 24,
+      "full_shuffle_words": 20,
+      "generated_transitions": 24,
+      "group": "compute-heavy",
+      "id": "stress-09",
+      "improved": true,
+      "max_frontier": 1,
+      "nodes": 16,
+      "paired_value": "115",
+      "relative_gap": "2/115",
+      "rounds": 3,
+      "terminal_frontier": [
+        [
+          "105",
+          "113"
+        ]
+      ],
+      "unrestricted_value": "113",
+      "word": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 36,
+      "checker_obligations": 606,
+      "coverage_pointers": 60,
+      "full_shuffle_words": 252,
+      "generated_transitions": 60,
+      "group": "compute-heavy",
+      "id": "stress-10",
+      "improved": false,
+      "max_frontier": 1,
+      "nodes": 36,
+      "paired_value": "198",
+      "relative_gap": "0",
+      "rounds": 5,
+      "terminal_frontier": [
+        [
+          "198",
+          "167"
+        ]
+      ],
+      "unrestricted_value": "198",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 64,
+      "checker_obligations": 1618,
+      "coverage_pointers": 161,
+      "full_shuffle_words": 3432,
+      "generated_transitions": 161,
+      "group": "compute-heavy",
+      "id": "stress-11",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 94,
+      "paired_value": "304",
+      "relative_gap": "0",
+      "rounds": 7,
+      "terminal_frontier": [
+        [
+          "244",
+          "305"
+        ],
+        [
+          "247",
+          "304"
+        ]
+      ],
+      "unrestricted_value": "304",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 169,
+      "checker_obligations": 3049,
+      "coverage_pointers": 312,
+      "full_shuffle_words": null,
+      "generated_transitions": 312,
+      "group": "compute-heavy",
+      "id": "stress-12",
+      "improved": false,
+      "max_frontier": 1,
+      "nodes": 169,
+      "paired_value": "534",
+      "relative_gap": "0",
+      "rounds": 12,
+      "terminal_frontier": [
+        [
+          "424",
+          "534"
+        ]
+      ],
+      "unrestricted_value": "534",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 16,
+      "checker_obligations": 606,
+      "coverage_pointers": 53,
+      "full_shuffle_words": 20,
+      "generated_transitions": 53,
+      "group": "link-heavy",
+      "id": "stress-13",
+      "improved": false,
+      "max_frontier": 6,
+      "nodes": 42,
+      "paired_value": "134",
+      "relative_gap": "0",
+      "rounds": 3,
+      "terminal_frontier": [
+        [
+          "84",
+          "153"
+        ],
+        [
+          "92",
+          "139"
+        ],
+        [
+          "106",
+          "135"
+        ],
+        [
+          "134",
+          "109"
+        ],
+        [
+          "140",
+          "91"
+        ],
+        [
+          "152",
+          "70"
+        ]
+      ],
+      "unrestricted_value": "134",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 36,
+      "checker_obligations": 2407,
+      "coverage_pointers": 226,
+      "full_shuffle_words": 252,
+      "generated_transitions": 226,
+      "group": "link-heavy",
+      "id": "stress-14",
+      "improved": false,
+      "max_frontier": 10,
+      "nodes": 151,
+      "paired_value": "254",
+      "relative_gap": "0",
+      "rounds": 5,
+      "terminal_frontier": [
+        [
+          "176",
+          "300"
+        ],
+        [
+          "178",
+          "281"
+        ],
+        [
+          "197",
+          "270"
+        ],
+        [
+          "216",
+          "259"
+        ],
+        [
+          "230",
+          "254"
+        ],
+        [
+          "254",
+          "223"
+        ],
+        [
+          "266",
+          "200"
+        ],
+        [
+          "275",
+          "175"
+        ],
+        [
+          "288",
+          "146"
+        ],
+        [
+          "300",
+          "132"
+        ]
+      ],
+      "unrestricted_value": "254",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 64,
+      "checker_obligations": 5897,
+      "coverage_pointers": 572,
+      "full_shuffle_words": 3432,
+      "generated_transitions": 572,
+      "group": "link-heavy",
+      "id": "stress-15",
+      "improved": false,
+      "max_frontier": 14,
+      "nodes": 353,
+      "paired_value": "325",
+      "relative_gap": "0",
+      "rounds": 7,
+      "terminal_frontier": [
+        [
+          "191",
+          "389"
+        ],
+        [
+          "198",
+          "379"
+        ],
+        [
+          "199",
+          "367"
+        ],
+        [
+          "225",
+          "357"
+        ],
+        [
+          "247",
+          "342"
+        ],
+        [
+          "265",
+          "330"
+        ],
+        [
+          "295",
+          "325"
+        ],
+        [
+          "326",
+          "304"
+        ],
+        [
+          "335",
+          "273"
+        ],
+        [
+          "340",
+          "260"
+        ],
+        [
+          "347",
+          "250"
+        ],
+        [
+          "359",
+          "228"
+        ],
+        [
+          "375",
+          "213"
+        ],
+        [
+          "392",
+          "203"
+        ]
+      ],
+      "unrestricted_value": "325",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 169,
+      "checker_obligations": 29836,
+      "coverage_pointers": 2995,
+      "full_shuffle_words": null,
+      "generated_transitions": 2995,
+      "group": "link-heavy",
+      "id": "stress-16",
+      "improved": false,
+      "max_frontier": 24,
+      "nodes": 1696,
+      "paired_value": "604",
+      "relative_gap": "0",
+      "rounds": 12,
+      "terminal_frontier": [
+        [
+          "368",
+          "731"
+        ],
+        [
+          "383",
+          "713"
+        ],
+        [
+          "401",
+          "703"
+        ],
+        [
+          "406",
+          "694"
+        ],
+        [
+          "425",
+          "680"
+        ],
+        [
+          "431",
+          "667"
+        ],
+        [
+          "452",
+          "652"
+        ],
+        [
+          "481",
+          "645"
+        ],
+        [
+          "512",
+          "633"
+        ],
+        [
+          "544",
+          "620"
+        ],
+        [
+          "565",
+          "608"
+        ],
+        [
+          "584",
+          "605"
+        ],
+        [
+          "604",
+          "569"
+        ],
+        [
+          "611",
+          "540"
+        ],
+        [
+          "619",
+          "520"
+        ],
+        [
+          "624",
+          "505"
+        ],
+        [
+          "636",
+          "473"
+        ],
+        [
+          "652",
+          "444"
+        ],
+        [
+          "660",
+          "418"
+        ],
+        [
+          "676",
+          "400"
+        ],
+        [
+          "691",
+          "392"
+        ],
+        [
+          "701",
+          "384"
+        ],
+        [
+          "714",
+          "380"
+        ],
+        [
+          "728",
+          "369"
+        ]
+      ],
+      "unrestricted_value": "604",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 16,
+      "checker_obligations": 322,
+      "coverage_pointers": 29,
+      "full_shuffle_words": 20,
+      "generated_transitions": 29,
+      "group": "asymmetric",
+      "id": "stress-17",
+      "improved": false,
+      "max_frontier": 3,
+      "nodes": 22,
+      "paired_value": "80",
+      "relative_gap": "0",
+      "rounds": 3,
+      "terminal_frontier": [
+        [
+          "50",
+          "101"
+        ],
+        [
+          "70",
+          "82"
+        ],
+        [
+          "73",
+          "80"
+        ]
+      ],
+      "unrestricted_value": "80",
+      "word": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 36,
+      "checker_obligations": 825,
+      "coverage_pointers": 79,
+      "full_shuffle_words": 252,
+      "generated_transitions": 79,
+      "group": "asymmetric",
+      "id": "stress-18",
+      "improved": false,
+      "max_frontier": 3,
+      "nodes": 51,
+      "paired_value": "137",
+      "relative_gap": "0",
+      "rounds": 5,
+      "terminal_frontier": [
+        [
+          "122",
+          "169"
+        ],
+        [
+          "134",
+          "137"
+        ],
+        [
+          "151",
+          "111"
+        ]
+      ],
+      "unrestricted_value": "137",
+      "word": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 64,
+      "checker_obligations": 1230,
+      "coverage_pointers": 122,
+      "full_shuffle_words": 3432,
+      "generated_transitions": 122,
+      "group": "asymmetric",
+      "id": "stress-19",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 72,
+      "paired_value": "245",
+      "relative_gap": "0",
+      "rounds": 7,
+      "terminal_frontier": [
+        [
+          "142",
+          "265"
+        ],
+        [
+          "157",
+          "245"
+        ]
+      ],
+      "unrestricted_value": "245",
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "2",
+      "cells": 169,
+      "checker_obligations": 6524,
+      "coverage_pointers": 652,
+      "full_shuffle_words": null,
+      "generated_transitions": 652,
+      "group": "asymmetric",
+      "id": "stress-20",
+      "improved": true,
+      "max_frontier": 8,
+      "nodes": 374,
+      "paired_value": "358",
+      "relative_gap": "1/179",
+      "rounds": 12,
+      "terminal_frontier": [
+        [
+          "268",
+          "423"
+        ],
+        [
+          "287",
+          "386"
+        ],
+        [
+          "304",
+          "379"
+        ],
+        [
+          "315",
+          "368"
+        ],
+        [
+          "326",
+          "358"
+        ],
+        [
+          "330",
+          "356"
+        ],
+        [
+          "366",
+          "344"
+        ],
+        [
+          "371",
+          "343"
+        ]
+      ],
+      "unrestricted_value": "356",
+      "word": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 16,
+      "checker_obligations": 334,
+      "coverage_pointers": 31,
+      "full_shuffle_words": 20,
+      "generated_transitions": 31,
+      "group": "mixed-rational",
+      "id": "stress-21",
+      "improved": false,
+      "max_frontier": 2,
+      "nodes": 22,
+      "paired_value": "7772/105",
+      "relative_gap": "0",
+      "rounds": 3,
+      "terminal_frontier": [
+        [
+          "11967/385",
+          "93673/1155"
+        ],
+        [
+          "3236/77",
+          "7772/105"
+        ]
+      ],
+      "unrestricted_value": "7772/105",
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 36,
+      "checker_obligations": 1773,
+      "coverage_pointers": 167,
+      "full_shuffle_words": 252,
+      "generated_transitions": 167,
+      "group": "mixed-rational",
+      "id": "stress-22",
+      "improved": false,
+      "max_frontier": 8,
+      "nodes": 111,
+      "paired_value": "251948/1155",
+      "relative_gap": "0",
+      "rounds": 5,
+      "terminal_frontier": [
+        [
+          "126653/770",
+          "96561/385"
+        ],
+        [
+          "69063/385",
+          "18041/77"
+        ],
+        [
+          "72473/385",
+          "52231/231"
+        ],
+        [
+          "242246/1155",
+          "251948/1155"
+        ],
+        [
+          "85387/385",
+          "224206/1155"
+        ],
+        [
+          "17898/77",
+          "13828/77"
+        ],
+        [
+          "97694/385",
+          "11896/77"
+        ],
+        [
+          "330742/1155",
+          "57103/462"
+        ]
+      ],
+      "unrestricted_value": "251948/1155",
+      "word": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "0",
+      "cells": 64,
+      "checker_obligations": 5127,
+      "coverage_pointers": 495,
+      "full_shuffle_words": 3432,
+      "generated_transitions": 495,
+      "group": "mixed-rational",
+      "id": "stress-23",
+      "improved": false,
+      "max_frontier": 13,
+      "nodes": 309,
+      "paired_value": "33513/154",
+      "relative_gap": "0",
+      "rounds": 7,
+      "terminal_frontier": [
+        [
+          "12619/66",
+          "104983/330"
+        ],
+        [
+          "63469/330",
+          "30961/110"
+        ],
+        [
+          "63529/330",
+          "83593/330"
+        ],
+        [
+          "457573/2310",
+          "109163/462"
+        ],
+        [
+          "22489/110",
+          "25811/110"
+        ],
+        [
+          "158171/770",
+          "33513/154"
+        ],
+        [
+          "12042/55",
+          "79663/385"
+        ],
+        [
+          "25603/110",
+          "4009/21"
+        ],
+        [
+          "8651/35",
+          "7769/42"
+        ],
+        [
+          "9169/35",
+          "35233/210"
+        ],
+        [
+          "320828/1155",
+          "2341/14"
+        ],
+        [
+          "111537/385",
+          "34687/210"
+        ],
+        [
+          "371879/1155",
+          "34183/210"
+        ]
+      ],
+      "unrestricted_value": "33513/154",
+      "word": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "absolute_gap": "3896/165",
+      "cells": 169,
+      "checker_obligations": 12673,
+      "coverage_pointers": 1272,
+      "full_shuffle_words": null,
+      "generated_transitions": 1272,
+      "group": "mixed-rational",
+      "id": "stress-24",
+      "improved": true,
+      "max_frontier": 12,
+      "nodes": 721,
+      "paired_value": "658639/1155",
+      "relative_gap": "27272/658639",
+      "rounds": 12,
+      "terminal_frontier": [
+        [
+          "109651/330",
+          "1855061/2310"
+        ],
+        [
+          "111631/330",
+          "258981/385"
+        ],
+        [
+          "796003/2310",
+          "256517/385"
+        ],
+        [
+          "839557/2310",
+          "483277/770"
+        ],
+        [
+          "149498/385",
+          "229137/385"
+        ],
+        [
+          "506896/1155",
+          "685753/1155"
+        ],
+        [
+          "1036459/2310",
+          "24097/42"
+        ],
+        [
+          "1086817/2310",
+          "264857/462"
+        ],
+        [
+          "601043/1155",
+          "1267459/2310"
+        ],
+        [
+          "56263/105",
+          "57397/105"
+        ],
+        [
+          "17147/30",
+          "16367/30"
+        ],
+        [
+          "12640/21",
+          "15827/30"
+        ]
+      ],
+      "unrestricted_value": "57397/105",
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    }
+  ],
+  "counts": {
+    "checker_obligations": 142687,
+    "search_states": 39239
+  },
+  "cpu_seconds": 1.4223103480000001,
+  "full_shuffle_oracle_instances": 27,
+  "full_shuffle_words": 25224,
+  "improved_cases": 3,
+  "improved_ids": [
+    "stress-09",
+    "stress-20",
+    "stress-24"
+  ],
+  "instances": 36,
+  "max_absolute_gap": "3896/165",
+  "max_frontier": 24,
+  "max_gap_case": "stress-24",
+  "max_relative_gap": "27272/658639",
+  "mutation_results": [
+    {
+      "name": "wrong-identity",
+      "rejected": true
+    },
+    {
+      "name": "unreachable-node",
+      "rejected": true
+    },
+    {
+      "name": "bad-parent",
+      "rejected": true
+    },
+    {
+      "name": "bad-stream",
+      "rejected": true
+    },
+    {
+      "name": "missing-coverage",
+      "rejected": true
+    },
+    {
+      "name": "false-dominator",
+      "rejected": true
+    },
+    {
+      "name": "false-bound",
+      "rejected": true
+    },
+    {
+      "name": "bad-word",
+      "rejected": true
+    }
+  ],
+  "peak_rss_kib": 96164,
+  "scope": "post-freeze exact boundary baseline; not merged into the original 36-case timing protocol",
+  "total_coverage_pointers": 14015,
+  "total_generated_transitions": 14015,
+  "total_nodes": 8195,
+  "workers": 1
+}

@@ -1,0 +1,137 @@
+{
+  "instance_id": "schema-11",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "9",
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "20",
+            "15"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "31",
+            "27"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "44",
+            "39"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "57",
+            "47"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "67",
+            "60"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "67",
+  "orders": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "terminal": 0,
+  "transitions": 12,
+  "upper_bound": "67"
+}

@@ -1,0 +1,150 @@
+{
+  "instance_id": "stress-18",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "16",
+            "26"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "53",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          1
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "79",
+            "82"
+          ]
+        },
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "84",
+            "61"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "95",
+            "116"
+          ]
+        },
+        {
+          "order": 1,
+          "parent": 1,
+          "xy": [
+            "107",
+            "105"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 1,
+          "xy": [
+            "134",
+            "137"
+          ]
+        },
+        {
+          "order": 1,
+          "parent": 1,
+          "xy": [
+            "155",
+            "131"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "137",
+  "orders": [
+    0,
+    1,
+    1,
+    1,
+    0
+  ],
+  "terminal": 0,
+  "transitions": 14,
+  "upper_bound": "137"
+}

@@ -1,0 +1,101 @@
+{
+  "all_exit_zero": true,
+  "commands": [
+    {
+      "command": "python tests/validation.py results/reproduction-validation.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_source_schemas.py --output results/reproduction-source-schemas.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python tests/exchange_conditions.py results/reproduction-exchange-conditions.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python tests/pairing_boundary.py results/reproduction-pairing-boundary.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python tests/unrestricted_grid.py results/reproduction-unrestricted-grid-validation.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/run_unrestricted_baseline.py results/reproduction-unrestricted-baseline.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/run_campaign.py --output results/reproduction",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/compare_results.py results/campaign results/reproduction",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/solve.py inputs/stress-04.json results/reproduction-example-certificate.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_certificate.py inputs/stress-04.json results/reproduction-example-certificate.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_bibliography.py --output results/reproduction-bibliography-integrity.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/pilot.py --output results/reproduction-pilot.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/export_paper_data.py --output results/reproduction-figure-sources",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/run_campaign.py --output results/reproduction --resume",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/compare_results.py results/campaign results/reproduction",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/check_reproduction.py",
+      "exit_code": 0
+    }
+  ],
+  "commands_expected": 16,
+  "commands_passed": 16,
+  "exact_comparison": {
+    "canonical_reports_equal": 8,
+    "example_certificate_equal": true,
+    "figure_sources_equal": 6,
+    "ignored_measurement_fields": [
+      "cpu_seconds",
+      "elapsed_wall_seconds",
+      "peak_rss_kib"
+    ],
+    "paired_cases_equal": 36,
+    "paired_certificates_equal": 36,
+    "scope": "exact claim-critical reproduction comparison; ignores only explicitly noisy CPU, wall-time, and peak-RSS measurements"
+  },
+  "execution_date": "2026-09-19",
+  "fresh_extraction": true,
+  "scope": "fresh standalone extraction; exact scientific replay, resume check, and isolated-output comparison; no independent peer review, mechanized implementation proof, or hardware validation",
+  "seed_reproduction_outputs_removed_before_extraction": true,
+  "selected_observed_counts": {
+    "bibliography_references": 30,
+    "exchange_cases": 6875,
+    "paired_boundary_optimum": "17",
+    "source_order_words": 1020,
+    "source_schema_count": 12,
+    "unrestricted_boundary_optimum": "13",
+    "unrestricted_improved_cases": 3,
+    "unrestricted_instances": 36,
+    "unrestricted_oracle_words": 25224,
+    "validation_checker_obligations": 90386,
+    "validation_search_states": 41155
+  }
+}

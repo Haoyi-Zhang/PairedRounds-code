@@ -1,0 +1,195 @@
+{
+  "branch_bound": {
+    "initialization_states": 5,
+    "orders": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pruned": 5,
+    "tree_states": 9,
+    "value": "251948/1155"
+  },
+  "certificate_bytes": 2367,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 10,
+    "obligations": 303,
+    "transitions": 16,
+    "value": "251948/1155",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 1515,
+    "search_states": 468
+  },
+  "cpu_seconds": 0.006243003999999885,
+  "edge_bound": 27,
+  "endpoint_bits": 9,
+  "events": 20,
+  "group": "mixed-rational",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 5,
+      "value": "251948/1155"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 5,
+      "value": "251948/1155"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 5,
+      "value": "251948/1155"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "2797/62987",
+      "states": 5,
+      "value": "87712/385"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 15,
+      "value": "251948/1155"
+    }
+  },
+  "id": "stress-22",
+  "oracle": {
+    "event_evaluations": 640,
+    "leaves": 32,
+    "tree_states": 63,
+    "value": "251948/1155"
+  },
+  "peak_rss_kib": 94636,
+  "rounds": 5,
+  "source_schema": "none",
+  "state_bits": 18,
+  "terminal_frontier": [
+    [
+      "242246/1155",
+      "251948/1155"
+    ],
+    [
+      "85387/385",
+      "224206/1155"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      50897,
+      45319,
+      42965,
+      42804,
+      43065
+    ],
+    "branch-bound": [
+      139220,
+      126291,
+      116736,
+      127803,
+      115944
+    ],
+    "checker": [
+      382718,
+      372152,
+      463960,
+      350689,
+      378201
+    ],
+    "earliest-release": [
+      25289,
+      23415,
+      22093,
+      21713,
+      22544
+    ],
+    "fixed12": [
+      16735,
+      16094,
+      37426,
+      15734,
+      15734
+    ],
+    "fixed21": [
+      17887,
+      15984,
+      16255,
+      113171,
+      18668
+    ],
+    "greedy-makespan": [
+      58027,
+      53650,
+      77567,
+      59069,
+      53311
+    ],
+    "merge": [
+      277158,
+      246232,
+      232792,
+      247183,
+      224569
+    ],
+    "oracle": [
+      1350558
+    ],
+    "sort": [
+      205480,
+      173422,
+      164458,
+      176736,
+      156746
+    ]
+  },
+  "value": "251948/1155",
+  "widths": [
+    1,
+    2,
+    1,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

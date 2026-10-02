@@ -1,0 +1,403 @@
+{
+  "certificate": {
+    "instance_id": "pairing-boundary",
+    "layers": [
+      {
+        "states": [
+          {
+            "order": null,
+            "parent": null,
+            "xy": [
+              "0",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "cover": [
+          [
+            0,
+            0
+          ]
+        ],
+        "states": [
+          {
+            "order": 0,
+            "parent": 0,
+            "xy": [
+              "2",
+              "11"
+            ]
+          }
+        ]
+      },
+      {
+        "cover": [
+          [
+            0,
+            1
+          ]
+        ],
+        "states": [
+          {
+            "order": 0,
+            "parent": 0,
+            "xy": [
+              "16",
+              "17"
+            ]
+          },
+          {
+            "order": 1,
+            "parent": 0,
+            "xy": [
+              "18",
+              "13"
+            ]
+          }
+        ]
+      }
+    ],
+    "lower_bound": "17",
+    "orders": [
+      0,
+      0
+    ],
+    "terminal": 0,
+    "transitions": 4,
+    "upper_bound": "17"
+  },
+  "check": {
+    "max_frontier": 2,
+    "nodes": 4,
+    "obligations": 90,
+    "transitions": 4,
+    "value": "17",
+    "verified": true
+  },
+  "checker_obligations": 90,
+  "cpu_seconds": 0.0007464850000000745,
+  "input": {
+    "duration_provenance": "synthetic rational values; no device measurements",
+    "grammar": "paired-two-chain",
+    "group": "post-freeze-boundary",
+    "id": "pairing-boundary",
+    "resources": [
+      "C1",
+      "C2",
+      "L"
+    ],
+    "source_schema": "none",
+    "stages": [
+      {
+        "c1": {
+          "hi": "1",
+          "lo": "3/4"
+        },
+        "c2": {
+          "hi": "10",
+          "lo": "15/2"
+        },
+        "p1": {
+          "hi": "1",
+          "lo": "3/4"
+        },
+        "p2": {
+          "hi": "1",
+          "lo": "3/4"
+        }
+      },
+      {
+        "c1": {
+          "hi": "1",
+          "lo": "3/4"
+        },
+        "c2": {
+          "hi": "1",
+          "lo": "3/4"
+        },
+        "p1": {
+          "hi": "5",
+          "lo": "15/4"
+        },
+        "p2": {
+          "hi": "1",
+          "lo": "3/4"
+        }
+      }
+    ]
+  },
+  "orders": [
+    {
+      "makespan": 13,
+      "paired": false,
+      "trace": [
+        {
+          "compute_end": 1,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 1,
+          "transfer_end": 2,
+          "transfer_start": 1
+        },
+        {
+          "compute_end": 3,
+          "compute_start": 2,
+          "round": 2,
+          "stream": 1,
+          "transfer_end": 8,
+          "transfer_start": 3
+        },
+        {
+          "compute_end": 10,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 2,
+          "transfer_end": 11,
+          "transfer_start": 10
+        },
+        {
+          "compute_end": 12,
+          "compute_start": 11,
+          "round": 2,
+          "stream": 2,
+          "transfer_end": 13,
+          "transfer_start": 12
+        }
+      ],
+      "word": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "makespan": 17,
+      "paired": true,
+      "trace": [
+        {
+          "compute_end": 1,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 1,
+          "transfer_end": 2,
+          "transfer_start": 1
+        },
+        {
+          "compute_end": 10,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 2,
+          "transfer_end": 11,
+          "transfer_start": 10
+        },
+        {
+          "compute_end": 3,
+          "compute_start": 2,
+          "round": 2,
+          "stream": 1,
+          "transfer_end": 16,
+          "transfer_start": 11
+        },
+        {
+          "compute_end": 12,
+          "compute_start": 11,
+          "round": 2,
+          "stream": 2,
+          "transfer_end": 17,
+          "transfer_start": 16
+        }
+      ],
+      "word": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "makespan": 18,
+      "paired": true,
+      "trace": [
+        {
+          "compute_end": 1,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 1,
+          "transfer_end": 2,
+          "transfer_start": 1
+        },
+        {
+          "compute_end": 10,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 2,
+          "transfer_end": 11,
+          "transfer_start": 10
+        },
+        {
+          "compute_end": 12,
+          "compute_start": 11,
+          "round": 2,
+          "stream": 2,
+          "transfer_end": 13,
+          "transfer_start": 12
+        },
+        {
+          "compute_end": 3,
+          "compute_start": 2,
+          "round": 2,
+          "stream": 1,
+          "transfer_end": 18,
+          "transfer_start": 13
+        }
+      ],
+      "word": [
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "makespan": 19,
+      "paired": true,
+      "trace": [
+        {
+          "compute_end": 10,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 2,
+          "transfer_end": 11,
+          "transfer_start": 10
+        },
+        {
+          "compute_end": 1,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 1,
+          "transfer_end": 12,
+          "transfer_start": 11
+        },
+        {
+          "compute_end": 13,
+          "compute_start": 12,
+          "round": 2,
+          "stream": 1,
+          "transfer_end": 18,
+          "transfer_start": 13
+        },
+        {
+          "compute_end": 12,
+          "compute_start": 11,
+          "round": 2,
+          "stream": 2,
+          "transfer_end": 19,
+          "transfer_start": 18
+        }
+      ],
+      "word": [
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "makespan": 18,
+      "paired": true,
+      "trace": [
+        {
+          "compute_end": 10,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 2,
+          "transfer_end": 11,
+          "transfer_start": 10
+        },
+        {
+          "compute_end": 1,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 1,
+          "transfer_end": 12,
+          "transfer_start": 11
+        },
+        {
+          "compute_end": 12,
+          "compute_start": 11,
+          "round": 2,
+          "stream": 2,
+          "transfer_end": 13,
+          "transfer_start": 12
+        },
+        {
+          "compute_end": 13,
+          "compute_start": 12,
+          "round": 2,
+          "stream": 1,
+          "transfer_end": 18,
+          "transfer_start": 13
+        }
+      ],
+      "word": [
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "makespan": 20,
+      "paired": false,
+      "trace": [
+        {
+          "compute_end": 10,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 2,
+          "transfer_end": 11,
+          "transfer_start": 10
+        },
+        {
+          "compute_end": 12,
+          "compute_start": 11,
+          "round": 2,
+          "stream": 2,
+          "transfer_end": 13,
+          "transfer_start": 12
+        },
+        {
+          "compute_end": 1,
+          "compute_start": 0,
+          "round": 1,
+          "stream": 1,
+          "transfer_end": 14,
+          "transfer_start": 13
+        },
+        {
+          "compute_end": 15,
+          "compute_start": 14,
+          "round": 2,
+          "stream": 1,
+          "transfer_end": 20,
+          "transfer_start": 15
+        }
+      ],
+      "word": [
+        2,
+        2,
+        1,
+        1
+      ]
+    }
+  ],
+  "paired_optimum": "17",
+  "peak_rss_kib": 93096,
+  "scope": "post-freeze boundary illustration, not campaign inclusion",
+  "search_states": 10,
+  "unrestricted_optimum": "13",
+  "workers": 1
+}

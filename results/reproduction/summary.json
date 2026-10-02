@@ -1,0 +1,191 @@
+{
+  "certificate_nodes": 505,
+  "checker_obligations_once": 15495,
+  "counts": {
+    "checker_obligations": 77475,
+    "search_states": 76922
+  },
+  "cpu_seconds": 5.070807940000001,
+  "groups": {
+    "asymmetric": {
+      "bnb_states": 114,
+      "greedy_optimal": 0,
+      "instances": 4,
+      "max_frontier": 2,
+      "oracle_leaves": 4264,
+      "transitions": 74
+    },
+    "compute-heavy": {
+      "bnb_states": 56,
+      "greedy_optimal": 4,
+      "instances": 4,
+      "max_frontier": 1,
+      "oracle_leaves": 4264,
+      "transitions": 54
+    },
+    "link-heavy": {
+      "bnb_states": 50,
+      "greedy_optimal": 4,
+      "instances": 4,
+      "max_frontier": 2,
+      "oracle_leaves": 4264,
+      "transitions": 100
+    },
+    "mixed-rational": {
+      "bnb_states": 774,
+      "greedy_optimal": 2,
+      "instances": 4,
+      "max_frontier": 3,
+      "oracle_leaves": 4264,
+      "transitions": 88
+    },
+    "reset": {
+      "bnb_states": 46,
+      "greedy_optimal": 4,
+      "instances": 4,
+      "max_frontier": 2,
+      "oracle_leaves": 4264,
+      "transitions": 100
+    },
+    "sharp": {
+      "bnb_states": 58,
+      "greedy_optimal": 0,
+      "instances": 4,
+      "max_frontier": 13,
+      "oracle_leaves": 4264,
+      "transitions": 254
+    },
+    "source-inspired": {
+      "bnb_states": 196,
+      "greedy_optimal": 11,
+      "instances": 12,
+      "max_frontier": 2,
+      "oracle_leaves": 1020,
+      "transitions": 170
+    }
+  },
+  "heuristics": {
+    "bottom-level": {
+      "max_gap": "73/358",
+      "mean_gap": "9855056924186388709686817648537/206395205267187725244714589312800",
+      "optimal_cases": 10
+    },
+    "earliest-release": {
+      "max_gap": "3/52",
+      "mean_gap": "271444992369167962961277007/43098545632360246671479316480",
+      "optimal_cases": 25
+    },
+    "fixed12": {
+      "max_gap": "17/137",
+      "mean_gap": "3291439764530586971882585238292338029/136560041014247291100661397673976258560",
+      "optimal_cases": 15
+    },
+    "fixed21": {
+      "max_gap": "7/20",
+      "mean_gap": "356394097682816942636977072796526309970651/6640171525581265169522594722984477956710400",
+      "optimal_cases": 14
+    },
+    "greedy-makespan": {
+      "max_gap": "3/52",
+      "mean_gap": "271444992369167962961277007/43098545632360246671479316480",
+      "optimal_cases": 25
+    }
+  },
+  "instances": 36,
+  "max_certificate_bytes": 17535,
+  "max_endpoint_bits": 18,
+  "max_frontier": 13,
+  "max_state_bits": 21,
+  "merge_transitions_once": 840,
+  "oracle_agreement": 36,
+  "oracle_leaves": 26604,
+  "oracle_repeats": 1,
+  "oracle_tree_states": 53172,
+  "peak_rss_kib": 95668,
+  "repeats": 5,
+  "timing": {
+    "bottom-level": {
+      "max_case_us": 303.316,
+      "max_sample_us": 374.905,
+      "median_case_us": 78.66499999999999,
+      "min_case_us": 19.508,
+      "min_sample_us": 19.125,
+      "total_measured_wall_seconds": 0.019127859
+    },
+    "branch-bound": {
+      "max_case_us": 8925.155,
+      "max_sample_us": 9064.325,
+      "median_case_us": 240.84550000000002,
+      "min_case_us": 69.377,
+      "min_sample_us": 68.219,
+      "total_measured_wall_seconds": 0.098657358
+    },
+    "checker": {
+      "max_case_us": 4411.823,
+      "max_sample_us": 4722.95,
+      "median_case_us": 661.5709999999999,
+      "min_case_us": 193.606,
+      "min_sample_us": 187.879,
+      "total_measured_wall_seconds": 0.154165017
+    },
+    "earliest-release": {
+      "max_case_us": 83.612,
+      "max_sample_us": 128.781,
+      "median_case_us": 36.783,
+      "min_case_us": 13.288,
+      "min_sample_us": 13.263,
+      "total_measured_wall_seconds": 0.007463096000000001
+    },
+    "fixed12": {
+      "max_case_us": 63.814,
+      "max_sample_us": 132.23,
+      "median_case_us": 26.587000000000003,
+      "min_case_us": 10.093,
+      "min_sample_us": 9.845,
+      "total_measured_wall_seconds": 0.005485940999999999
+    },
+    "fixed21": {
+      "max_case_us": 61.166,
+      "max_sample_us": 116.621,
+      "median_case_us": 26.65,
+      "min_case_us": 10.179,
+      "min_sample_us": 9.871,
+      "total_measured_wall_seconds": 0.0055026499999999996
+    },
+    "greedy-makespan": {
+      "max_case_us": 214.66,
+      "max_sample_us": 281.788,
+      "median_case_us": 90.962,
+      "min_case_us": 32.067,
+      "min_sample_us": 31.6,
+      "total_measured_wall_seconds": 0.018397331
+    },
+    "merge": {
+      "max_case_us": 2043.467,
+      "max_sample_us": 6183.975,
+      "median_case_us": 436.8845,
+      "min_case_us": 135.878,
+      "min_sample_us": 132.691,
+      "total_measured_wall_seconds": 0.10338503600000001
+    },
+    "oracle": {
+      "max_case_us": 783665.823,
+      "max_sample_us": 783665.823,
+      "median_case_us": 3738.2945,
+      "min_case_us": 126.999,
+      "min_sample_us": 126.999,
+      "total_measured_wall_seconds": 4.603822532
+    },
+    "sort": {
+      "max_case_us": 1680.051,
+      "max_sample_us": 1918.39,
+      "median_case_us": 296.1885,
+      "min_case_us": 88.939,
+      "min_sample_us": 87.044,
+      "total_measured_wall_seconds": 0.06863229
+    }
+  },
+  "timing_clock": "perf_counter_ns; elapsed wall time; process CPU recorded only in aggregate",
+  "whole_frontier_agreement": 36,
+  "workers": 1
+}

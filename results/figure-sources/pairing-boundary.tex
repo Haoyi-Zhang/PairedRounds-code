@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=.43cm,y=.48cm,font=\scriptsize,>=Stealth]
+\draw[gray] (0,2)--(17,2);\node[anchor=east] at (-.3,2.3) {$C_1$};
+\draw[gray] (0,1)--(17,1);\node[anchor=east] at (-.3,1.3) {$C_2$};
+\draw[gray] (0,0)--(17,0);\node[anchor=east] at (-.3,0.3) {$L$};
+\draw[fill=white] (0,2.04) rectangle (1,2.6);\node at (0.5,2.32) {$C_{11}$};
+\draw[fill=black!12] (1,0.04) rectangle (2,0.6);\node at (1.5,0.32) {$T_{11}$};
+\draw[fill=white] (0,1.04) rectangle (10,1.6);\node at (5,1.32) {$C_{21}$};
+\draw[fill=black!12] (10,0.04) rectangle (11,0.6);\node at (10.5,0.32) {$T_{21}$};
+\draw[fill=white] (2,2.04) rectangle (3,2.6);\node at (2.5,2.32) {$C_{12}$};
+\draw[fill=black!12] (11,0.04) rectangle (16,0.6);\node at (13.5,0.32) {$T_{12}$};
+\draw[fill=white] (11,1.04) rectangle (12,1.6);\node at (11.5,1.32) {$C_{22}$};
+\draw[fill=black!12] (16,0.04) rectangle (17,0.6);\node at (16.5,0.32) {$T_{22}$};
+\draw[->] (0,-0.55)--(17.8,-0.55);
+\draw (0,-0.55)--(0,-0.7) node[below] {0};
+\draw (5,-0.55)--(5,-0.7) node[below] {5};
+\draw (10,-0.55)--(10,-0.7) node[below] {10};
+\draw (13,-0.55)--(13,-0.7) node[below] {13};
+\draw (17,-0.55)--(17,-0.7) node[below] {17};
+\node[anchor=west] at (0,3.1) {(a) Paired: 1212};
+\draw[gray] (0,-3.4)--(17,-3.4);\node[anchor=east] at (-.3,-3.1) {$C_1$};
+\draw[gray] (0,-4.4)--(17,-4.4);\node[anchor=east] at (-.3,-4.1) {$C_2$};
+\draw[gray] (0,-5.4)--(17,-5.4);\node[anchor=east] at (-.3,-5.1) {$L$};
+\draw[fill=white] (0,-3.36) rectangle (1,-2.8);\node at (0.5,-3.08) {$C_{11}$};
+\draw[fill=black!12] (1,-5.36) rectangle (2,-4.8);\node at (1.5,-5.08) {$T_{11}$};
+\draw[fill=white] (2,-3.36) rectangle (3,-2.8);\node at (2.5,-3.08) {$C_{12}$};
+\draw[fill=black!12] (3,-5.36) rectangle (8,-4.8);\node at (5.5,-5.08) {$T_{12}$};
+\draw[fill=white] (0,-4.36) rectangle (10,-3.8);\node at (5,-4.08) {$C_{21}$};
+\draw[fill=black!12] (10,-5.36) rectangle (11,-4.8);\node at (10.5,-5.08) {$T_{21}$};
+\draw[fill=white] (11,-4.36) rectangle (12,-3.8);\node at (11.5,-4.08) {$C_{22}$};
+\draw[fill=black!12] (12,-5.36) rectangle (13,-4.8);\node at (12.5,-5.08) {$T_{22}$};
+\draw[->] (0,-5.95)--(17.8,-5.95);
+\draw (0,-5.95)--(0,-6.1) node[below] {0};
+\draw (5,-5.95)--(5,-6.1) node[below] {5};
+\draw (10,-5.95)--(10,-6.1) node[below] {10};
+\draw (13,-5.95)--(13,-6.1) node[below] {13};
+\draw (17,-5.95)--(17,-6.1) node[below] {17};
+\node[anchor=west] at (0,-2.3) {(b) Unrestricted: 1122};
+\end{tikzpicture}

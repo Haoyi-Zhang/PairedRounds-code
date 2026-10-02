@@ -1,0 +1,61 @@
+{
+  "instance_id": "schema-09",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "9",
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "20",
+            "15"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "20",
+  "orders": [
+    1,
+    1
+  ],
+  "terminal": 0,
+  "transitions": 4,
+  "upper_bound": "20"
+}

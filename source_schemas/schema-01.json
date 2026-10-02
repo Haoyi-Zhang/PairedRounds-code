@@ -1,0 +1,96 @@
+{
+  "chain_edges": [
+    [
+      "C1.1",
+      "T1.1"
+    ],
+    [
+      "T1.1",
+      "C1.2"
+    ],
+    [
+      "C1.2",
+      "T1.2"
+    ],
+    [
+      "C2.1",
+      "T2.1"
+    ],
+    [
+      "T2.1",
+      "C2.2"
+    ],
+    [
+      "C2.2",
+      "T2.2"
+    ]
+  ],
+  "completion": "required-data-and-notification-complete",
+  "duration_dependence": "independent-of-overlap",
+  "events": [
+    {
+      "id": "C1.1",
+      "kind": "C",
+      "resource": "C1",
+      "round": 1,
+      "stream": 1
+    },
+    {
+      "id": "T1.1",
+      "kind": "T",
+      "resource": "L",
+      "round": 1,
+      "stream": 1
+    },
+    {
+      "id": "C1.2",
+      "kind": "C",
+      "resource": "C1",
+      "round": 2,
+      "stream": 1
+    },
+    {
+      "id": "T1.2",
+      "kind": "T",
+      "resource": "L",
+      "round": 2,
+      "stream": 1
+    },
+    {
+      "id": "C2.1",
+      "kind": "C",
+      "resource": "C2",
+      "round": 1,
+      "stream": 2
+    },
+    {
+      "id": "T2.1",
+      "kind": "T",
+      "resource": "L",
+      "round": 1,
+      "stream": 2
+    },
+    {
+      "id": "C2.2",
+      "kind": "C",
+      "resource": "C2",
+      "round": 2,
+      "stream": 2
+    },
+    {
+      "id": "T2.2",
+      "kind": "T",
+      "resource": "L",
+      "round": 2,
+      "stream": 2
+    }
+  ],
+  "id": "schema-01",
+  "initial_data": "ready",
+  "link_policy": "paired-rounds",
+  "origin": "newly authored restricted abstraction; not a CUDA extraction",
+  "rounds": 2,
+  "source": "arXiv:2511.13940, Appendix D and transfer/scheduling discussion",
+  "source_schema": "producer-store",
+  "target": "private-point-to-point"
+}

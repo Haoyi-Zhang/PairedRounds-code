@@ -1,0 +1,118 @@
+{
+  "instance_id": "stress-10",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "26",
+            "16"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "59",
+            "52"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "122",
+            "93"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "154",
+            "125"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "198",
+            "167"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "198",
+  "orders": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "terminal": 0,
+  "transitions": 10,
+  "upper_bound": "198"
+}

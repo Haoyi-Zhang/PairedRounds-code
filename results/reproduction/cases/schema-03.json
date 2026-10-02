@@ -1,0 +1,202 @@
+{
+  "branch_bound": {
+    "initialization_states": 6,
+    "orders": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pruned": 12,
+    "tree_states": 25,
+    "value": "44"
+  },
+  "certificate_bytes": 2820,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 13,
+    "obligations": 405,
+    "transitions": 22,
+    "value": "44",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 2025,
+    "search_states": 712
+  },
+  "cpu_seconds": 0.019141499000000062,
+  "edge_bound": 33,
+  "endpoint_bits": 4,
+  "events": 24,
+  "group": "source-inspired",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/44",
+      "states": 6,
+      "value": "45"
+    },
+    "earliest-release": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "1/44",
+      "states": 6,
+      "value": "45"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "44"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "1/44",
+      "states": 6,
+      "value": "45"
+    },
+    "greedy-makespan": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "1/44",
+      "states": 18,
+      "value": "45"
+    }
+  },
+  "id": "schema-03",
+  "oracle": {
+    "event_evaluations": 1536,
+    "leaves": 64,
+    "tree_states": 127,
+    "value": "44"
+  },
+  "peak_rss_kib": 94516,
+  "rounds": 6,
+  "source_schema": "producer-store",
+  "state_bits": 6,
+  "terminal_frontier": [
+    [
+      "41",
+      "44"
+    ],
+    [
+      "45",
+      "40"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      85286,
+      82172,
+      81440,
+      81406,
+      81205
+    ],
+    "branch-bound": [
+      480465,
+      343825,
+      400589,
+      358398,
+      350265
+    ],
+    "checker": [
+      895538,
+      769766,
+      766572,
+      773034,
+      744731
+    ],
+    "earliest-release": [
+      37829,
+      64259,
+      36906,
+      36515,
+      36706
+    ],
+    "fixed12": [
+      28697,
+      27083,
+      26271,
+      26213,
+      26484
+    ],
+    "fixed21": [
+      43503,
+      27182,
+      26649,
+      26638,
+      26346
+    ],
+    "greedy-makespan": [
+      96243,
+      90669,
+      109935,
+      91423,
+      91086
+    ],
+    "merge": [
+      654881,
+      499839,
+      604863,
+      1270220,
+      517140
+    ],
+    "oracle": [
+      6425788
+    ],
+    "sort": [
+      344015,
+      422009,
+      329528,
+      357483,
+      318405
+    ]
+  },
+  "value": "44",
+  "widths": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

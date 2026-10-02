@@ -1,0 +1,80 @@
+{
+  "instance_id": "stress-21",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "582/35",
+            "263/7"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "270/7",
+            "1192/21"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "13448/231",
+            "7772/105"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "7772/105",
+  "orders": [
+    0,
+    0,
+    0
+  ],
+  "terminal": 0,
+  "transitions": 6,
+  "upper_bound": "7772/105"
+}

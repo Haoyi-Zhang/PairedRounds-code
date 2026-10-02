@@ -1,0 +1,15 @@
+{
+  "cases": 6875,
+  "checker_obligations": 123750,
+  "cpu_seconds": 0.031652707999999974,
+  "elapsed_wall_seconds": 0.03211087099998622,
+  "outcomes": {
+    "12_dominates": 1625,
+    "21_dominates": 1625,
+    "incomparable": 3625
+  },
+  "peak_rss_kib": 92200,
+  "scope": "post-freeze exact exchange theorem finite check, not campaign inclusion",
+  "search_states": 0,
+  "workers": 1
+}

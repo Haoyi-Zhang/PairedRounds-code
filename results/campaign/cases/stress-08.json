@@ -1,0 +1,244 @@
+{
+  "branch_bound": {
+    "initialization_states": 12,
+    "orders": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "pruned": 12,
+    "tree_states": 25,
+    "value": "170"
+  },
+  "certificate_bytes": 5392,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 25,
+    "obligations": 831,
+    "transitions": 46,
+    "value": "170",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 4155,
+    "search_states": 9256
+  },
+  "cpu_seconds": 0.4470586460000001,
+  "edge_bound": 69,
+  "endpoint_bits": 5,
+  "events": 48,
+  "group": "reset",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "relative_gap": "3/85",
+      "states": 12,
+      "value": "176"
+    },
+    "earliest-release": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "0",
+      "states": 12,
+      "value": "170"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/170",
+      "states": 12,
+      "value": "171"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "0",
+      "states": 12,
+      "value": "170"
+    },
+    "greedy-makespan": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "0",
+      "states": 36,
+      "value": "170"
+    }
+  },
+  "id": "stress-08",
+  "oracle": {
+    "event_evaluations": 196608,
+    "leaves": 4096,
+    "tree_states": 8191,
+    "value": "170"
+  },
+  "peak_rss_kib": 94508,
+  "rounds": 12,
+  "source_schema": "none",
+  "state_bits": 8,
+  "terminal_frontier": [
+    [
+      "163",
+      "171"
+    ],
+    [
+      "170",
+      "164"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      161323,
+      145180,
+      147322,
+      145860,
+      145840
+    ],
+    "branch-bound": [
+      339513,
+      368426,
+      324170,
+      423399,
+      320153
+    ],
+    "checker": [
+      993129,
+      814489,
+      814489,
+      813377,
+      836262
+    ],
+    "earliest-release": [
+      44888,
+      44137,
+      43916,
+      43786,
+      43465
+    ],
+    "fixed12": [
+      33751,
+      32418,
+      32138,
+      31908,
+      32439
+    ],
+    "fixed21": [
+      32620,
+      31608,
+      32329,
+      31978,
+      31418
+    ],
+    "greedy-makespan": [
+      113852,
+      111197,
+      124197,
+      111278,
+      113271
+    ],
+    "merge": [
+      546654,
+      550210,
+      616090,
+      524050,
+      532283
+    ],
+    "oracle": [
+      437291244
+    ],
+    "sort": [
+      401506,
+      391751,
+      372442,
+      371000,
+      384430
+    ]
+  },
+  "value": "170",
+  "widths": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

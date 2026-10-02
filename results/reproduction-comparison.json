@@ -1,0 +1,13 @@
+{
+  "canonical_reports_equal": 8,
+  "example_certificate_equal": true,
+  "figure_sources_equal": 6,
+  "ignored_measurement_fields": [
+    "cpu_seconds",
+    "elapsed_wall_seconds",
+    "peak_rss_kib"
+  ],
+  "paired_cases_equal": 36,
+  "paired_certificates_equal": 36,
+  "scope": "exact claim-critical reproduction comparison; ignores only explicitly noisy CPU, wall-time, and peak-RSS measurements"
+}

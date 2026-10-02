@@ -1,0 +1,68 @@
+{
+  "duration_provenance": "synthetic rational values; no device measurements",
+  "grammar": "paired-two-chain",
+  "group": "link-heavy",
+  "id": "stress-13",
+  "resources": [
+    "C1",
+    "C2",
+    "L"
+  ],
+  "source_schema": "none",
+  "stages": [
+    {
+      "c1": {
+        "hi": "2",
+        "lo": "3/2"
+      },
+      "c2": {
+        "hi": "1",
+        "lo": "3/4"
+      },
+      "p1": {
+        "hi": "31",
+        "lo": "93/4"
+      },
+      "p2": {
+        "hi": "12",
+        "lo": "9"
+      }
+    },
+    {
+      "c1": {
+        "hi": "2",
+        "lo": "3/2"
+      },
+      "c2": {
+        "hi": "10",
+        "lo": "15/2"
+      },
+      "p1": {
+        "hi": "20",
+        "lo": "15"
+      },
+      "p2": {
+        "hi": "16",
+        "lo": "12"
+      }
+    },
+    {
+      "c1": {
+        "hi": "4",
+        "lo": "3"
+      },
+      "c2": {
+        "hi": "2",
+        "lo": "3/2"
+      },
+      "p1": {
+        "hi": "25",
+        "lo": "75/4"
+      },
+      "p2": {
+        "hi": "29",
+        "lo": "87/4"
+      }
+    }
+  ]
+}

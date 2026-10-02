@@ -1,0 +1,240 @@
+{
+  "branch_bound": {
+    "initialization_states": 12,
+    "orders": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "pruned": 35,
+    "tree_states": 73,
+    "value": "358"
+  },
+  "certificate_bytes": 4205,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 18,
+    "obligations": 636,
+    "transitions": 34,
+    "value": "358",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 3180,
+    "search_states": 9376
+  },
+  "cpu_seconds": 0.7547471870000004,
+  "edge_bound": 69,
+  "endpoint_bits": 8,
+  "events": 48,
+  "group": "asymmetric",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "relative_gap": "73/358",
+      "states": 12,
+      "value": "431"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/179",
+      "states": 12,
+      "value": "360"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "35/358",
+      "states": 12,
+      "value": "393"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "41/179",
+      "states": 12,
+      "value": "440"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/179",
+      "states": 36,
+      "value": "360"
+    }
+  },
+  "id": "stress-20",
+  "oracle": {
+    "event_evaluations": 196608,
+    "leaves": 4096,
+    "tree_states": 8191,
+    "value": "358"
+  },
+  "peak_rss_kib": 95284,
+  "rounds": 12,
+  "source_schema": "none",
+  "state_bits": 9,
+  "terminal_frontier": [
+    [
+      "347",
+      "358"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      248690,
+      244728,
+      243635,
+      264056,
+      244275
+    ],
+    "branch-bound": [
+      1096072,
+      1505002,
+      1077346,
+      1019738,
+      1017198
+    ],
+    "checker": [
+      1282805,
+      1269975,
+      1225421,
+      1199241,
+      1246913
+    ],
+    "earliest-release": [
+      75794,
+      73599,
+      93657,
+      74079,
+      98395
+    ],
+    "fixed12": [
+      57172,
+      53562,
+      53306,
+      53152,
+      52820
+    ],
+    "fixed21": [
+      56160,
+      54125,
+      53101,
+      53398,
+      52989
+    ],
+    "greedy-makespan": [
+      194108,
+      188205,
+      206538,
+      189088,
+      185721
+    ],
+    "merge": [
+      855275,
+      876590,
+      824904,
+      850267,
+      851444
+    ],
+    "oracle": [
+      733410912
+    ],
+    "sort": [
+      632853,
+      597528,
+      576404,
+      597315,
+      584732
+    ]
+  },
+  "value": "358",
+  "widths": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2,
+    2,
+    1
+  ],
+  "workers": 1
+}

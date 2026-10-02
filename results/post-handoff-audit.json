@@ -1,0 +1,64 @@
+{
+  "all_commands_succeeded": true,
+  "basis": "fresh extraction of the previously delivered standalone repository; scientific source, proof, input, and schema files were then byte-compared with the final working artifact",
+  "budget_interpretation": {
+    "disclosure": "The mechanical lifetime sum would exceed the 2,000,000 checker-obligation campaign ceiling because it counts a duplicate post-handoff review replay. Therefore the package makes no claim that every later duplicate verification execution remains inside the original campaign ceiling; it claims only that the frozen scientific campaign and designated clean reproduction did.",
+    "frozen_scientific_ledger": "results/resource-accounting.json remains the predeclared scientific campaign plus its designated clean reproduction",
+    "mechanical_sum_if_duplicate_review_work_were_added": {
+      "checker_obligations": 2447983,
+      "cpu_seconds": 132.541136159,
+      "maximum_peak_rss_kib": 106028,
+      "search_states": 831084
+    },
+    "post_handoff_replay_is_separate": true
+  },
+  "commands_executed": 13,
+  "date": "2026-09-16",
+  "outcomes": {
+    "example_certificate_verified": true,
+    "generated_paper_sources_recreated": true,
+    "improved_unrestricted_cases": [
+      "stress-09",
+      "stress-20",
+      "stress-24"
+    ],
+    "paired_frontiers_and_certificates_equal": 36,
+    "paired_oracle_words": 26604,
+    "pairing_boundary": {
+      "paired": "17",
+      "unrestricted": "13"
+    },
+    "resume_rechecked_retained_certificates": true,
+    "unrestricted_certificates_passed": 36,
+    "unrestricted_oracle_instances": 27,
+    "unrestricted_oracle_words": 25224
+  },
+  "scientific_replay_charge": {
+    "accounting_note": "The replay included validation, source checks, exchange checks, paired/unrestricted boundary checks, a fresh paired campaign, exact comparison, example certificate verification, resume verification, and paper-data export. It did not rerun the optional pilot.",
+    "checker_obligations": 665824,
+    "maximum_reported_peak_rss_kib": 105900,
+    "rounded_user_plus_system_cpu_seconds": 17.5,
+    "search_states": 173369
+  },
+  "scientific_tree_equivalence": {
+    "byte_identical_directories": [
+      "src/",
+      "tests/",
+      "proofs/",
+      "inputs/",
+      "source_schemas/"
+    ],
+    "byte_identical_scientific_scripts": [
+      "scripts/check_certificate.py",
+      "scripts/check_source_schemas.py",
+      "scripts/compare_results.py",
+      "scripts/export_paper_data.py",
+      "scripts/pilot.py",
+      "scripts/run_campaign.py",
+      "scripts/run_unrestricted_baseline.py",
+      "scripts/solve.py"
+    ],
+    "excluded_from_equivalence": "documentation, bibliography-audit additions, compact audit records, and regenerated LaTeX outputs"
+  },
+  "scope": "post-handoff duplicate verification only; no instance, hypothesis, algorithm, threshold, result, or manuscript claim was tuned from this replay"
+}

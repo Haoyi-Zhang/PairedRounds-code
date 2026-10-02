@@ -1,0 +1,209 @@
+{
+  "branch_bound": {
+    "initialization_states": 7,
+    "orders": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "pruned": 7,
+    "tree_states": 17,
+    "value": "245"
+  },
+  "certificate_bytes": 2557,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 11,
+    "obligations": 352,
+    "transitions": 18,
+    "value": "245",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 1760,
+    "search_states": 800
+  },
+  "cpu_seconds": 0.025482187999999795,
+  "edge_bound": 39,
+  "endpoint_bits": 8,
+  "events": 28,
+  "group": "asymmetric",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "relative_gap": "1/5",
+      "states": 7,
+      "value": "294"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/245",
+      "states": 7,
+      "value": "246"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "2/49",
+      "states": 7,
+      "value": "255"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "59/245",
+      "states": 7,
+      "value": "304"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/245",
+      "states": 21,
+      "value": "246"
+    }
+  },
+  "id": "stress-19",
+  "oracle": {
+    "event_evaluations": 3584,
+    "leaves": 128,
+    "tree_states": 255,
+    "value": "245"
+  },
+  "peak_rss_kib": 95156,
+  "rounds": 7,
+  "source_schema": "none",
+  "state_bits": 8,
+  "terminal_frontier": [
+    [
+      "230",
+      "246"
+    ],
+    [
+      "234",
+      "245"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      105926,
+      103340,
+      103231,
+      103048,
+      102945
+    ],
+    "branch-bound": [
+      312515,
+      290345,
+      306137,
+      287313,
+      288895
+    ],
+    "checker": [
+      731845,
+      685877,
+      751105,
+      916063,
+      942042
+    ],
+    "earliest-release": [
+      44262,
+      42458,
+      42441,
+      42383,
+      42176
+    ],
+    "fixed12": [
+      32447,
+      31142,
+      30957,
+      30786,
+      30665
+    ],
+    "fixed21": [
+      33370,
+      51746,
+      32241,
+      31360,
+      31205
+    ],
+    "greedy-makespan": [
+      110556,
+      119975,
+      132306,
+      106865,
+      107227
+    ],
+    "merge": [
+      542519,
+      466131,
+      488650,
+      458588,
+      489582
+    ],
+    "oracle": [
+      12923994
+    ],
+    "sort": [
+      370120,
+      367691,
+      439702,
+      330094,
+      389104
+    ]
+  },
+  "value": "245",
+  "widths": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    2
+  ],
+  "workers": 1
+}

@@ -1,0 +1,173 @@
+{
+  "charged_cpu_seconds": 115.04113615899999,
+  "cumulative_checker_obligations": 1782159,
+  "cumulative_search_states": 657715,
+  "limits": {
+    "checker_obligations": 2000000,
+    "cpu_seconds": 21600,
+    "peak_rss_kib": 3145728,
+    "per_run_cpu_seconds": 300,
+    "search_states": 1000000,
+    "workers": 1
+  },
+  "maximum_measured_peak_rss_kib": 106028,
+  "notes": [
+    "Scientific state counts include every retained exploratory, campaign, repair, boundary-baseline and clean-reproduction pass; no superseded run is erased.",
+    "A search state counts a visited search node, propagated candidate, or explicitly enumerated word according to the producing method; theorem operation bounds are separate.",
+    "Clean child CPU includes interpreter/process startup. Internal CPU fields from that clean run are not charged a second time.",
+    "Prior small startup/administrative costs and one uninstrumented probe retain explicit conservative allowances; allowances are not measured runtimes.",
+    "The final clean report charges resume certificate rechecks, the example certificate check, and pilot checks; comparison and export commands add CPU but no scientific states.",
+    "Browser-mediated scholarly retrieval bytes are not exposed by the web tool. No dataset, external solver, model service, or scientific runtime dependency was downloaded into the artifact.",
+    "LaTeX compilation and visual packaging are not scientific campaign execution and are excluded from these state/obligation totals.",
+    "Exact scientific outputs reproduce; noisy timings and PDF bytes are not required to match across environments.",
+    "A later duplicate post-handoff audit replay is not folded into this frozen campaign ledger; its exact counts and the mechanical lifetime sum are disclosed in post-handoff-audit.json."
+  ],
+  "phases": [
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 0,
+      "cpu_seconds": 0.048587747000000014,
+      "evidence": "exploratory/pair-widths.json",
+      "peak_rss_kib": 92204,
+      "phase": "exploratory/pair-widths.json",
+      "search_states": 42000
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 0,
+      "cpu_seconds": 0.04544121799999995,
+      "evidence": "exploratory/random-frontiers.json",
+      "peak_rss_kib": 92208,
+      "phase": "exploratory/random-frontiers.json",
+      "search_states": 45522
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 2756,
+      "cpu_seconds": 0.4674489130000001,
+      "evidence": "pilot.json",
+      "peak_rss_kib": 93232,
+      "phase": "pilot",
+      "search_states": 8446
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 77475,
+      "cpu_seconds": 3.0647049229999994,
+      "evidence": "coarse-clock-observation.json",
+      "peak_rss_kib": 95280,
+      "phase": "coarse-clock pass",
+      "search_states": 76922
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 77475,
+      "cpu_seconds": 3.0897372089999995,
+      "evidence": "campaign/summary.json",
+      "peak_rss_kib": 95276,
+      "phase": "repaired campaign",
+      "search_states": 76922
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 90386,
+      "cpu_seconds": 0.355043058,
+      "evidence": "validation.json",
+      "peak_rss_kib": 95152,
+      "phase": "validation.json",
+      "search_states": 41155
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 72067,
+      "cpu_seconds": 0.03834555900000003,
+      "evidence": "source-schemas.json",
+      "peak_rss_kib": 92720,
+      "phase": "source-schemas.json",
+      "search_states": 2028
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 123750,
+      "cpu_seconds": 0.031652707999999974,
+      "evidence": "exchange-conditions.json",
+      "peak_rss_kib": 92200,
+      "phase": "exchange-conditions.json",
+      "search_states": 0
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 90,
+      "cpu_seconds": 0.0,
+      "evidence": "pairing-boundary.json",
+      "peak_rss_kib": 92332,
+      "phase": "pairing-boundary.json",
+      "search_states": 10
+    },
+    {
+      "accounting_kind": "conservative allowance, not a measurement",
+      "checker_obligations": 0,
+      "cpu_seconds": 10.0,
+      "evidence": "research-plan accounting allowance",
+      "peak_rss_kib": null,
+      "phase": "uninstrumented small exploratory probe",
+      "search_states": 100
+    },
+    {
+      "accounting_kind": "additional conservative allowance; observed 0 CPU is not zero cost",
+      "checker_obligations": 0,
+      "cpu_seconds": 1.0,
+      "evidence": "pairing-boundary.json",
+      "peak_rss_kib": null,
+      "phase": "zero-quantized pairing clock allowance",
+      "search_states": 0
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 384654,
+      "cpu_seconds": 16.447945999999998,
+      "evidence": "cumulative ledger record; detailed report superseded by final reproduction-report.json",
+      "peak_rss_kib": 95400,
+      "phase": "prior clean extraction, including resume and optional pilot/export",
+      "search_states": 128717
+    },
+    {
+      "accounting_kind": "conservative allowance, not a measurement",
+      "checker_obligations": 1000,
+      "cpu_seconds": 60.0,
+      "evidence": "explicit closure allowance",
+      "peak_rss_kib": null,
+      "phase": "prior process-startup and finite administrative checks",
+      "search_states": 1000
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 142687,
+      "cpu_seconds": 0.9398754920000001,
+      "evidence": "unrestricted-grid-validation.json",
+      "peak_rss_kib": 96176,
+      "phase": "unrestricted-grid validation and full-shuffle oracle",
+      "search_states": 39239
+    },
+    {
+      "accounting_kind": "measured",
+      "checker_obligations": 141239,
+      "cpu_seconds": 0.40171033199999995,
+      "evidence": "unrestricted-baseline.json",
+      "peak_rss_kib": 97836,
+      "phase": "unrestricted progress-grid baseline on frozen inputs",
+      "search_states": 14015
+    },
+    {
+      "accounting_kind": "measured child-process total; includes process startup",
+      "checker_obligations": 668580,
+      "cpu_seconds": 19.110643,
+      "evidence": "reproduction-report.json",
+      "peak_rss_kib": 106028,
+      "phase": "final clean standalone extraction and exact-output recheck",
+      "search_states": 181639
+    }
+  ],
+  "scope": "frozen scientific campaign through the designated clean standalone reproduction; later duplicate post-handoff review replays are disclosed separately in post-handoff-audit.json",
+  "within_count_cpu_memory_limits": true
+}

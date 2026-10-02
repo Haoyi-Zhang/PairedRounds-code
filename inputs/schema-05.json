@@ -1,0 +1,50 @@
+{
+  "duration_provenance": "synthetic rational values; no device measurements",
+  "grammar": "paired-two-chain",
+  "group": "source-inspired",
+  "id": "schema-05",
+  "resources": [
+    "C1",
+    "C2",
+    "L"
+  ],
+  "source_schema": "load-consumer-reuse",
+  "stages": [
+    {
+      "c1": {
+        "hi": "2",
+        "lo": "3/2"
+      },
+      "c2": {
+        "hi": "4",
+        "lo": "3"
+      },
+      "p1": {
+        "hi": "1",
+        "lo": "3/4"
+      },
+      "p2": {
+        "hi": "2",
+        "lo": "3/2"
+      }
+    },
+    {
+      "c1": {
+        "hi": "5",
+        "lo": "15/4"
+      },
+      "c2": {
+        "hi": "5",
+        "lo": "15/4"
+      },
+      "p1": {
+        "hi": "2",
+        "lo": "3/2"
+      },
+      "p2": {
+        "hi": "3",
+        "lo": "9/4"
+      }
+    }
+  ]
+}

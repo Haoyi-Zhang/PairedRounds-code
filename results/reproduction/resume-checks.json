@@ -1,0 +1,186 @@
+{
+  "checker_obligations": 15495,
+  "checks": [
+    {
+      "cpu_seconds": 0.004002612999999933,
+      "id": "schema-01",
+      "obligations": 121
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-02",
+      "obligations": 263
+    },
+    {
+      "cpu_seconds": 0.0039746389999999465,
+      "id": "schema-03",
+      "obligations": 405
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-04",
+      "obligations": 547
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-05",
+      "obligations": 81
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-06",
+      "obligations": 201
+    },
+    {
+      "cpu_seconds": 0.000356397999999869,
+      "id": "schema-07",
+      "obligations": 343
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-08",
+      "obligations": 485
+    },
+    {
+      "cpu_seconds": 0.00047220599999997503,
+      "id": "schema-09",
+      "obligations": 81
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-10",
+      "obligations": 161
+    },
+    {
+      "cpu_seconds": 0.0004925930000001522,
+      "id": "schema-11",
+      "obligations": 241
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "schema-12",
+      "obligations": 321
+    },
+    {
+      "cpu_seconds": 0.0005578559999999122,
+      "id": "stress-01",
+      "obligations": 241
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-02",
+      "obligations": 556
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-03",
+      "obligations": 995
+    },
+    {
+      "cpu_seconds": 0.003959193999999888,
+      "id": "stress-04",
+      "obligations": 2635
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-05",
+      "obligations": 192
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-06",
+      "obligations": 334
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-07",
+      "obligations": 476
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-08",
+      "obligations": 831
+    },
+    {
+      "cpu_seconds": 0.0004122330000000396,
+      "id": "stress-09",
+      "obligations": 121
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-10",
+      "obligations": 201
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-11",
+      "obligations": 281
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-12",
+      "obligations": 481
+    },
+    {
+      "cpu_seconds": 0.00037874900000001155,
+      "id": "stress-13",
+      "obligations": 192
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-14",
+      "obligations": 334
+    },
+    {
+      "cpu_seconds": 0.0004940700000000131,
+      "id": "stress-15",
+      "obligations": 476
+    },
+    {
+      "cpu_seconds": 0.0016732649999999794,
+      "id": "stress-16",
+      "obligations": 831
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-17",
+      "obligations": 161
+    },
+    {
+      "cpu_seconds": 0.00483794500000001,
+      "id": "stress-18",
+      "obligations": 272
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-19",
+      "obligations": 352
+    },
+    {
+      "cpu_seconds": 0.0015740959999999138,
+      "id": "stress-20",
+      "obligations": 636
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-21",
+      "obligations": 121
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-22",
+      "obligations": 303
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-23",
+      "obligations": 476
+    },
+    {
+      "cpu_seconds": 0.0,
+      "id": "stress-24",
+      "obligations": 747
+    }
+  ],
+  "cpu_seconds": 0.023185856999999643
+}

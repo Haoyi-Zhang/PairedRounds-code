@@ -1,0 +1,202 @@
+{
+  "branch_bound": {
+    "initialization_states": 6,
+    "orders": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pruned": 10,
+    "tree_states": 21,
+    "value": "46"
+  },
+  "certificate_bytes": 2468,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 11,
+    "obligations": 343,
+    "transitions": 18,
+    "value": "46",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 1715,
+    "search_states": 652
+  },
+  "cpu_seconds": 0.01599203299999985,
+  "edge_bound": 33,
+  "endpoint_bits": 5,
+  "events": 24,
+  "group": "source-inspired",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "relative_gap": "2/23",
+      "states": 6,
+      "value": "50"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "46"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "46"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "3/46",
+      "states": 6,
+      "value": "49"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 18,
+      "value": "46"
+    }
+  },
+  "id": "schema-07",
+  "oracle": {
+    "event_evaluations": 1536,
+    "leaves": 64,
+    "tree_states": 127,
+    "value": "46"
+  },
+  "peak_rss_kib": 94516,
+  "rounds": 6,
+  "source_schema": "load-consumer-reuse",
+  "state_bits": 6,
+  "terminal_frontier": [
+    [
+      "41",
+      "46"
+    ],
+    [
+      "48",
+      "45"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      83974,
+      140172,
+      99656,
+      82131,
+      81455
+    ],
+    "branch-bound": [
+      343094,
+      304026,
+      298593,
+      298470,
+      314666
+    ],
+    "checker": [
+      1286486,
+      764837,
+      762506,
+      661845,
+      652235
+    ],
+    "earliest-release": [
+      38030,
+      36659,
+      36660,
+      37000,
+      36380
+    ],
+    "fixed12": [
+      28025,
+      26762,
+      26680,
+      26606,
+      26690
+    ],
+    "fixed21": [
+      28465,
+      27129,
+      26635,
+      26527,
+      26691
+    ],
+    "greedy-makespan": [
+      95892,
+      92580,
+      92018,
+      91597,
+      91447
+    ],
+    "merge": [
+      436495,
+      3018405,
+      478682,
+      420933,
+      414225
+    ],
+    "oracle": [
+      5117789
+    ],
+    "sort": [
+      314685,
+      288150,
+      285339,
+      310296,
+      287247
+    ]
+  },
+  "value": "46",
+  "widths": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

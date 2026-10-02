@@ -1,0 +1,202 @@
+{
+  "branch_bound": {
+    "initialization_states": 6,
+    "orders": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pruned": 10,
+    "tree_states": 21,
+    "value": "46"
+  },
+  "certificate_bytes": 2468,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 11,
+    "obligations": 343,
+    "transitions": 18,
+    "value": "46",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 1715,
+    "search_states": 652
+  },
+  "cpu_seconds": 0.005932252000000027,
+  "edge_bound": 33,
+  "endpoint_bits": 5,
+  "events": 24,
+  "group": "source-inspired",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "relative_gap": "2/23",
+      "states": 6,
+      "value": "50"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "46"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "46"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "3/46",
+      "states": 6,
+      "value": "49"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 18,
+      "value": "46"
+    }
+  },
+  "id": "schema-07",
+  "oracle": {
+    "event_evaluations": 1536,
+    "leaves": 64,
+    "tree_states": 127,
+    "value": "46"
+  },
+  "peak_rss_kib": 93868,
+  "rounds": 6,
+  "source_schema": "load-consumer-reuse",
+  "state_bits": 6,
+  "terminal_frontier": [
+    [
+      "41",
+      "46"
+    ],
+    [
+      "48",
+      "45"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      51237,
+      50366,
+      49845,
+      50596,
+      49335
+    ],
+    "branch-bound": [
+      209776,
+      187954,
+      182325,
+      203437,
+      185019
+    ],
+    "checker": [
+      380104,
+      396789,
+      356247,
+      370369,
+      438341
+    ],
+    "earliest-release": [
+      23235,
+      23435,
+      22664,
+      22854,
+      22494
+    ],
+    "fixed12": [
+      17537,
+      16565,
+      16315,
+      16465,
+      16114
+    ],
+    "fixed21": [
+      17266,
+      16275,
+      16635,
+      16205,
+      16505
+    ],
+    "greedy-makespan": [
+      57818,
+      70256,
+      60622,
+      55444,
+      56045
+    ],
+    "merge": [
+      255896,
+      239762,
+      252020,
+      231549,
+      228345
+    ],
+    "oracle": [
+      2981248
+    ],
+    "sort": [
+      183156,
+      173853,
+      193502,
+      173362,
+      167813
+    ]
+  },
+  "value": "46",
+  "widths": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

@@ -1,0 +1,109 @@
+{
+  "checker_obligations": 90386,
+  "checks": 6776,
+  "corner_checks": 1024,
+  "correlation_negative": {
+    "actual": "4",
+    "box": "5"
+  },
+  "cpu_seconds": 0.609540811,
+  "generic_diagonal_width": 4096,
+  "greedy_negative": {
+    "exact": "14",
+    "greedy": "15"
+  },
+  "interval_sensitivity_cases": 144,
+  "mutation_results": [
+    {
+      "name": "missing-layer",
+      "rejected": true
+    },
+    {
+      "name": "unreachable-coordinate",
+      "rejected": true
+    },
+    {
+      "name": "missing-branch",
+      "rejected": true
+    },
+    {
+      "name": "invalid-dominator",
+      "rejected": true
+    },
+    {
+      "name": "invalid-parent",
+      "rejected": true
+    },
+    {
+      "name": "nonbinary-order",
+      "rejected": true
+    },
+    {
+      "name": "boolean-order",
+      "rejected": true
+    },
+    {
+      "name": "false-lower-bound",
+      "rejected": true
+    },
+    {
+      "name": "false-upper-bound",
+      "rejected": true
+    },
+    {
+      "name": "wrong-incumbent",
+      "rejected": true
+    },
+    {
+      "name": "malformed-layer",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-frontier-node",
+      "rejected": true
+    },
+    {
+      "name": "unsupported-constraint",
+      "rejected": true
+    },
+    {
+      "name": "third-compute-resource",
+      "rejected": true
+    },
+    {
+      "name": "invalid-interval",
+      "rejected": true
+    },
+    {
+      "name": "endpoint-width",
+      "rejected": true
+    },
+    {
+      "name": "oversized-rational",
+      "rejected": true
+    },
+    {
+      "name": "identity-mismatch",
+      "rejected": true
+    }
+  ],
+  "pair_cases": 5103,
+  "peak_rss_kib": 95144,
+  "random_cases": 56,
+  "search_states": 41155,
+  "sharp_widths": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "workers": 1
+}

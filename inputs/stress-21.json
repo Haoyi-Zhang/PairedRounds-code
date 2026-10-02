@@ -1,0 +1,68 @@
+{
+  "duration_provenance": "synthetic rational values; no device measurements",
+  "grammar": "paired-two-chain",
+  "group": "mixed-rational",
+  "id": "stress-21",
+  "resources": [
+    "C1",
+    "C2",
+    "L"
+  ],
+  "source_schema": "none",
+  "stages": [
+    {
+      "c1": {
+        "hi": "26/5",
+        "lo": "39/10"
+      },
+      "c2": {
+        "hi": "24",
+        "lo": "18"
+      },
+      "p1": {
+        "hi": "80/7",
+        "lo": "60/7"
+      },
+      "p2": {
+        "hi": "95/7",
+        "lo": "285/28"
+      }
+    },
+    {
+      "c1": {
+        "hi": "10",
+        "lo": "15/2"
+      },
+      "c2": {
+        "hi": "34/3",
+        "lo": "17/2"
+      },
+      "p1": {
+        "hi": "1",
+        "lo": "3/4"
+      },
+      "p2": {
+        "hi": "55/7",
+        "lo": "165/28"
+      }
+    },
+    {
+      "c1": {
+        "hi": "2",
+        "lo": "3/2"
+      },
+      "c2": {
+        "hi": "48/7",
+        "lo": "36/7"
+      },
+      "p1": {
+        "hi": "16/11",
+        "lo": "12/11"
+      },
+      "p2": {
+        "hi": "52/5",
+        "lo": "39/5"
+      }
+    }
+  ]
+}

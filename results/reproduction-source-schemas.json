@@ -1,0 +1,105 @@
+{
+  "checker_obligations": 72067,
+  "cpu_seconds": 0.07886537700000007,
+  "mutations_rejected": [
+    "missing-chain-edge",
+    "extra-cross-compute-wait",
+    "third-compute-resource",
+    "launch-only-completion",
+    "collective-target",
+    "unpaired-link-policy",
+    "contingent-duration"
+  ],
+  "order_words": 1020,
+  "peak_rss_kib": 93356,
+  "schema_count": 12,
+  "schemas": [
+    {
+      "edge_bound": 9,
+      "events": 8,
+      "id": "schema-01",
+      "order_words": 4,
+      "rounds": 2
+    },
+    {
+      "edge_bound": 21,
+      "events": 16,
+      "id": "schema-02",
+      "order_words": 16,
+      "rounds": 4
+    },
+    {
+      "edge_bound": 33,
+      "events": 24,
+      "id": "schema-03",
+      "order_words": 64,
+      "rounds": 6
+    },
+    {
+      "edge_bound": 45,
+      "events": 32,
+      "id": "schema-04",
+      "order_words": 256,
+      "rounds": 8
+    },
+    {
+      "edge_bound": 9,
+      "events": 8,
+      "id": "schema-05",
+      "order_words": 4,
+      "rounds": 2
+    },
+    {
+      "edge_bound": 21,
+      "events": 16,
+      "id": "schema-06",
+      "order_words": 16,
+      "rounds": 4
+    },
+    {
+      "edge_bound": 33,
+      "events": 24,
+      "id": "schema-07",
+      "order_words": 64,
+      "rounds": 6
+    },
+    {
+      "edge_bound": 45,
+      "events": 32,
+      "id": "schema-08",
+      "order_words": 256,
+      "rounds": 8
+    },
+    {
+      "edge_bound": 9,
+      "events": 8,
+      "id": "schema-09",
+      "order_words": 4,
+      "rounds": 2
+    },
+    {
+      "edge_bound": 21,
+      "events": 16,
+      "id": "schema-10",
+      "order_words": 16,
+      "rounds": 4
+    },
+    {
+      "edge_bound": 33,
+      "events": 24,
+      "id": "schema-11",
+      "order_words": 64,
+      "rounds": 6
+    },
+    {
+      "edge_bound": 45,
+      "events": 32,
+      "id": "schema-12",
+      "order_words": 256,
+      "rounds": 8
+    }
+  ],
+  "scope": "restricted declared macro contracts, not CUDA extraction or hardware validation",
+  "search_states": 2028,
+  "workers": 1
+}
