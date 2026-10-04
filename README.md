@@ -159,8 +159,3 @@ review replay is disclosed separately in `results/post-handoff-audit.json`; it c
 no scientific input or result and is not used to obscure the original campaign ceiling.
 None of these records is a submission decision, external review, or hardware
 validation.
-
-Substantive AI assistance covered research reasoning, proof development, code,
-experiments, writing, and artifact preparation.  Human authors must independently
-assess correctness, authorship, disclosure, originality, and venue requirements
-before any external use.
