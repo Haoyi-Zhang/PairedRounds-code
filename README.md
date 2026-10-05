@@ -154,7 +154,11 @@ comparison to all shuffles.
 `results/reproduction-report.json` records the final fresh standalone extraction, and
 `results/reproduction-comparison.json` is the machine-generated exact-field comparison.
 `results/resource-accounting.json` freezes the original campaign, validation, repairs,
-unrestricted boundary work, and its designated clean repetition.  A later duplicate
+unrestricted boundary work, and its designated clean repetition. Its counters retain
+their original measurement scope; `counter_corrections` gives the two unrestricted
+all-call counts derived from the saved certificates. Current entry points include
+those calls. The reproduction comparator translates these two old counter schemas
+before comparing; it does not ignore changed scientific results. A later duplicate
 review replay is disclosed separately in `results/post-handoff-audit.json`; it changed
 no scientific input or result and is not used to obscure the original campaign ceiling.
 None of these records is a submission decision, external review, or hardware

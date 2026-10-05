@@ -23,6 +23,34 @@ def canonical(value: Any) -> Any:
     return value
 
 
+def normalize_accounting(value: Any, report: str, results: Path) -> Any:
+    """Convert the two retained v1 counters without changing scientific values."""
+    if report.startswith("reproduction-"):
+        report = report[len("reproduction-"):]
+    if report not in {"unrestricted-grid-validation.json", "unrestricted-baseline.json"}:
+        return value
+    version = value.get("accounting_version", 1)
+    if version not in (1, 2):
+        raise ValueError("unsupported unrestricted accounting version")
+    certs = results / "campaign" / "certificates"
+    names = [case["id"] for case in value["cases"]]
+    paired_states = sum(load(certs / (name + ".json"))["transitions"] for name in names)
+    if report == "unrestricted-grid-validation.json":
+        if version == 1:
+            baseline = load(results / "unrestricted-baseline.json")
+            fixture, = [case for case in baseline["cases"] if case["id"] == names[0]]
+            value["counts"]["search_states"] += paired_states + fixture["generated_transitions"]
+            value["counts"]["checker_obligations"] += fixture["checker_obligations"]
+    elif version == 1:
+        value["paired_search_states"] = paired_states
+        value["search_states"] = value["total_generated_transitions"] + paired_states
+    elif (value["paired_search_states"] != paired_states
+          or value["search_states"] != value["total_generated_transitions"] + paired_states):
+        raise ValueError("unrestricted baseline accounting does not match its components")
+    value["accounting_version"] = 2
+    return value
+
+
 def require_equal(left: Path, right: Path, *, canonicalize: bool = True) -> None:
     if not left.is_file() or not right.is_file():
         raise ValueError(f"missing comparison input: {left} or {right}")
@@ -30,6 +58,8 @@ def require_equal(left: Path, right: Path, *, canonicalize: bool = True) -> None
         a, b = load(left), load(right)
         if canonicalize:
             a, b = canonical(a), canonical(b)
+            a = normalize_accounting(a, left.name, left.parent)
+            b = normalize_accounting(b, left.name, left.parent)
         if a != b:
             raise ValueError(f"scientific evidence differs: {left} vs {right}")
     elif left.read_bytes() != right.read_bytes():
@@ -96,6 +126,7 @@ def main() -> int:
         "example_certificate_equal": True,
         "figure_sources_equal": len(figure_names),
         "ignored_measurement_fields": sorted(NOISY_KEYS),
+        "accounting_normalization": "two unrestricted v1 reports converted from retained certificate counts",
         "scope": (
             "exact claim-critical reproduction comparison; ignores only explicitly noisy "
             "CPU, wall-time, and peak-RSS measurements"

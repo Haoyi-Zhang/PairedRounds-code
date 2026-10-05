@@ -60,6 +60,7 @@ def run():
     for obj in all_instances():
         rows = decode(obj)
         paired = solve(obj)
+        counts["search_states"] += paired["transitions"]
         cert = solve_unrestricted(obj)
         checked = check_unrestricted(obj, cert)
         terminal = [tuple(F(z) for z in xy) for xy in checked["terminal_frontier"]]
@@ -103,6 +104,7 @@ def run():
     # Mutation attacks target every obligation class added by this certificate.
     obj = all_instances()[0]
     valid = solve_unrestricted(obj)
+    counts["search_states"] += valid["generated_transitions"]
     mutations = []
     def add(name, change):
         cert = copy.deepcopy(valid)
@@ -118,6 +120,7 @@ def run():
     add("bad-word", lambda c: c["word"].__setitem__(0, 2 if c["word"][0] == 1 else 1))
     mutation_results = []
     valid_checked = check_unrestricted(obj, valid)
+    counts["checker_obligations"] += valid_checked["obligations"]
     for name, cert in mutations:
         try:
             check_unrestricted(obj, cert)
@@ -146,6 +149,7 @@ def run():
         "mutation_results": mutation_results,
         "cases": cases,
         "counts": counts,
+        "accounting_version": 2,
         "cpu_seconds": time.process_time() - begin,
         "peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
         "workers": 1,

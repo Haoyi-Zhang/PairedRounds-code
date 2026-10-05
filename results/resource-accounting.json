@@ -12,7 +12,7 @@
   },
   "maximum_measured_peak_rss_kib": 106028,
   "notes": [
-    "Scientific state counts include every retained exploratory, campaign, repair, boundary-baseline and clean-reproduction pass; no superseded run is erased.",
+    "The recorded counters cover the listed phases. They are not complete all-call totals: the two unrestricted entries omit paired candidates, and validation also omits fixture preparation. The counter corrections below are derived from retained certificates, not new runtime measurements; other historical phases have not been recounted.",
     "A search state counts a visited search node, propagated candidate, or explicitly enumerated word according to the producing method; theorem operation bounds are separate.",
     "Clean child CPU includes interpreter/process startup. Internal CPU fields from that clean run are not charged a second time.",
     "Prior small startup/administrative costs and one uninstrumented probe retain explicit conservative allowances; allowances are not measured runtimes.",
@@ -169,5 +169,21 @@
     }
   ],
   "scope": "frozen scientific campaign through the designated clean standalone reproduction; later duplicate post-handoff review replays are disclosed separately in post-handoff-audit.json",
-  "within_count_cpu_memory_limits": true
+  "within_recorded_count_cpu_memory_limits": true,
+  "counter_corrections": {
+    "basis": "deterministic recomputation from retained paired certificates and the first unrestricted fixture; not an experimental rerun",
+    "unrestricted_grid_validation": {
+      "paired_search_states": 840,
+      "fixture_search_states": 16,
+      "fixture_checker_obligations": 181,
+      "all_call_search_states": 40095,
+      "all_call_checker_obligations": 142868
+    },
+    "unrestricted_baseline": {
+      "grid_generated_transitions": 14015,
+      "paired_search_states": 840,
+      "all_call_search_states": 14855,
+      "checker_obligations": 141239
+    }
+  }
 }

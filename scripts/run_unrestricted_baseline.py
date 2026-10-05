@@ -22,9 +22,10 @@ def main():
     constrain()
     begin = time.process_time()
     cases = []
-    search_states = checker_obligations = 0
+    search_states = paired_search_states = checker_obligations = 0
     for obj in all_instances():
         paired = solve(obj)
+        paired_search_states += paired["transitions"]
         cert = solve_unrestricted(obj)
         checked = check_unrestricted(obj, cert)
         p, u = F(paired["upper_bound"]), F(checked["value"])
@@ -63,6 +64,9 @@ def main():
         "max_frontier": max(c["max_frontier"] for c in cases),
         "total_nodes": sum(c["nodes"] for c in cases),
         "total_generated_transitions": search_states,
+        "search_states": search_states + paired_search_states,
+        "paired_search_states": paired_search_states,
+        "accounting_version": 2,
         "total_coverage_pointers": sum(c["coverage_pointers"] for c in cases),
         "checker_obligations": checker_obligations,
         "cases": cases,
