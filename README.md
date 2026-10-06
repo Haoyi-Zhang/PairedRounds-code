@@ -104,6 +104,20 @@ than the merge solver on these small cases, so no fastest-solver claim is made.
 
 ## Trust boundary
 
+The reset subfamily requires **both** `b <= p` and `a <= q` in every round;
+neither inequality alone guarantees width two. A separate regression checks the
+two one-sided counterexamples, all 6,561 two-round assignments with durations in
+`{1,2,3}`, and their exact event-DAG frontiers:
+
+```sh
+python -B tests/reset_conditions.py results/reproduction-reset-conditions.json
+```
+
+These checks do not alter the frozen 36-case inputs, timing aggregates, or
+historical resource ledger. The `scientific-checks.yml` workflow runs the bounded
+finite suites and campaign from the flat artifact root on Ubuntu 24.04, compares
+exact campaign evidence, and uploads raw output even when a check fails.
+
 Inputs admit 1--12 rounds, exactly resources `C1`, `C2`, and `L`, no additional
 precedence constraints, nonnegative interval lower endpoints, and positive upper
 endpoints.  Endpoint numerators and denominators are each limited to 64 bits;

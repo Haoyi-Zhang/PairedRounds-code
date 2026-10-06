@@ -267,6 +267,15 @@ ordered image, so the union frontier has at most two states at every round. The
 one-round (1,1,1,1) example attains two. This is a reset subfamily, not the assumption
 behind the general k+1 bound.
 
+Both inequalities are required for that width-two guarantee. The two rounds
+(1,1,1,2),(3,1,1,1) satisfy b<=p in every round but have the terminal frontier
+{(6,7),(7,6),(8,5)}. Swapping stream roles gives rounds (1,1,2,1),(1,3,1,1),
+which satisfy a<=q in every round and have frontier {(5,8),(6,7),(7,6)}.
+The separate reset regression compares both counterexamples and all 6,561
+two-round duration assignments in {1,2,3}^8 with full event-DAG enumeration.
+This bounded check is separate from the frozen performance campaign; the
+general two-inequality guarantee is the argument above, not a finite inference.
+
 Neither branch uniformly coordinatewise dominates the other for strictly positive
 durations and arbitrary entry states. M12's lower-left entry exceeds M21's by a+p;
 M21's upper-right entry exceeds M12's by b+q. Making the respective input coordinate
