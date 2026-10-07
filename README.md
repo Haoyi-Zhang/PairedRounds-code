@@ -81,6 +81,20 @@ python -B scripts/check_reproduction.py --paired-only --campaign runs/paired/cam
 
 ## Retained evidence
 
+The current paired checker reuses an independently evaluated four-event DAG
+transition within one layer, keyed by already validated parent and strict binary
+order. Boolean/float orders are rejected before lookup. All retained reachability,
+branch coverage, domination, antichain and terminal checks remain; incumbent replay
+is still separate. Public `obligations`/`transitions` count the same semantic
+checks, not newly measured evaluator calls. The layer holds at most twice the
+previous frontier size. No time/peak-memory gain is claimed; all timings and native
+receipts below remain original, before this reuse change.
+
+Three new standalone finite methods include an independent full-event exhaustive
+oracle and invalid numeric-key collisions. Run `python -B tests/test_transition_cache.py -v`.
+This is a separate required CI step before the unchanged historical finite suites;
+it is not silently counted as part of `validation.py` or its frozen denominators.
+
 `inputs/` contains 36 exact frozen inputs generated with seed `20260915`.  Twelve
 are source-inspired abstract schemas: three declared macro motifs at depths 2, 4,
 6, and 8.  They are not twelve published workloads or extracted traces.  The other

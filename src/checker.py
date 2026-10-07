@@ -70,12 +70,20 @@ def check(obj,cert):
         layer=layers[k];require(set(layer)=={'states','cover'},'layer keys');nodes=layer.get('states')
         require(isinstance(nodes,list) and 1<=len(nodes)<=k+1,'frontier width')
         current=[]
+        evaluated={}
+        def replay_parent(parent,order):
+            # Validate BEFORE lookup: bool and int compare equal in Python.
+            require(type(order) is int and order in (0,1),'nonbinary order')
+            key=(parent,order)
+            if key not in evaluated:
+                evaluated[key]=transition(previous[parent],d,order)
+            return evaluated[key]
         for node in nodes:
             require(isinstance(node,dict) and set(node)=={'xy','parent','order'},'node keys')
             xy=node['xy'];require(isinstance(xy,list) and len(xy)==2,'state coordinate count')
             pair=tuple(number(s) for s in xy)
             parent=node['parent'];require(type(parent) is int and 0<=parent<len(previous),'bad parent')
-            expected=transition(previous[parent],d,node['order']);obligations+=9
+            expected=replay_parent(parent,node['order']);obligations+=9
             require(pair==expected,'unreachable retained state')
             if current:require(current[-1][0]<pair[0] and current[-1][1]>pair[1],'not a strict antichain')
             current.append(pair)
@@ -85,7 +93,7 @@ def check(obj,cert):
             require(isinstance(cover[i],list) and len(cover[i])==2,'missing binary branch')
             for order in (0,1):
                 index=cover[i][order];require(type(index) is int and 0<=index<len(current),'invalid dominator')
-                candidate=transition(entry,d,order);transitions+=1;obligations+=11
+                candidate=replay_parent(i,order);transitions+=1;obligations+=11
                 require(all(a<=b for a,b in zip(current[index],candidate)),'false domination')
         previous=current;parsed.append(current)
     terminal=cert.get('terminal');require(type(terminal) is int and 0<=terminal<len(previous),'terminal')
