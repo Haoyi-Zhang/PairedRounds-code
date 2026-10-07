@@ -1,0 +1,156 @@
+{
+  "instance_id": "stress-11",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "18",
+            "41"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "76",
+            "101"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "102",
+            "150"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "162",
+            "189"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "201",
+            "212"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "221",
+            "250"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 0,
+          "parent": 0,
+          "xy": [
+            "252",
+            "304"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "304",
+  "orders": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "terminal": 0,
+  "transitions": 14,
+  "upper_bound": "304"
+}

@@ -1,0 +1,170 @@
+{
+  "branch_bound": {
+    "initialization_states": 2,
+    "orders": [
+      0,
+      0
+    ],
+    "pruned": 2,
+    "tree_states": 5,
+    "value": "14"
+  },
+  "certificate_bytes": 817,
+  "checker": {
+    "max_frontier": 1,
+    "nodes": 3,
+    "obligations": 81,
+    "transitions": 4,
+    "value": "14",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 405,
+    "search_states": 152
+  },
+  "cpu_seconds": 0.0,
+  "edge_bound": 9,
+  "endpoint_bits": 4,
+  "events": 8,
+  "group": "source-inspired",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1
+      ],
+      "relative_gap": "1/7",
+      "states": 2,
+      "value": "16"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 2,
+      "value": "14"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 2,
+      "value": "14"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1
+      ],
+      "relative_gap": "1/7",
+      "states": 2,
+      "value": "16"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "14"
+    }
+  },
+  "id": "schema-05",
+  "oracle": {
+    "event_evaluations": 32,
+    "leaves": 4,
+    "tree_states": 7,
+    "value": "14"
+  },
+  "peak_rss_kib": 32812.0,
+  "rounds": 2,
+  "source_schema": "load-consumer-reuse",
+  "state_bits": 4,
+  "terminal_frontier": [
+    [
+      "10",
+      "14"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      12600,
+      11200,
+      11300,
+      11300,
+      10800
+    ],
+    "branch-bound": [
+      49400,
+      43800,
+      41600,
+      40700,
+      41500
+    ],
+    "checker": [
+      114800,
+      103300,
+      99700,
+      98500,
+      96900
+    ],
+    "earliest-release": [
+      8400,
+      7900,
+      7700,
+      8200,
+      8000
+    ],
+    "fixed12": [
+      6600,
+      6000,
+      5800,
+      5900,
+      5800
+    ],
+    "fixed21": [
+      6800,
+      6000,
+      6100,
+      6000,
+      6200
+    ],
+    "greedy-makespan": [
+      20600,
+      18800,
+      18900,
+      19100,
+      18800
+    ],
+    "merge": [
+      85100,
+      74800,
+      72000,
+      71100,
+      68900
+    ],
+    "oracle": [
+      72900
+    ],
+    "sort": [
+      57600,
+      48900,
+      45900,
+      46300,
+      45600
+    ]
+  },
+  "value": "14",
+  "widths": [
+    1,
+    1,
+    1
+  ],
+  "workers": 1
+}

@@ -1,0 +1,209 @@
+{
+  "branch_bound": {
+    "initialization_states": 7,
+    "orders": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "pruned": 7,
+    "tree_states": 15,
+    "value": "92"
+  },
+  "certificate_bytes": 3246,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 15,
+    "obligations": 476,
+    "transitions": 26,
+    "value": "92",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 2380,
+    "search_states": 870
+  },
+  "cpu_seconds": 0.015625,
+  "edge_bound": 39,
+  "endpoint_bits": 5,
+  "events": 28,
+  "group": "reset",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "3/92",
+      "states": 7,
+      "value": "95"
+    },
+    "earliest-release": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "0",
+      "states": 7,
+      "value": "92"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "1/92",
+      "states": 7,
+      "value": "93"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "0",
+      "states": 7,
+      "value": "92"
+    },
+    "greedy-makespan": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "0",
+      "states": 21,
+      "value": "92"
+    }
+  },
+  "id": "stress-07",
+  "oracle": {
+    "event_evaluations": 3584,
+    "leaves": 128,
+    "tree_states": 255,
+    "value": "92"
+  },
+  "peak_rss_kib": 33956.0,
+  "rounds": 7,
+  "source_schema": "none",
+  "state_bits": 7,
+  "terminal_frontier": [
+    [
+      "87",
+      "93"
+    ],
+    [
+      "92",
+      "85"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      57900,
+      56600,
+      56300,
+      56400,
+      56400
+    ],
+    "branch-bound": [
+      160900,
+      152800,
+      151400,
+      151100,
+      176500
+    ],
+    "checker": [
+      456600,
+      443400,
+      440900,
+      433100,
+      434200
+    ],
+    "earliest-release": [
+      24900,
+      24100,
+      24000,
+      25600,
+      24500
+    ],
+    "fixed12": [
+      19000,
+      18100,
+      18300,
+      18100,
+      18100
+    ],
+    "fixed21": [
+      18700,
+      18200,
+      18000,
+      17900,
+      17900
+    ],
+    "greedy-makespan": [
+      65400,
+      63500,
+      63600,
+      63500,
+      63500
+    ],
+    "merge": [
+      299600,
+      290400,
+      415900,
+      287600,
+      285100
+    ],
+    "oracle": [
+      7255500
+    ],
+    "sort": [
+      202200,
+      197000,
+      192500,
+      192500,
+      192000
+    ]
+  },
+  "value": "92",
+  "widths": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

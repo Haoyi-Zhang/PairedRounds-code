@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def write_table(path: Path, columns: str, header: str, rows: list[str]) -> None:
     path.write_text('\n'.join([r'\begin{tabular}{'+columns+'}', r'\toprule',
-        header+r'\\\midrule', *rows, r'\bottomrule', r'\end{tabular}'])+'\n')
+        header+r'\\\midrule', *rows, r'\bottomrule', r'\end{tabular}'])+'\n', newline='\n')
 
 def trace_diagram(path: Path) -> None:
     data = json.loads((ROOT/'results/pairing-boundary.json').read_text())
@@ -36,14 +36,15 @@ def trace_diagram(path: Path) -> None:
             out.append(fr'\draw ({x},{base-.55:g})--({x},{base-.7:g}) node[below] {{{x}}};')
         out.append(fr'\node[anchor=west] at (0,{base+3.1:g}) {{{label}}};')
     out.append(r'\end{tikzpicture}')
-    path.write_text('\n'.join(out)+'\n')
+    path.write_text('\n'.join(out)+'\n', newline='\n')
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True, type=Path)
+    parser.add_argument('--campaign', type=Path, default=ROOT/'results/host-campaign')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    summary = json.loads((ROOT/'results/campaign/summary.json').read_text())
+    summary = json.loads((args.campaign/'summary.json').read_text())
     validation = json.loads((ROOT/'results/validation.json').read_text())
     with (args.output/'widths.csv').open('w', newline='') as stream:
         writer = csv.writer(stream)
@@ -68,7 +69,7 @@ def main() -> None:
     write_table(args.output/'timing-table.tex','lrrr',
                 'Method & Median case & Min. case & Max. case',rows)
     rows = []
-    for record in sorted((ROOT/'results/campaign/cases').glob('*.json')):
+    for record in sorted((args.campaign/'cases').glob('*.json')):
         case = json.loads(record.read_text())
         check = case['checker']
         rows.append(' & '.join([case['id'],labels[case['group']],str(case['rounds']),

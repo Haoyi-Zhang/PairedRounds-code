@@ -1,0 +1,202 @@
+{
+  "branch_bound": {
+    "initialization_states": 6,
+    "orders": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pruned": 10,
+    "tree_states": 21,
+    "value": "46"
+  },
+  "certificate_bytes": 2468,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 11,
+    "obligations": 343,
+    "transitions": 18,
+    "value": "46",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 1715,
+    "search_states": 652
+  },
+  "cpu_seconds": 0.015625,
+  "edge_bound": 33,
+  "endpoint_bits": 5,
+  "events": 24,
+  "group": "source-inspired",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "relative_gap": "2/23",
+      "states": 6,
+      "value": "50"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "46"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 6,
+      "value": "46"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "3/46",
+      "states": 6,
+      "value": "49"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 18,
+      "value": "46"
+    }
+  },
+  "id": "schema-07",
+  "oracle": {
+    "event_evaluations": 1536,
+    "leaves": 64,
+    "tree_states": 127,
+    "value": "46"
+  },
+  "peak_rss_kib": 32816.0,
+  "rounds": 6,
+  "source_schema": "load-consumer-reuse",
+  "state_bits": 6,
+  "terminal_frontier": [
+    [
+      "41",
+      "46"
+    ],
+    [
+      "48",
+      "45"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      46100,
+      44800,
+      45200,
+      44900,
+      44500
+    ],
+    "branch-bound": [
+      192000,
+      172200,
+      257400,
+      169400,
+      167300
+    ],
+    "checker": [
+      394400,
+      340700,
+      337400,
+      335200,
+      335900
+    ],
+    "earliest-release": [
+      21500,
+      21000,
+      21200,
+      21100,
+      21000
+    ],
+    "fixed12": [
+      16500,
+      18800,
+      15400,
+      15500,
+      15600
+    ],
+    "fixed21": [
+      16500,
+      16000,
+      15600,
+      15500,
+      15600
+    ],
+    "greedy-makespan": [
+      56200,
+      53900,
+      53600,
+      53400,
+      53400
+    ],
+    "merge": [
+      234400,
+      223700,
+      219900,
+      220700,
+      220900
+    ],
+    "oracle": [
+      3083600
+    ],
+    "sort": [
+      166300,
+      158100,
+      155700,
+      156300,
+      155800
+    ]
+  },
+  "value": "46",
+  "widths": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

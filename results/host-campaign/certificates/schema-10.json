@@ -1,0 +1,99 @@
+{
+  "instance_id": "schema-10",
+  "layers": [
+    {
+      "states": [
+        {
+          "order": null,
+          "parent": null,
+          "xy": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "9",
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "20",
+            "15"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "31",
+            "27"
+          ]
+        }
+      ]
+    },
+    {
+      "cover": [
+        [
+          0,
+          0
+        ]
+      ],
+      "states": [
+        {
+          "order": 1,
+          "parent": 0,
+          "xy": [
+            "44",
+            "39"
+          ]
+        }
+      ]
+    }
+  ],
+  "lower_bound": "44",
+  "orders": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "terminal": 0,
+  "transitions": 8,
+  "upper_bound": "44"
+}

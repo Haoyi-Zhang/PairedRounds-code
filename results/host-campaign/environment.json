@@ -1,0 +1,30 @@
+{
+  "clock": {
+    "adjustable": false,
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "resolution": 1e-07
+  },
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+  "executable": "python.exe",
+  "implementation": "CPython",
+  "limits": {
+    "cpu_seconds": 300,
+    "cpu_scope": "user-mode CPU time",
+    "memory_scope": "committed virtual memory",
+    "mechanism": "Windows job object",
+    "memory_bytes": 3221225472
+  },
+  "logical_processor_affinity": [
+    0
+  ],
+  "os": "Windows-11-10.0.28000-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "system": {
+    "name": "Windows",
+    "release": "11",
+    "version": "10.0.28000",
+    "machine": "AMD64"
+  },
+  "workers": 1
+}

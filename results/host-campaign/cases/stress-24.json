@@ -1,0 +1,248 @@
+{
+  "branch_bound": {
+    "initialization_states": 12,
+    "orders": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "pruned": 355,
+    "tree_states": 727,
+    "value": "658639/1155"
+  },
+  "certificate_bytes": 5256,
+  "checker": {
+    "max_frontier": 3,
+    "nodes": 23,
+    "obligations": 747,
+    "transitions": 40,
+    "value": "658639/1155",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 3735,
+    "search_states": 12706
+  },
+  "cpu_seconds": 0.546875,
+  "edge_bound": 69,
+  "endpoint_bits": 9,
+  "events": 48,
+  "group": "mixed-rational",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "relative_gap": "29845/658639",
+      "states": 12,
+      "value": "688484/1155"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "58443/1317278",
+      "states": 12,
+      "value": "1375721/2310"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "58443/1317278",
+      "states": 12,
+      "value": "1375721/2310"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "117275/1317278",
+      "states": 12,
+      "value": "1434553/2310"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "58443/1317278",
+      "states": 36,
+      "value": "1375721/2310"
+    }
+  },
+  "id": "stress-24",
+  "oracle": {
+    "event_evaluations": 196608,
+    "leaves": 4096,
+    "tree_states": 8191,
+    "value": "658639/1155"
+  },
+  "peak_rss_kib": 33956.0,
+  "rounds": 12,
+  "source_schema": "none",
+  "state_bits": 21,
+  "terminal_frontier": [
+    [
+      "635539/1155",
+      "1336451/2310"
+    ],
+    [
+      "129233/231",
+      "658639/1155"
+    ],
+    [
+      "196409/330",
+      "187829/330"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      162500,
+      163100,
+      177600,
+      328700,
+      240100
+    ],
+    "branch-bound": [
+      5043700,
+      5100700,
+      4913100,
+      4876200,
+      4941400
+    ],
+    "checker": [
+      775400,
+      756600,
+      951100,
+      767300,
+      764200
+    ],
+    "earliest-release": [
+      50000,
+      48200,
+      47100,
+      47900,
+      47800
+    ],
+    "fixed12": [
+      40200,
+      36300,
+      35100,
+      34200,
+      34200
+    ],
+    "fixed21": [
+      37200,
+      35900,
+      35100,
+      36000,
+      36200
+    ],
+    "greedy-makespan": [
+      154400,
+      136000,
+      123100,
+      121100,
+      127600
+    ],
+    "merge": [
+      523200,
+      510200,
+      508800,
+      506800,
+      494500
+    ],
+    "oracle": [
+      497932100
+    ],
+    "sort": [
+      410000,
+      359900,
+      353000,
+      352500,
+      349700
+    ]
+  },
+  "value": "658639/1155",
+  "widths": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    2,
+    1,
+    2,
+    2,
+    2,
+    3
+  ],
+  "workers": 1
+}

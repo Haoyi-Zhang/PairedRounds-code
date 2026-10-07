@@ -5,12 +5,12 @@ Every method uses the same positive upper-endpoint instance on one CPU worker.
 No device performance is measured. Re-running to another --output retains both
 measurements for honest clean-extraction reproduction.
 """
-import argparse,csv,json,resource,statistics,sys,time
+import argparse,csv,json,statistics,sys,time
 from fractions import Fraction as F
 from pathlib import Path
 sys.dont_write_bytecode = True
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
-from budget import constrain
+from budget import constrain,environment,peak_rss_kib
 from io_contract import read_json,write_json
 from generation import all_instances
 from model import decode
@@ -64,7 +64,7 @@ def case(obj):
         'oracle':dict(value=str(oracle['value']),leaves=oracle['leaves'],tree_states=oracle['tree_states'],event_evaluations=oracle['event_evaluations']),
         'branch_bound':dict(bb,value=str(bb['value'])),'heuristics':heuristic_results,
         'timing_clock':'perf_counter_ns; elapsed wall time','timing_ns':raw,'counts':counts,'cpu_seconds':time.process_time()-start,
-        'peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'workers':1}
+        'peak_rss_kib':peak_rss_kib(),'workers':1}
     return cert,evidence
 
 def summarize(results,out):
@@ -112,9 +112,13 @@ def summarize(results,out):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,default=ROOT/'results'/'campaign')
+    parser.add_argument('--output',type=Path,default=ROOT/'results'/'reproduction')
     parser.add_argument('--resume',action='store_true',help='Reuse fully completed case chunks; never changes inputs.')
-    args=parser.parse_args();constrain();out=args.output;out.mkdir(parents=True,exist_ok=True)
+    args=parser.parse_args();out=args.output
+    if out.exists() and any(out.iterdir()) and not args.resume:
+        parser.error('Output is not empty; choose a new directory or --resume.')
+    constrain();out.mkdir(parents=True,exist_ok=True)
+    write_json(out/'environment.json',environment())
     results=[]
     resume_log=out/'resume-checks.json'
     extra=read_json(resume_log) if resume_log.exists() else {'checks':[], 'checker_obligations':0, 'cpu_seconds':0.0}

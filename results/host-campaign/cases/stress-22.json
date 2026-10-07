@@ -1,0 +1,195 @@
+{
+  "branch_bound": {
+    "initialization_states": 5,
+    "orders": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pruned": 5,
+    "tree_states": 9,
+    "value": "251948/1155"
+  },
+  "certificate_bytes": 2367,
+  "checker": {
+    "max_frontier": 2,
+    "nodes": 10,
+    "obligations": 303,
+    "transitions": 16,
+    "value": "251948/1155",
+    "verified": true
+  },
+  "counts": {
+    "checker_obligations": 1515,
+    "search_states": 468
+  },
+  "cpu_seconds": 0.0,
+  "edge_bound": 27,
+  "endpoint_bits": 9,
+  "events": 20,
+  "group": "mixed-rational",
+  "heuristics": {
+    "bottom-level": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 5,
+      "value": "251948/1155"
+    },
+    "earliest-release": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 5,
+      "value": "251948/1155"
+    },
+    "fixed12": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 5,
+      "value": "251948/1155"
+    },
+    "fixed21": {
+      "orders": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "relative_gap": "2797/62987",
+      "states": 5,
+      "value": "87712/385"
+    },
+    "greedy-makespan": {
+      "orders": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_gap": "0",
+      "states": 15,
+      "value": "251948/1155"
+    }
+  },
+  "id": "stress-22",
+  "oracle": {
+    "event_evaluations": 640,
+    "leaves": 32,
+    "tree_states": 63,
+    "value": "251948/1155"
+  },
+  "peak_rss_kib": 33956.0,
+  "rounds": 5,
+  "source_schema": "none",
+  "state_bits": 18,
+  "terminal_frontier": [
+    [
+      "242246/1155",
+      "251948/1155"
+    ],
+    [
+      "85387/385",
+      "224206/1155"
+    ]
+  ],
+  "timing_clock": "perf_counter_ns; elapsed wall time",
+  "timing_ns": {
+    "bottom-level": [
+      43800,
+      41100,
+      40400,
+      40700,
+      40200
+    ],
+    "branch-bound": [
+      124900,
+      112300,
+      109500,
+      214200,
+      118600
+    ],
+    "checker": [
+      351800,
+      334700,
+      326000,
+      325500,
+      321900
+    ],
+    "earliest-release": [
+      22400,
+      20900,
+      21000,
+      21000,
+      20800
+    ],
+    "fixed12": [
+      16900,
+      15200,
+      15100,
+      15000,
+      15400
+    ],
+    "fixed21": [
+      16400,
+      15200,
+      15000,
+      15000,
+      14900
+    ],
+    "greedy-makespan": [
+      55000,
+      52600,
+      51700,
+      51500,
+      51300
+    ],
+    "merge": [
+      239700,
+      229600,
+      420400,
+      223500,
+      220800
+    ],
+    "oracle": [
+      1430200
+    ],
+    "sort": [
+      179800,
+      153000,
+      148800,
+      146800,
+      150300
+    ]
+  },
+  "value": "251948/1155",
+  "widths": [
+    1,
+    2,
+    1,
+    2,
+    2,
+    2
+  ],
+  "workers": 1
+}

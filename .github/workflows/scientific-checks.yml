@@ -40,6 +40,8 @@ jobs:
           python -B scripts/run_unrestricted_baseline.py scientific-output/unrestricted-baseline.json
           python -B scripts/run_campaign.py --output scientific-output/campaign
           python -B scripts/compare_results.py results/campaign scientific-output/campaign
+          python -B scripts/export_paper_data.py --output scientific-output/figure-sources
+          python -B scripts/check_reproduction.py --paired-only --campaign scientific-output/campaign --figure-sources scientific-output/figure-sources --output scientific-output/paired-comparison.json
           python -B scripts/check_bibliography.py --output scientific-output/bibliography-integrity.json
           python -B scripts/check_repository_integrity.py --output scientific-output/repository-integrity.json
           CHECKS

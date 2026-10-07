@@ -23,34 +23,37 @@ interleavings.  Its proof and trust boundary are in `proofs/unrestricted-grid.md
 
 ## Requirements
 
-Use Python 3.10 or later on Linux with only the standard library.  No installation,
+Use Python 3.10 or later on Linux with only the standard library. The paired
+campaign also supports Windows through native job-object limits. No installation,
 network access, GPU, model API, external solver, parent directory, or paper source is
-required.  Each scientific command uses one worker and enforces the artifact's
-300-second and 3-GiB process limits.
+required. Each scientific command uses one worker. POSIX commands enforce
+300-second CPU and 3-GiB address-space limits; the Windows paired campaign
+enforces 300 user-mode CPU seconds and 3-GiB committed-memory limits.
 
 ## Exact reproduction
 
-Run these commands from the repository root.  Every command writes to a
-`reproduction-*` path, so retained evidence remains unchanged.  The entry points
+Run these commands from the repository root on Linux. Use a new empty
+`runs/local` directory; if it already exists, choose a different run directory
+consistently in every command. Retained evidence remains unchanged. The entry points
 disable Python bytecode emission before importing local modules; after the run the
 repository-integrity check therefore remains meaningful without manual cache cleanup.
 
 ```sh
-python tests/validation.py results/reproduction-validation.json
-python scripts/check_source_schemas.py --output results/reproduction-source-schemas.json
-python tests/exchange_conditions.py results/reproduction-exchange-conditions.json
-python tests/pairing_boundary.py results/reproduction-pairing-boundary.json
-python tests/unrestricted_grid.py results/reproduction-unrestricted-grid-validation.json
-python scripts/run_unrestricted_baseline.py results/reproduction-unrestricted-baseline.json
-python scripts/run_campaign.py --output results/reproduction
-python scripts/compare_results.py results/campaign results/reproduction
-python scripts/solve.py inputs/stress-04.json results/reproduction-example-certificate.json
-python scripts/check_certificate.py inputs/stress-04.json results/reproduction-example-certificate.json
-python scripts/check_bibliography.py --output results/reproduction-bibliography-integrity.json
-python scripts/pilot.py --output results/reproduction-pilot.json
-python scripts/export_paper_data.py --output results/reproduction-figure-sources
-python scripts/check_reproduction.py
-python scripts/check_repository_integrity.py --output results/reproduction-repository-integrity.json
+python tests/validation.py runs/local/reproduction-validation.json
+python scripts/check_source_schemas.py --output runs/local/reproduction-source-schemas.json
+python tests/exchange_conditions.py runs/local/reproduction-exchange-conditions.json
+python tests/pairing_boundary.py runs/local/reproduction-pairing-boundary.json
+python tests/unrestricted_grid.py runs/local/reproduction-unrestricted-grid-validation.json
+python scripts/run_unrestricted_baseline.py runs/local/reproduction-unrestricted-baseline.json
+python scripts/run_campaign.py --output runs/local/reproduction
+python scripts/compare_results.py results/host-campaign runs/local/reproduction
+python scripts/solve.py inputs/stress-04.json runs/local/reproduction-example-certificate.json
+python scripts/check_certificate.py inputs/stress-04.json runs/local/reproduction-example-certificate.json
+python scripts/check_bibliography.py --output runs/local/reproduction-bibliography-integrity.json
+python scripts/pilot.py --output runs/local/reproduction-pilot.json
+python scripts/export_paper_data.py --output runs/local/reproduction-figure-sources
+python scripts/check_reproduction.py --reproduction-root runs/local --output runs/local/reproduction-comparison.json
+python scripts/check_repository_integrity.py --output runs/local/reproduction-repository-integrity.json
 ```
 
 `scripts/check_reproduction.py` compares all exact claim-critical report fields, all
@@ -64,6 +67,16 @@ To test resume behavior, rerun the campaign command with `--resume`; every reuse
 case certificate is checked, and the extra checks are charged in that output
 directory.  `scripts/compare_results.py` deliberately does not require noisy
 wall-clock samples to match.
+
+To run only the paired CPU campaign on Windows or Linux, use a new empty
+`runs/paired` directory. The exported sources are derived from the retained
+declared-host measurements; exact result comparison excludes noisy timings.
+
+```sh
+python -B scripts/run_campaign.py --output runs/paired/campaign
+python -B scripts/export_paper_data.py --output runs/paired/figure-sources
+python -B scripts/check_reproduction.py --paired-only --campaign runs/paired/campaign --figure-sources runs/paired/figure-sources --output runs/paired/comparison.json
+```
 
 
 ## Retained evidence
@@ -96,7 +109,15 @@ mutation classes are rejected.  A separate transparent two-round example has pai
 optimum 17 and unrestricted optimum 13.
 
 Per-call implementation costs use monotonic elapsed wall time; aggregate process CPU
-is used only for campaign accounting.  The first timing attempt suffered coarse
+is used only for campaign accounting. The paper's timing table uses
+`results/host-campaign`, measured on an Intel Core i7-12700KF, Windows 11 build
+28000 and 64-bit CPython 3.12.14, pinned to logical processor 0. The environment,
+100-ns QueryPerformanceCounter resolution, all raw repetitions and process limits
+are recorded alongside the 36 results. All full frontiers agree with enumeration.
+The campaign costs 3.234375 process CPU seconds and peaks at 33.2 MiB resident
+memory. Earlier campaigns remain separate and are not pooled into the timing
+table because their exact host metadata were not retained.
+The first timing attempt suffered coarse
 process-clock quantization, including zero single-call samples.  Those raw
 observations remain in `results/coarse-clock-observation.json` but are not interpreted
 as zero-cost executions.  Sorting propagation and branch-and-bound are often faster
