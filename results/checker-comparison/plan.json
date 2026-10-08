@@ -1,0 +1,80 @@
+{
+  "arm_order": "alternating by case index plus block index",
+  "blocks": 11,
+  "calls_per_sample": 20,
+  "cases": [
+    "schema-01",
+    "schema-02",
+    "schema-03",
+    "schema-04",
+    "schema-05",
+    "schema-06",
+    "schema-07",
+    "schema-08",
+    "schema-09",
+    "schema-10",
+    "schema-11",
+    "schema-12",
+    "stress-01",
+    "stress-02",
+    "stress-03",
+    "stress-04",
+    "stress-05",
+    "stress-06",
+    "stress-07",
+    "stress-08",
+    "stress-09",
+    "stress-10",
+    "stress-11",
+    "stress-12",
+    "stress-13",
+    "stress-14",
+    "stress-15",
+    "stress-16",
+    "stress-17",
+    "stress-18",
+    "stress-19",
+    "stress-20",
+    "stress-21",
+    "stress-22",
+    "stress-23",
+    "stress-24"
+  ],
+  "environment": {
+    "clock": {
+      "adjustable": false,
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "resolution": 1e-07
+    },
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+    "executable": "python.exe",
+    "implementation": "CPython",
+    "limits": {
+      "cpu_scope": "user-mode CPU time",
+      "cpu_seconds": 300,
+      "mechanism": "Windows job object",
+      "memory_bytes": 3221225472,
+      "memory_scope": "committed virtual memory"
+    },
+    "logical_processor_affinity": [
+      0
+    ],
+    "os": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "system": {
+      "machine": "AMD64",
+      "name": "Windows",
+      "release": "11",
+      "version": "10.0.28000"
+    },
+    "workers": 1
+  },
+  "implementation_text": {
+    "common_checker": "\"\"\"Independent certificate checker: no imports from solver, model, or baselines.\n\nChecks a four-event precedence graph for every transition; verifies coverage and\nreachability separately. This is an independently implemented checker, not an\nindependent scientific review or a formally verified Python implementation.\n\"\"\"\nfrom fractions import Fraction\n\n# (topological order, predecessors) for the two admitted local event DAGs.\n# Both computations precede their own transfer; the transfers share one link.\nLOCAL_GRAPHS=(\n    ((0,1,2,3),((),(),(0,),(1,2))),\n    ((0,1,3,2),((),(),(0,3),(1,))),\n)\n\nclass InvalidCertificate(ValueError):\n    pass\n\ndef require(test,message):\n    if not test: raise InvalidCertificate(message)\n\ndef number(s,limit=3200):\n    require(isinstance(s,str) and len(s)<=2200,'bad rational string')\n    try:z=Fraction(s)\n    except (ValueError,ZeroDivisionError) as exc:raise InvalidCertificate('bad rational') from exc\n    require(abs(z.numerator).bit_length()<=limit and z.denominator.bit_length()<=limit,'number too large')\n    return z\n\ndef input_rows(obj):\n    require(isinstance(obj,dict),'input is not an object')\n    require(not (set(obj)-{'id','grammar','resources','stages','group','source_schema','duration_provenance'}),'unsupported input fields')\n    require(isinstance(obj.get('id'),str) and 1<=len(obj['id'])<=128,'bad identity')\n    require(obj.get('grammar')=='paired-two-chain','unsupported grammar')\n    require(obj.get('resources')==['C1','C2','L'],'unsupported resources')\n    stages=obj.get('stages');require(isinstance(stages,list) and 1<=len(stages)<=12,'stage cap')\n    rows=[]\n    for s in stages:\n        require(isinstance(s,dict) and set(s)=={'c1','c2','p1','p2'},'stage keys')\n        row=[]\n        for key in ('c1','c2','p1','p2'):\n            v=s[key];require(isinstance(v,dict) and set(v)=={'lo','hi'},'interval keys')\n            lo,hi=number(v['lo'],64),number(v['hi'],64)\n            require(0<=lo<=hi and hi>0,'invalid duration')\n            row.append(hi)\n        rows.append(row)\n    return rows\n\ndef transition(entry,durations,order):\n    require(type(order) is int and order in (0,1),'nonbinary order')\n    # Nodes: compute 1, compute 2, transfer 1, transfer 2.\n    topo,predecessors=LOCAL_GRAPHS[order]\n    link_release=max(entry)\n    starts=[entry[0],entry[1],link_release,link_release];finish=[None]*4\n    for u in topo:\n        for parent in predecessors[u]:\n            starts[u]=max(starts[u],finish[parent])\n        finish[u]=starts[u]+durations[u]\n    require(finish[2]<=starts[3] if order==0 else finish[3]<=starts[2],'link overlap')\n    return (finish[2],finish[3])\n\ndef check(obj,cert):\n    rows=input_rows(obj);require(isinstance(cert,dict),'certificate must be an object')\n    require(set(cert)=={'instance_id','layers','terminal','lower_bound','upper_bound','orders','transitions'},'certificate keys')\n    require(cert.get('instance_id')==obj.get('id'),'instance identity mismatch')\n    layers=cert.get('layers');require(isinstance(layers,list) and len(layers)==len(rows)+1,'missing layer')\n    require(all(isinstance(l,dict) and isinstance(l.get('states'),list) for l in layers),'invalid layer object')\n    require(sum(len(l['states']) for l in layers)<=100000,'certificate node cap')\n    require(layers[0]=={'states':[{'xy':['0','0'],'parent':None,'order':None}]},'initial state')\n    previous=[(Fraction(0),Fraction(0))];obligations=1;transitions=0\n    parsed=[previous]\n    for k,d in enumerate(rows,1):\n        layer=layers[k];require(set(layer)=={'states','cover'},'layer keys');nodes=layer.get('states')\n        require(isinstance(nodes,list) and 1<=len(nodes)<=k+1,'frontier width')\n        current=[]\n        evaluated={}\n        def replay_parent(parent,order):\n            # Validate BEFORE lookup: bool and int compare equal in Python.\n            require(type(order) is int and order in (0,1),'nonbinary order')\n            key=(parent,order)\n            if key not in evaluated:\n                evaluated[key]=transition(previous[parent],d,order)\n            return evaluated[key]\n        for node in nodes:\n            require(isinstance(node,dict) and set(node)=={'xy','parent','order'},'node keys')\n            xy=node['xy'];require(isinstance(xy,list) and len(xy)==2,'state coordinate count')\n            pair=tuple(number(s) for s in xy)\n            parent=node['parent'];require(type(parent) is int and 0<=parent<len(previous),'bad parent')\n            expected=replay_parent(parent,node['order']);obligations+=9\n            require(pair==expected,'unreachable retained state')\n            if current:require(current[-1][0]<pair[0] and current[-1][1]>pair[1],'not a strict antichain')\n            current.append(pair)\n        cover=layer.get('cover')\n        require(isinstance(cover,list) and len(cover)==len(previous),'missing predecessor coverage')\n        for i,entry in enumerate(previous):\n            require(isinstance(cover[i],list) and len(cover[i])==2,'missing binary branch')\n            for order in (0,1):\n                index=cover[i][order];require(type(index) is int and 0<=index<len(current),'invalid dominator')\n                candidate=replay_parent(i,order);transitions+=1;obligations+=11\n                require(all(a<=b for a,b in zip(current[index],candidate)),'false domination')\n        previous=current;parsed.append(current)\n    terminal=cert.get('terminal');require(type(terminal) is int and 0<=terminal<len(previous),'terminal')\n    value=min(max(s) for s in previous)\n    require(max(previous[terminal])==value,'nonminimal terminal')\n    require(number(cert.get('lower_bound'))==value==number(cert.get('upper_bound')),'false bounds')\n    require(type(cert.get('transitions')) is int and cert['transitions']==transitions,'transition count')\n    orders=cert.get('orders');require(isinstance(orders,list) and len(orders)==len(rows),'order sequence')\n    state=(Fraction(0),Fraction(0))\n    for d,b in zip(rows,orders):state=transition(state,d,b);obligations+=9\n    require(max(state)==value,'incumbent does not attain bound')\n    return {'verified':True,'value':str(value),'obligations':obligations,\n            'nodes':sum(map(len,parsed)),'transitions':transitions,'max_frontier':max(map(len,parsed))}\n",
+    "dynamic_evaluator": "\"\"\"Dynamic adjacency/queue evaluator for the same four-node event contract.\"\"\"\nfrom collections import deque\nimport importlib.util\nfrom pathlib import Path\n\ndef transition(entry,durations,order):\n    if type(order) is not int or order not in (0,1):\n        raise ValueError('nonbinary order')\n    edges=[(0,2),(1,3),(2,3) if order==0 else (3,2)]\n    release=[entry[0],entry[1],max(entry),max(entry)]\n    successors=[[] for _ in range(4)];indegree=[0]*4;starts=release[:]\n    for u,v in edges:\n        successors[u].append(v);indegree[v]+=1\n    ready=deque(i for i in range(4) if indegree[i]==0)\n    finish=[None]*4;seen=0\n    while ready:\n        u=ready.popleft();finish[u]=starts[u]+durations[u];seen+=1\n        for v in successors[u]:\n            starts[v]=max(starts[v],finish[u]);indegree[v]-=1\n            if indegree[v]==0:ready.append(v)\n    if seen!=4:\n        raise ValueError('cyclic local graph')\n    if not (finish[2]<=starts[3] if order==0 else finish[3]<=starts[2]):\n        raise ValueError('link overlap')\n    return finish[2],finish[3]\n\ndef checker_module():\n    \"\"\"Use identical admission/coverage logic, changing only the DAG evaluator.\"\"\"\n    path=Path(__file__).resolve().parents[1]/'src/checker.py'\n    spec=importlib.util.spec_from_file_location('dynamic_graph_checker',path)\n    module=importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(module)\n    module.transition=transition\n    return module\n",
+    "measurement_driver": "#!/usr/bin/env python3\n\"\"\"Compare dynamic graph construction/traversal with fixed-topology DAG evaluation.\"\"\"\nimport argparse\nfrom pathlib import Path\nimport statistics\nimport sys\nimport time\n\nsys.dont_write_bytecode=True\nROOT=Path(__file__).resolve().parents[1]\nsys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'tests'))\nfrom budget import constrain,environment,peak_rss_kib\nfrom io_contract import read_json,write_json\nfrom dag_reference import checker_module\nimport checker\n\nBLOCKS=11\nCALLS=20\nWARMUPS=2\n\ndef main():\n    parser=argparse.ArgumentParser()\n    parser.add_argument('--output',type=Path,required=True)\n    args=parser.parse_args();out=args.output.resolve()\n    if out.exists():\n        raise ValueError('Measurement output must be new; retained samples are not overwritten')\n    constrain();cpu_start=time.process_time()\n    paths=sorted((ROOT/'inputs').glob('*.json'))\n    if len(paths)!=36:\n        raise ValueError('Frozen case collection changed')\n    cases=[(read_json(path),read_json(ROOT/'results/host-campaign/certificates'/path.name)) for path in paths]\n    reference=checker_module()\n    methods={'dynamic':reference.check,'compiled':checker.check}\n    plan={'blocks':BLOCKS,'calls_per_sample':CALLS,'warmups_per_arm':WARMUPS,\n          'cases':[obj['id'] for obj,cert in cases],\n          'arm_order':'alternating by case index plus block index',\n          'scope':'whole checker with identical admission, layer reuse, obligations and incumbent replay; only local graph evaluator differs',\n          'environment':environment(),\n          'implementation_text':{'common_checker':(ROOT/'src/checker.py').read_text(encoding='utf-8'),\n                                 'dynamic_evaluator':(ROOT/'tests/dag_reference.py').read_text(encoding='utf-8'),\n                                 'measurement_driver':Path(__file__).read_text(encoding='utf-8')}}\n    # Written before warmup/timing. There is one prescribed campaign, with no\n    # omitted slower case, early speedup stop, or adaptive repetition selection.\n    write_json(out/'plan.json',plan)\n    rows=[]\n    for case_index,(obj,cert) in enumerate(cases):\n        expected=checker.check(obj,cert)\n        if reference.check(obj,cert)!=expected:\n            raise AssertionError('Full checker disagreement')\n        for method in methods.values():\n            for _ in range(WARMUPS):\n                if method(obj,cert)!=expected:\n                    raise AssertionError('Warmup result disagreement')\n        raw={'dynamic':[],'compiled':[]};pairs=[]\n        for block in range(BLOCKS):\n            order=('dynamic','compiled') if (block+case_index)%2==0 else ('compiled','dynamic')\n            pair={}\n            for arm in order:\n                method=methods[arm];start=time.perf_counter_ns()\n                for _ in range(CALLS):\n                    result=method(obj,cert)\n                elapsed=time.perf_counter_ns()-start\n                if result!=expected:\n                    raise AssertionError('Measured result disagreement')\n                raw[arm].append(elapsed);pair[arm]=elapsed\n            pairs.append({'block':block,'first':order[0],**pair})\n        dynamic=statistics.median(raw['dynamic'])/CALLS\n        compiled=statistics.median(raw['compiled'])/CALLS\n        rows.append({'id':obj['id'],'group':obj['group'],'result':expected,\n                     'pairs':pairs,'dynamic_median_ns':dynamic,'compiled_median_ns':compiled,\n                     'speedup':dynamic/compiled,'relative_reduction':1-compiled/dynamic})\n    write_json(out/'cases.json',rows)\n    summary={'cases':len(rows),'timed_full_checks_per_arm':len(rows)*BLOCKS*CALLS,\n             'compiled_faster_cases':sum(x['compiled_median_ns']<x['dynamic_median_ns'] for x in rows),\n             'equal_cases':sum(x['compiled_median_ns']==x['dynamic_median_ns'] for x in rows),\n             'compiled_slower_cases':sum(x['compiled_median_ns']>x['dynamic_median_ns'] for x in rows),\n             'median_dynamic_us':statistics.median(x['dynamic_median_ns'] for x in rows)/1000,\n             'median_compiled_us':statistics.median(x['compiled_median_ns'] for x in rows)/1000,\n             'median_paired_relative_reduction':statistics.median(x['relative_reduction'] for x in rows),\n             'min_speedup':min(x['speedup'] for x in rows),'max_speedup':max(x['speedup'] for x in rows),\n             'cpu_seconds':time.process_time()-cpu_start,'peak_rss_kib':peak_rss_kib(),\n             'all_full_checker_results_equal':True}\n    write_json(out/'summary.json',summary)\n    print(summary)\n\nif __name__=='__main__':\n    main()\n"
+  },
+  "scope": "whole checker with identical admission, layer reuse, obligations and incumbent replay; only local graph evaluator differs",
+  "warmups_per_arm": 2
+}

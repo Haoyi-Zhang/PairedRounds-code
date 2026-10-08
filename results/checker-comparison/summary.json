@@ -1,0 +1,15 @@
+{
+  "all_full_checker_results_equal": true,
+  "cases": 36,
+  "compiled_faster_cases": 36,
+  "compiled_slower_cases": 0,
+  "cpu_seconds": 5.375,
+  "equal_cases": 0,
+  "max_speedup": 1.1953208165568006,
+  "median_compiled_us": 241.23,
+  "median_dynamic_us": 277.065,
+  "median_paired_relative_reduction": 0.13831896635752727,
+  "min_speedup": 1.1275724876205742,
+  "peak_rss_kib": 27004.0,
+  "timed_full_checks_per_arm": 7920
+}

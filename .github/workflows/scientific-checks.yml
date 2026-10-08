@@ -32,6 +32,7 @@ jobs:
           ulimit -v 3145728
           ulimit -t 900
           python -B tests/test_transition_cache.py -v
+          python -B tests/test_graph_topology.py -v
           python -B tests/validation.py scientific-output/validation.json
           python -B tests/reset_conditions.py scientific-output/reset-conditions.json
           python -B tests/exchange_conditions.py scientific-output/exchange-conditions.json

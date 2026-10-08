@@ -86,14 +86,34 @@ transition within one layer, keyed by already validated parent and strict binary
 order. Boolean/float orders are rejected before lookup. All retained reachability,
 branch coverage, domination, antichain and terminal checks remain; incumbent replay
 is still separate. Public `obligations`/`transitions` count the same semantic
-checks, not newly measured evaluator calls. The layer holds at most twice the
-previous frontier size. No time/peak-memory gain is claimed; all timings and native
-receipts below remain original, before this reuse change.
+checks, not evaluator calls. The layer holds at most twice the previous frontier
+size. The two local graph topologies are stored once, while each replay still
+performs exact DAG evaluation. The original campaign below predates layer reuse;
+the separate graph comparison holds that reuse fixed in both arms.
 
 Three new standalone finite methods include an independent full-event exhaustive
 oracle and invalid numeric-key collisions. Run `python -B tests/test_transition_cache.py -v`.
 This is a separate required CI step before the unchanged historical finite suites;
 it is not silently counted as part of `validation.py` or its frozen denominators.
+
+`tests/test_graph_topology.py` compares 12,800 rational local transitions, all 36
+retained complete checker outputs, and 540 malformed-certificate/input mutations
+against dynamic adjacency/queue evaluation, including identical rejection reasons.
+Run `python -B tests/test_graph_topology.py -v`; this is another required CI step.
+
+`results/checker-comparison/` retains the prespecified matched full-check protocol,
+the exact executed implementation text, every raw sample pair and environment.
+For each of all 36 unchanged cases, 11 alternating-order pairs contain 20 full calls
+per arm, with two warmups per arm. Both arms retain the same layer cache, admission,
+coverage, counters and incumbent replay. All 36 case medians decrease; the median
+paired relative time reduction is 13.8%. Medians across case costs are 277.065 us
+for dynamic graph construction and queue traversal and 241.230 us for stored-topology traversal.
+This is a CPU checker comparison, not improved scheduling quality, GPU speed or
+a portable latency prediction. Reproduce into a new directory:
+
+```sh
+python -B scripts/compare_checker_graphs.py --output runs/graph-comparison
+```
 
 `inputs/` contains 36 exact frozen inputs generated with seed `20260915`.  Twelve
 are source-inspired abstract schemas: three declared macro motifs at depths 2, 4,

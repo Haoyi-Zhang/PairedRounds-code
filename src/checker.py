@@ -5,7 +5,13 @@ reachability separately. This is an independently implemented checker, not an
 independent scientific review or a formally verified Python implementation.
 """
 from fractions import Fraction
-from collections import deque
+
+# (topological order, predecessors) for the two admitted local event DAGs.
+# Both computations precede their own transfer; the transfers share one link.
+LOCAL_GRAPHS=(
+    ((0,1,2,3),((),(),(0,),(1,2))),
+    ((0,1,3,2),((),(),(0,3),(1,))),
+)
 
 class InvalidCertificate(ValueError):
     pass
@@ -42,17 +48,13 @@ def input_rows(obj):
 def transition(entry,durations,order):
     require(type(order) is int and order in (0,1),'nonbinary order')
     # Nodes: compute 1, compute 2, transfer 1, transfer 2.
-    edges=[(0,2),(1,3),(2,3) if order==0 else (3,2)]
-    release=[entry[0],entry[1],max(entry),max(entry)]
-    successors=[[] for _ in range(4)]; indegree=[0]*4; starts=release[:]
-    for u,v in edges:successors[u].append(v);indegree[v]+=1
-    ready=deque(i for i in range(4) if indegree[i]==0);finish=[None]*4;seen=0
-    while ready:
-        u=ready.popleft();finish[u]=starts[u]+durations[u];seen+=1
-        for v in successors[u]:
-            starts[v]=max(starts[v],finish[u]);indegree[v]-=1
-            if indegree[v]==0:ready.append(v)
-    require(seen==4,'cyclic local graph')
+    topo,predecessors=LOCAL_GRAPHS[order]
+    link_release=max(entry)
+    starts=[entry[0],entry[1],link_release,link_release];finish=[None]*4
+    for u in topo:
+        for parent in predecessors[u]:
+            starts[u]=max(starts[u],finish[parent])
+        finish[u]=starts[u]+durations[u]
     require(finish[2]<=starts[3] if order==0 else finish[3]<=starts[2],'link overlap')
     return (finish[2],finish[3])
 

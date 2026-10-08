@@ -1,0 +1,3026 @@
+[
+  {
+    "compiled_median_ns": 96550.0,
+    "dynamic_median_ns": 113470.0,
+    "group": "source-inspired",
+    "id": "schema-01",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 1954800,
+        "dynamic": 2347600,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 2054600,
+        "dynamic": 2324600,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 1930000,
+        "dynamic": 2218300,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 1921500,
+        "dynamic": 2226800,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 1925500,
+        "dynamic": 2229500,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 1967000,
+        "dynamic": 2225700,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 1987600,
+        "dynamic": 2566400,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 1925000,
+        "dynamic": 2269400,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 1964200,
+        "dynamic": 2313600,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 1926500,
+        "dynamic": 2275900,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 1931000,
+        "dynamic": 2230700,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.1491143033400899,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 5,
+      "obligations": 121,
+      "transitions": 6,
+      "value": "15",
+      "verified": true
+    },
+    "speedup": 1.1752459865354739
+  },
+  {
+    "compiled_median_ns": 187220.0,
+    "dynamic_median_ns": 217360.0,
+    "group": "source-inspired",
+    "id": "schema-02",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 3871500,
+        "dynamic": 4333000,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 3788900,
+        "dynamic": 4314400,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 3718000,
+        "dynamic": 4335000,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 3716700,
+        "dynamic": 4333800,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 3766700,
+        "dynamic": 4378200,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 3756700,
+        "dynamic": 4372200,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 3744400,
+        "dynamic": 4376500,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 3741600,
+        "dynamic": 4347200,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 3722300,
+        "dynamic": 4347000,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 3855800,
+        "dynamic": 4363000,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 3738500,
+        "dynamic": 4357100,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.13866396761133604,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 9,
+      "obligations": 263,
+      "transitions": 14,
+      "value": "30",
+      "verified": true
+    },
+    "speedup": 1.1609870740305523
+  },
+  {
+    "compiled_median_ns": 276795.0,
+    "dynamic_median_ns": 322240.0,
+    "group": "source-inspired",
+    "id": "schema-03",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 5529000,
+        "dynamic": 6535900,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 5510800,
+        "dynamic": 6441900,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 5618000,
+        "dynamic": 6404900,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 5513200,
+        "dynamic": 6447500,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 5517400,
+        "dynamic": 6438700,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 5583200,
+        "dynamic": 6432900,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 5621800,
+        "dynamic": 6444800,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 5598100,
+        "dynamic": 6544600,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 5535900,
+        "dynamic": 6418600,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 5549000,
+        "dynamic": 6650000,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 5520900,
+        "dynamic": 6551900,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.1410284260178749,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 13,
+      "obligations": 405,
+      "transitions": 22,
+      "value": "44",
+      "verified": true
+    },
+    "speedup": 1.164182879025994
+  },
+  {
+    "compiled_median_ns": 365785.0,
+    "dynamic_median_ns": 431215.0,
+    "group": "source-inspired",
+    "id": "schema-04",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 7511600,
+        "dynamic": 8626300,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 7281300,
+        "dynamic": 8505800,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 7294000,
+        "dynamic": 8549200,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 7380300,
+        "dynamic": 8811000,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 7382300,
+        "dynamic": 8569600,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 7349000,
+        "dynamic": 8607200,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 7293400,
+        "dynamic": 8555300,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 7475600,
+        "dynamic": 9500000,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 7278500,
+        "dynamic": 8624300,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 7280800,
+        "dynamic": 9138400,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 7315700,
+        "dynamic": 8823400,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.15173405377827764,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 17,
+      "obligations": 547,
+      "transitions": 30,
+      "value": "60",
+      "verified": true
+    },
+    "speedup": 1.178875568981779
+  },
+  {
+    "compiled_median_ns": 76880.0,
+    "dynamic_median_ns": 90795.0,
+    "group": "source-inspired",
+    "id": "schema-05",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 1566600,
+        "dynamic": 1786400,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 1525700,
+        "dynamic": 1828400,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 1536900,
+        "dynamic": 1773700,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 1524100,
+        "dynamic": 1775300,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 1537600,
+        "dynamic": 1944700,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 1530100,
+        "dynamic": 1784700,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 1546300,
+        "dynamic": 1815900,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 1672100,
+        "dynamic": 1802800,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 1763500,
+        "dynamic": 1905200,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 1533400,
+        "dynamic": 1819000,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 1551000,
+        "dynamic": 1946300,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.15325733795913876,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 3,
+      "obligations": 81,
+      "transitions": 4,
+      "value": "14",
+      "verified": true
+    },
+    "speedup": 1.1809963579604579
+  },
+  {
+    "compiled_median_ns": 161290.0,
+    "dynamic_median_ns": 183785.0,
+    "group": "source-inspired",
+    "id": "schema-06",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 3177600,
+        "dynamic": 3662800,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 3231700,
+        "dynamic": 3665800,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 3212400,
+        "dynamic": 3876200,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 3225800,
+        "dynamic": 3954400,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 3180300,
+        "dynamic": 3658200,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 3222900,
+        "dynamic": 3651200,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 3180400,
+        "dynamic": 3651400,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 3828300,
+        "dynamic": 3705300,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 3324400,
+        "dynamic": 3675700,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 3308000,
+        "dynamic": 3729500,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 3292500,
+        "dynamic": 4004900,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.12239845471610855,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 7,
+      "obligations": 201,
+      "transitions": 10,
+      "value": "30",
+      "verified": true
+    },
+    "speedup": 1.1394692789385579
+  },
+  {
+    "compiled_median_ns": 253855.0,
+    "dynamic_median_ns": 293730.0,
+    "group": "source-inspired",
+    "id": "schema-07",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 5034800,
+        "dynamic": 7044300,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 5077100,
+        "dynamic": 5953700,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 4971200,
+        "dynamic": 5764300,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 5106500,
+        "dynamic": 6402000,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 5277300,
+        "dynamic": 5836200,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 5008500,
+        "dynamic": 7300400,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 5304700,
+        "dynamic": 5784800,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 5102900,
+        "dynamic": 5777000,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 5086900,
+        "dynamic": 5747300,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 4956500,
+        "dynamic": 5874600,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 5070000,
+        "dynamic": 6119800,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.13575392367139894,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 11,
+      "obligations": 343,
+      "transitions": 18,
+      "value": "46",
+      "verified": true
+    },
+    "speedup": 1.1570778594079296
+  },
+  {
+    "compiled_median_ns": 341895.0,
+    "dynamic_median_ns": 397545.0,
+    "group": "source-inspired",
+    "id": "schema-08",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 7169100,
+        "dynamic": 8044100,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 6889100,
+        "dynamic": 8023200,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 6967100,
+        "dynamic": 7952000,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 6801900,
+        "dynamic": 7930100,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 8031200,
+        "dynamic": 8047400,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 6775200,
+        "dynamic": 8002900,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 6837900,
+        "dynamic": 7810300,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 6956600,
+        "dynamic": 7950900,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 6794900,
+        "dynamic": 7842300,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 6759600,
+        "dynamic": 7889400,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 6749500,
+        "dynamic": 7819300,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.13998415273742593,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 15,
+      "obligations": 485,
+      "transitions": 26,
+      "value": "60",
+      "verified": true
+    },
+    "speedup": 1.1627692712674944
+  },
+  {
+    "compiled_median_ns": 76585.0,
+    "dynamic_median_ns": 87930.0,
+    "group": "source-inspired",
+    "id": "schema-09",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 1533600,
+        "dynamic": 1751700,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 1521000,
+        "dynamic": 1761100,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 1515500,
+        "dynamic": 1855300,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 1560500,
+        "dynamic": 1758600,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 1667800,
+        "dynamic": 1751700,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 1531700,
+        "dynamic": 1759100,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 1786700,
+        "dynamic": 1745500,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 1518400,
+        "dynamic": 1754300,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 1521000,
+        "dynamic": 1747100,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 1507100,
+        "dynamic": 1966400,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 1566800,
+        "dynamic": 1771700,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.12902308654611627,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 3,
+      "obligations": 81,
+      "transitions": 4,
+      "value": "20",
+      "verified": true
+    },
+    "speedup": 1.1481360579747992
+  },
+  {
+    "compiled_median_ns": 139705.0,
+    "dynamic_median_ns": 160305.0,
+    "group": "source-inspired",
+    "id": "schema-10",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 3055600,
+        "dynamic": 3322100,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 2794100,
+        "dynamic": 3870600,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 2780300,
+        "dynamic": 3212700,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 2820100,
+        "dynamic": 3192300,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 2876800,
+        "dynamic": 3554300,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 2796200,
+        "dynamic": 3206100,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 2775400,
+        "dynamic": 3202200,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 2797500,
+        "dynamic": 3232600,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 2782700,
+        "dynamic": 3201000,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 2762500,
+        "dynamic": 3201700,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 2756800,
+        "dynamic": 3203600,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.1285050372726989,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 5,
+      "obligations": 161,
+      "transitions": 8,
+      "value": "44",
+      "verified": true
+    },
+    "speedup": 1.1474535628646076
+  },
+  {
+    "compiled_median_ns": 200970.0,
+    "dynamic_median_ns": 230575.0,
+    "group": "source-inspired",
+    "id": "schema-11",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 4022300,
+        "dynamic": 4595900,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 4146000,
+        "dynamic": 4612400,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 4008300,
+        "dynamic": 4591100,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 4009000,
+        "dynamic": 4595300,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 4019400,
+        "dynamic": 4611500,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 4007500,
+        "dynamic": 4609300,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 4006000,
+        "dynamic": 4694400,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 4040800,
+        "dynamic": 4620300,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 4092400,
+        "dynamic": 4665700,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 4025700,
+        "dynamic": 4950300,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 3998300,
+        "dynamic": 4599400,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.1283964003035889,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 7,
+      "obligations": 241,
+      "transitions": 12,
+      "value": "67",
+      "verified": true
+    },
+    "speedup": 1.147310543862268
+  },
+  {
+    "compiled_median_ns": 263375.0,
+    "dynamic_median_ns": 302720.0,
+    "group": "source-inspired",
+    "id": "schema-12",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 5300400,
+        "dynamic": 6029800,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 5267500,
+        "dynamic": 6044700,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 5267700,
+        "dynamic": 6016800,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 5256700,
+        "dynamic": 6054800,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 5308700,
+        "dynamic": 6122900,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 5266600,
+        "dynamic": 6018500,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 5236900,
+        "dynamic": 6054400,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 5251700,
+        "dynamic": 6179700,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 5264000,
+        "dynamic": 6082300,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 5616700,
+        "dynamic": 6025700,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 5273200,
+        "dynamic": 6068300,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.12997159090909094,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 9,
+      "obligations": 321,
+      "transitions": 16,
+      "value": "89",
+      "verified": true
+    },
+    "speedup": 1.1493877551020408
+  },
+  {
+    "compiled_median_ns": 169240.0,
+    "dynamic_median_ns": 197585.0,
+    "group": "sharp",
+    "id": "stress-01",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 3384800,
+        "dynamic": 4651400,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 3385500,
+        "dynamic": 3899300,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 3606800,
+        "dynamic": 4078300,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 3413800,
+        "dynamic": 3904300,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 3370900,
+        "dynamic": 4009000,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 3356900,
+        "dynamic": 3908000,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 3491600,
+        "dynamic": 4237200,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 3966700,
+        "dynamic": 5586900,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 3370600,
+        "dynamic": 3924700,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 3345500,
+        "dynamic": 3884200,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 3356600,
+        "dynamic": 3951700,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.14345724624845002,
+    "result": {
+      "max_frontier": 4,
+      "nodes": 10,
+      "obligations": 241,
+      "transitions": 12,
+      "value": "13",
+      "verified": true
+    },
+    "speedup": 1.167484046324746
+  },
+  {
+    "compiled_median_ns": 354350.0,
+    "dynamic_median_ns": 413145.0,
+    "group": "sharp",
+    "id": "stress-02",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 7162900,
+        "dynamic": 8192100,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 7005000,
+        "dynamic": 8345200,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 7367600,
+        "dynamic": 8207100,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 7087000,
+        "dynamic": 8438200,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 7211100,
+        "dynamic": 8218400,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 7003600,
+        "dynamic": 8494800,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 7033200,
+        "dynamic": 8197300,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 7153400,
+        "dynamic": 9254100,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 7044400,
+        "dynamic": 8192500,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 7259700,
+        "dynamic": 8873800,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 7025400,
+        "dynamic": 8262900,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.14231081097435527,
+    "result": {
+      "max_frontier": 6,
+      "nodes": 21,
+      "obligations": 556,
+      "transitions": 30,
+      "value": "31",
+      "verified": true
+    },
+    "speedup": 1.165923521941583
+  },
+  {
+    "compiled_median_ns": 601200.0,
+    "dynamic_median_ns": 707660.0,
+    "group": "sharp",
+    "id": "stress-03",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 12065600,
+        "dynamic": 15222600,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 12094100,
+        "dynamic": 13974100,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 11927700,
+        "dynamic": 15202700,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 11978000,
+        "dynamic": 14336300,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 12033400,
+        "dynamic": 15875100,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 12024000,
+        "dynamic": 13957400,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 12300200,
+        "dynamic": 14153200,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 11980700,
+        "dynamic": 14163400,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 12357100,
+        "dynamic": 13965900,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 11958600,
+        "dynamic": 14024200,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 11965300,
+        "dynamic": 13916100,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.1504394765848006,
+    "result": {
+      "max_frontier": 8,
+      "nodes": 36,
+      "obligations": 995,
+      "transitions": 56,
+      "value": "57",
+      "verified": true
+    },
+    "speedup": 1.1770791749833667
+  },
+  {
+    "compiled_median_ns": 1488935.0,
+    "dynamic_median_ns": 1779755.0,
+    "group": "sharp",
+    "id": "stress-04",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 29897800,
+        "dynamic": 35179100,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 29578500,
+        "dynamic": 36039800,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 29606900,
+        "dynamic": 35888600,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 29734800,
+        "dynamic": 35138400,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 30569700,
+        "dynamic": 35288200,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 29778700,
+        "dynamic": 35595100,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 29753500,
+        "dynamic": 36444300,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 30064800,
+        "dynamic": 35327900,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 29398900,
+        "dynamic": 38562700,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 30001400,
+        "dynamic": 35258400,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 29813900,
+        "dynamic": 36305800,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.16340451354259433,
+    "result": {
+      "max_frontier": 13,
+      "nodes": 91,
+      "obligations": 2635,
+      "transitions": 156,
+      "value": "157",
+      "verified": true
+    },
+    "speedup": 1.1953208165568006
+  },
+  {
+    "compiled_median_ns": 142560.0,
+    "dynamic_median_ns": 167925.0,
+    "group": "reset",
+    "id": "stress-05",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 2882500,
+        "dynamic": 3286500,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 2851200,
+        "dynamic": 3497500,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 2865600,
+        "dynamic": 3479600,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 2871300,
+        "dynamic": 3304200,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 2828300,
+        "dynamic": 3278000,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 2829200,
+        "dynamic": 3358500,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 2860000,
+        "dynamic": 3418900,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 2846500,
+        "dynamic": 3521100,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 2832300,
+        "dynamic": 3291300,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 2918900,
+        "dynamic": 3286600,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 2835000,
+        "dynamic": 3618200,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.15104957570343902,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 7,
+      "obligations": 192,
+      "transitions": 10,
+      "value": "41",
+      "verified": true
+    },
+    "speedup": 1.1779250841750841
+  },
+  {
+    "compiled_median_ns": 235380.0,
+    "dynamic_median_ns": 274345.0,
+    "group": "reset",
+    "id": "stress-06",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 4707600,
+        "dynamic": 5405600,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 5034300,
+        "dynamic": 5471500,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 5351100,
+        "dynamic": 5655400,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 4680000,
+        "dynamic": 5379900,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 4608200,
+        "dynamic": 5362200,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 4623700,
+        "dynamic": 5498200,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 4984900,
+        "dynamic": 5482700,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 4634400,
+        "dynamic": 5509100,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 4672000,
+        "dynamic": 5501400,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 4735500,
+        "dynamic": 5486900,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 4736100,
+        "dynamic": 5491000,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.1420291968142302,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 11,
+      "obligations": 334,
+      "transitions": 18,
+      "value": "64",
+      "verified": true
+    },
+    "speedup": 1.1655408275979267
+  },
+  {
+    "compiled_median_ns": 328015.0,
+    "dynamic_median_ns": 378030.0,
+    "group": "reset",
+    "id": "stress-07",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 6772900,
+        "dynamic": 7711700,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 6591700,
+        "dynamic": 7642800,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 6498300,
+        "dynamic": 7651100,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 6492400,
+        "dynamic": 7617500,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 6418100,
+        "dynamic": 7586600,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 6798800,
+        "dynamic": 7502200,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 6560300,
+        "dynamic": 7503200,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 6757200,
+        "dynamic": 7560600,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 6426800,
+        "dynamic": 7557000,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 6534300,
+        "dynamic": 7481600,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 6579800,
+        "dynamic": 7484000,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.13230431447239632,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 15,
+      "obligations": 476,
+      "transitions": 26,
+      "value": "92",
+      "verified": true
+    },
+    "speedup": 1.1524777830282151
+  },
+  {
+    "compiled_median_ns": 548520.0,
+    "dynamic_median_ns": 640585.0,
+    "group": "reset",
+    "id": "stress-08",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 11112400,
+        "dynamic": 12808500,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 10866500,
+        "dynamic": 12707400,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 12152700,
+        "dynamic": 12752000,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 11142000,
+        "dynamic": 12811700,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 10880300,
+        "dynamic": 13021700,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 10970400,
+        "dynamic": 12910500,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 11008800,
+        "dynamic": 12765000,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 10881900,
+        "dynamic": 12845900,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 10877700,
+        "dynamic": 12999000,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 11026200,
+        "dynamic": 12916400,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 10912700,
+        "dynamic": 12767200,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.1437201932608475,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 25,
+      "obligations": 831,
+      "transitions": 46,
+      "value": "170",
+      "verified": true
+    },
+    "speedup": 1.1678425581564937
+  },
+  {
+    "compiled_median_ns": 109790.0,
+    "dynamic_median_ns": 126235.0,
+    "group": "compute-heavy",
+    "id": "stress-09",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 2225700,
+        "dynamic": 2525200,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 3295200,
+        "dynamic": 2573300,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 2183700,
+        "dynamic": 2509200,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 2160000,
+        "dynamic": 2522900,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 2195800,
+        "dynamic": 2524700,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 2229600,
+        "dynamic": 2525700,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 2197100,
+        "dynamic": 2553000,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 2172300,
+        "dynamic": 4731700,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 2196500,
+        "dynamic": 2517300,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 2188300,
+        "dynamic": 2517400,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 2177500,
+        "dynamic": 2499300,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.13027290371133204,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 4,
+      "obligations": 121,
+      "transitions": 6,
+      "value": "115",
+      "verified": true
+    },
+    "speedup": 1.1497859550050096
+  },
+  {
+    "compiled_median_ns": 174685.0,
+    "dynamic_median_ns": 196970.0,
+    "group": "compute-heavy",
+    "id": "stress-10",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 3634900,
+        "dynamic": 3945300,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 3663500,
+        "dynamic": 3958200,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 3410000,
+        "dynamic": 3930100,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 3459900,
+        "dynamic": 3939000,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 3651300,
+        "dynamic": 4041800,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 3541500,
+        "dynamic": 3953000,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 3415100,
+        "dynamic": 3925500,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 3493700,
+        "dynamic": 3939400,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 3417500,
+        "dynamic": 3990200,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 3537900,
+        "dynamic": 3913700,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 3426900,
+        "dynamic": 3926000,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.11313905670914348,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 6,
+      "obligations": 201,
+      "transitions": 10,
+      "value": "198",
+      "verified": true
+    },
+    "speedup": 1.1275724876205742
+  },
+  {
+    "compiled_median_ns": 238830.0,
+    "dynamic_median_ns": 275330.0,
+    "group": "compute-heavy",
+    "id": "stress-11",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 5427600,
+        "dynamic": 5530900,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 4707800,
+        "dynamic": 5594500,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 4738000,
+        "dynamic": 5429900,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 4761900,
+        "dynamic": 5851800,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 4857600,
+        "dynamic": 5409000,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 4793900,
+        "dynamic": 5506600,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 4810000,
+        "dynamic": 5590500,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 4776600,
+        "dynamic": 5493300,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 4721800,
+        "dynamic": 5393800,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 4735600,
+        "dynamic": 5969400,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 4946900,
+        "dynamic": 5489900,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.13256819089819494,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 8,
+      "obligations": 281,
+      "transitions": 14,
+      "value": "304",
+      "verified": true
+    },
+    "speedup": 1.1528283716451033
+  },
+  {
+    "compiled_median_ns": 399540.0,
+    "dynamic_median_ns": 456175.0,
+    "group": "compute-heavy",
+    "id": "stress-12",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 7990800,
+        "dynamic": 9233900,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 7904000,
+        "dynamic": 9091900,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 7929500,
+        "dynamic": 9577500,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 7952300,
+        "dynamic": 9209800,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 8311200,
+        "dynamic": 9415300,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 8167500,
+        "dynamic": 9037800,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 7973400,
+        "dynamic": 9123500,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 8328500,
+        "dynamic": 9094800,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 8056600,
+        "dynamic": 9066500,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 8407500,
+        "dynamic": 9125800,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 7974200,
+        "dynamic": 9084100,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.12415191538335069,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 13,
+      "obligations": 481,
+      "transitions": 24,
+      "value": "534",
+      "verified": true
+    },
+    "speedup": 1.1417505130900536
+  },
+  {
+    "compiled_median_ns": 142490.0,
+    "dynamic_median_ns": 168035.0,
+    "group": "link-heavy",
+    "id": "stress-13",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 2922900,
+        "dynamic": 3295800,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 3296100,
+        "dynamic": 3316900,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 2849800,
+        "dynamic": 3380800,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 3002200,
+        "dynamic": 3360700,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 2842400,
+        "dynamic": 3401800,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 3829700,
+        "dynamic": 4136300,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 2834600,
+        "dynamic": 3404400,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 2834800,
+        "dynamic": 3408100,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 2898400,
+        "dynamic": 3296900,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 2831100,
+        "dynamic": 3275900,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 2833100,
+        "dynamic": 3291500,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.15202190019936324,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 7,
+      "obligations": 192,
+      "transitions": 10,
+      "value": "134",
+      "verified": true
+    },
+    "speedup": 1.1792757386483261
+  },
+  {
+    "compiled_median_ns": 235540.0,
+    "dynamic_median_ns": 273115.0,
+    "group": "link-heavy",
+    "id": "stress-14",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 4938800,
+        "dynamic": 5769500,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 4703500,
+        "dynamic": 5470300,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 4700000,
+        "dynamic": 5579700,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 4635300,
+        "dynamic": 5462300,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 4737500,
+        "dynamic": 5385500,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 4710800,
+        "dynamic": 5379000,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 4619900,
+        "dynamic": 5385200,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 4665700,
+        "dynamic": 5435700,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 4868600,
+        "dynamic": 5761700,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 4756700,
+        "dynamic": 5479700,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 4746300,
+        "dynamic": 5405700,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.13757940794170953,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 11,
+      "obligations": 334,
+      "transitions": 18,
+      "value": "254",
+      "verified": true
+    },
+    "speedup": 1.1595270442387704
+  },
+  {
+    "compiled_median_ns": 329640.0,
+    "dynamic_median_ns": 386630.0,
+    "group": "link-heavy",
+    "id": "stress-15",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 6508200,
+        "dynamic": 7732600,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 6585800,
+        "dynamic": 7641700,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 6563700,
+        "dynamic": 8182900,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 6611800,
+        "dynamic": 7886400,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 6598500,
+        "dynamic": 7602200,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 6471800,
+        "dynamic": 7776200,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 6679400,
+        "dynamic": 7908400,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 6592800,
+        "dynamic": 7593100,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 6637500,
+        "dynamic": 8156000,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 6664300,
+        "dynamic": 7701400,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 6519500,
+        "dynamic": 7546800,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.14740190880169668,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 15,
+      "obligations": 476,
+      "transitions": 26,
+      "value": "325",
+      "verified": true
+    },
+    "speedup": 1.1728855721393034
+  },
+  {
+    "compiled_median_ns": 565935.0,
+    "dynamic_median_ns": 655860.0,
+    "group": "link-heavy",
+    "id": "stress-16",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 11198400,
+        "dynamic": 13013200,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 11089900,
+        "dynamic": 14395100,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 11354300,
+        "dynamic": 13151400,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 12211200,
+        "dynamic": 13012300,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 11081900,
+        "dynamic": 13421700,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 11235600,
+        "dynamic": 13643000,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 11339300,
+        "dynamic": 13011400,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 11404700,
+        "dynamic": 13488300,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 11318700,
+        "dynamic": 13097500,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 12342700,
+        "dynamic": 13117200,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 11157400,
+        "dynamic": 13056200,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.1371100539749337,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 25,
+      "obligations": 831,
+      "transitions": 46,
+      "value": "604",
+      "verified": true
+    },
+    "speedup": 1.1588963396856529
+  },
+  {
+    "compiled_median_ns": 128510.0,
+    "dynamic_median_ns": 149240.0,
+    "group": "asymmetric",
+    "id": "stress-17",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 2611600,
+        "dynamic": 3203100,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 2563300,
+        "dynamic": 2967600,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 2551700,
+        "dynamic": 2952700,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 2543000,
+        "dynamic": 3020900,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 2559300,
+        "dynamic": 2994600,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 2585600,
+        "dynamic": 3804900,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 2584800,
+        "dynamic": 3170000,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 2563500,
+        "dynamic": 2949400,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 2723100,
+        "dynamic": 2951500,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 2745700,
+        "dynamic": 2960300,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 2570200,
+        "dynamic": 2984800,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.1389037791476816,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 6,
+      "obligations": 161,
+      "transitions": 8,
+      "value": "80",
+      "verified": true
+    },
+    "speedup": 1.1613104038596218
+  },
+  {
+    "compiled_median_ns": 207480.0,
+    "dynamic_median_ns": 244160.0,
+    "group": "asymmetric",
+    "id": "stress-18",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 4143400,
+        "dynamic": 4897100,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 4301600,
+        "dynamic": 4909200,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 4185600,
+        "dynamic": 5041900,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 4156400,
+        "dynamic": 4883200,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 4152600,
+        "dynamic": 4806900,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 4094400,
+        "dynamic": 4935300,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 4149600,
+        "dynamic": 4778300,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 4084600,
+        "dynamic": 4728600,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 4120900,
+        "dynamic": 4903800,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 5731700,
+        "dynamic": 4754700,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 4083400,
+        "dynamic": 4756900,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.15022935779816515,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 9,
+      "obligations": 272,
+      "transitions": 14,
+      "value": "137",
+      "verified": true
+    },
+    "speedup": 1.1767881241565452
+  },
+  {
+    "compiled_median_ns": 269260.0,
+    "dynamic_median_ns": 309205.0,
+    "group": "asymmetric",
+    "id": "stress-19",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 5530500,
+        "dynamic": 6209900,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 5456900,
+        "dynamic": 6352000,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 5373100,
+        "dynamic": 6152400,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 5581100,
+        "dynamic": 6158900,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 5328600,
+        "dynamic": 6184100,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 5309900,
+        "dynamic": 7325200,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 5361000,
+        "dynamic": 6304600,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 5294700,
+        "dynamic": 6123800,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 5547700,
+        "dynamic": 6261200,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 5419400,
+        "dynamic": 6135600,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 5385200,
+        "dynamic": 6152800,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.12918613864588213,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 11,
+      "obligations": 352,
+      "transitions": 18,
+      "value": "245",
+      "verified": true
+    },
+    "speedup": 1.1483510361732154
+  },
+  {
+    "compiled_median_ns": 470830.0,
+    "dynamic_median_ns": 546190.0,
+    "group": "asymmetric",
+    "id": "stress-20",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 10124800,
+        "dynamic": 10822100,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 9363800,
+        "dynamic": 10991100,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 9270800,
+        "dynamic": 12540300,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 9379900,
+        "dynamic": 10861600,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 9813400,
+        "dynamic": 10797200,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 9473700,
+        "dynamic": 12012000,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 9306800,
+        "dynamic": 10923800,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 9432100,
+        "dynamic": 10763700,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 9546100,
+        "dynamic": 11210500,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 9402100,
+        "dynamic": 10850200,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 9416600,
+        "dynamic": 11493000,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.1379739651037185,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 18,
+      "obligations": 636,
+      "transitions": 34,
+      "value": "358",
+      "verified": true
+    },
+    "speedup": 1.160057770320498
+  },
+  {
+    "compiled_median_ns": 117520.0,
+    "dynamic_median_ns": 134415.0,
+    "group": "mixed-rational",
+    "id": "stress-21",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 2517400,
+        "dynamic": 2683900,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 2356300,
+        "dynamic": 2698600,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 2321100,
+        "dynamic": 2688300,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 2350400,
+        "dynamic": 2811800,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 2410000,
+        "dynamic": 2670000,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 2419700,
+        "dynamic": 2681700,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 2327500,
+        "dynamic": 2723200,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 2333000,
+        "dynamic": 2666800,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 2328300,
+        "dynamic": 2674900,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 2358300,
+        "dynamic": 3969600,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 2335600,
+        "dynamic": 2691500,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.1256928170219097,
+    "result": {
+      "max_frontier": 1,
+      "nodes": 4,
+      "obligations": 121,
+      "transitions": 6,
+      "value": "7772/105",
+      "verified": true
+    },
+    "speedup": 1.1437627637848877
+  },
+  {
+    "compiled_median_ns": 243630.0,
+    "dynamic_median_ns": 278800.0,
+    "group": "mixed-rational",
+    "id": "stress-22",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 4838600,
+        "dynamic": 5547000,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 4893800,
+        "dynamic": 5540100,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 4951500,
+        "dynamic": 5647300,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 5010100,
+        "dynamic": 5641400,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 4803700,
+        "dynamic": 5576000,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 4815300,
+        "dynamic": 5654000,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 4824600,
+        "dynamic": 5531000,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 4872600,
+        "dynamic": 5533600,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 5506400,
+        "dynamic": 5692300,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 4953500,
+        "dynamic": 5727500,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 4818900,
+        "dynamic": 5549500,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.12614777618364414,
+    "result": {
+      "max_frontier": 2,
+      "nodes": 10,
+      "obligations": 303,
+      "transitions": 16,
+      "value": "251948/1155",
+      "verified": true
+    },
+    "speedup": 1.1443582481631982
+  },
+  {
+    "compiled_median_ns": 355000.0,
+    "dynamic_median_ns": 415700.0,
+    "group": "mixed-rational",
+    "id": "stress-23",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 7076300,
+        "dynamic": 8273600,
+        "first": "dynamic"
+      },
+      {
+        "block": 1,
+        "compiled": 7128200,
+        "dynamic": 8298900,
+        "first": "compiled"
+      },
+      {
+        "block": 2,
+        "compiled": 7073000,
+        "dynamic": 8450500,
+        "first": "dynamic"
+      },
+      {
+        "block": 3,
+        "compiled": 7074700,
+        "dynamic": 9341700,
+        "first": "compiled"
+      },
+      {
+        "block": 4,
+        "compiled": 7167700,
+        "dynamic": 8314000,
+        "first": "dynamic"
+      },
+      {
+        "block": 5,
+        "compiled": 7130200,
+        "dynamic": 8257800,
+        "first": "compiled"
+      },
+      {
+        "block": 6,
+        "compiled": 7042400,
+        "dynamic": 8314800,
+        "first": "dynamic"
+      },
+      {
+        "block": 7,
+        "compiled": 7964600,
+        "dynamic": 8556400,
+        "first": "compiled"
+      },
+      {
+        "block": 8,
+        "compiled": 7100000,
+        "dynamic": 8177800,
+        "first": "dynamic"
+      },
+      {
+        "block": 9,
+        "compiled": 7233300,
+        "dynamic": 8350100,
+        "first": "compiled"
+      },
+      {
+        "block": 10,
+        "compiled": 7069100,
+        "dynamic": 8221500,
+        "first": "dynamic"
+      }
+    ],
+    "relative_reduction": 0.14601876353139287,
+    "result": {
+      "max_frontier": 3,
+      "nodes": 15,
+      "obligations": 476,
+      "transitions": 26,
+      "value": "33513/154",
+      "verified": true
+    },
+    "speedup": 1.1709859154929578
+  },
+  {
+    "compiled_median_ns": 564585.0,
+    "dynamic_median_ns": 645490.0,
+    "group": "mixed-rational",
+    "id": "stress-24",
+    "pairs": [
+      {
+        "block": 0,
+        "compiled": 12168300,
+        "dynamic": 12795200,
+        "first": "compiled"
+      },
+      {
+        "block": 1,
+        "compiled": 11355500,
+        "dynamic": 13059900,
+        "first": "dynamic"
+      },
+      {
+        "block": 2,
+        "compiled": 11289500,
+        "dynamic": 12864000,
+        "first": "compiled"
+      },
+      {
+        "block": 3,
+        "compiled": 11297200,
+        "dynamic": 12801800,
+        "first": "dynamic"
+      },
+      {
+        "block": 4,
+        "compiled": 11287200,
+        "dynamic": 13028200,
+        "first": "compiled"
+      },
+      {
+        "block": 5,
+        "compiled": 11110400,
+        "dynamic": 12909800,
+        "first": "dynamic"
+      },
+      {
+        "block": 6,
+        "compiled": 12334700,
+        "dynamic": 13044800,
+        "first": "compiled"
+      },
+      {
+        "block": 7,
+        "compiled": 11256200,
+        "dynamic": 13034900,
+        "first": "dynamic"
+      },
+      {
+        "block": 8,
+        "compiled": 11291700,
+        "dynamic": 13939700,
+        "first": "compiled"
+      },
+      {
+        "block": 9,
+        "compiled": 12130200,
+        "dynamic": 12861300,
+        "first": "dynamic"
+      },
+      {
+        "block": 10,
+        "compiled": 11186700,
+        "dynamic": 12863700,
+        "first": "compiled"
+      }
+    ],
+    "relative_reduction": 0.1253388898356288,
+    "result": {
+      "max_frontier": 3,
+      "nodes": 23,
+      "obligations": 747,
+      "transitions": 40,
+      "value": "658639/1155",
+      "verified": true
+    },
+    "speedup": 1.1432999459780193
+  }
+]

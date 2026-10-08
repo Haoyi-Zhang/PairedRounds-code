@@ -70,6 +70,7 @@ def main() -> int:
 
     py_files = iter_files(root, {".py"})
     local_modules = {p.stem for p in (root / "src").glob("*.py")}
+    local_modules |= {p.stem for p in (root / "tests").glob("*.py")}
     local_modules |= {"src", "scripts", "tests"}
     stdlib = set(getattr(sys, "stdlib_module_names", ()))
     unresolved_imports: list[tuple[str, str]] = []
