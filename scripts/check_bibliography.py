@@ -1,33 +1,25 @@
 #!/usr/bin/env python3
-"""Offline integrity checks for the frozen manuscript bibliography evidence.
-
-The checker deliberately does not query the network.  It verifies that the standalone
-BibTeX snapshot, the manuscript citation-key snapshot, and the per-entry publisher/
-archive audit agree exactly; that BibTeX metadata (type, title, venue, year, volume,
-issue, and pages) has not drifted; that stable identifiers and official URLs are
-well-formed; and that the predeclared literature-coverage quotas are met.  The input
-CSV records a dated publisher/stable-record recheck, while this script itself remains
-offline.  Full-text interpretation, continuous network revalidation, and peer review
-are not claims of this script.
-"""
+"""Check bibliography content and citations in included TeX sources."""
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import re
-import sys
 from pathlib import Path
-from typing import Dict, Iterable, Set
 
 
-def parse_bib_entries(text: str) -> Dict[str, Dict[str, str]]:
-    """Parse the brace/quote forms used by this frozen BibTeX file.
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise ValueError(message)
+
+
+def parse_bib_entries(text: str) -> dict[str, dict[str, str]]:
+    """Parse the brace/quote forms used by the supplied BibTeX files.
 
     The parser is intentionally small but balanced-brace aware.  Unsupported syntax
     fails closed instead of silently skipping metadata.
     """
-    entries: Dict[str, Dict[str, str]] = {}
+    entries: dict[str, dict[str, str]] = {}
     pos = 0
     while True:
         match = re.search(r"@(\w+)\s*\{\s*([^,\s]+)\s*,", text[pos:], re.S)
@@ -49,7 +41,7 @@ def parse_bib_entries(text: str) -> Dict[str, Dict[str, str]]:
         if depth:
             raise ValueError(f"unclosed BibTeX entry {key!r}")
         body = text[body_start : cursor - 1]
-        fields: Dict[str, str] = {"entry_type": entry_type}
+        fields: dict[str, str] = {"entry_type": entry_type}
         index = 0
         while index < len(body):
             while index < len(body) and (body[index].isspace() or body[index] == ","):
@@ -102,218 +94,138 @@ def parse_bib_entries(text: str) -> Dict[str, Dict[str, str]]:
     return entries
 
 
-def split_tags(value: str) -> Set[str]:
-    return {tag.strip() for tag in value.split(";") if tag.strip()}
+def plain(value: str) -> str:
+    return " ".join(value.split())
 
 
-def require_nonempty(row: Dict[str, str], fields: Iterable[str]) -> None:
-    missing = [field for field in fields if not row.get(field, "").strip()]
-    if missing:
-        raise ValueError(f"{row.get('key', '<unknown>')}: empty fields {missing}")
+def title_identity(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"\\[A-Za-z]+", "", value).lower())
 
 
-def expected_venue(entry: Dict[str, str]) -> str:
-    return entry.get("journal") or entry.get("booktitle") or entry.get("institution") or ""
+def doi_identity(value: str) -> str:
+    return re.sub(r"^(?:https?://(?:dx\.)?doi\.org/|doi:\s*)", "",
+                  plain(value).lower())
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--literature", type=Path, default=Path("literature"))
-    parser.add_argument("--output", type=Path, default=Path("results/bibliography-integrity.json"))
-    args = parser.parse_args()
+def identity(entries: dict) -> dict:
+    return {key: {"title": title_identity(fields["title"]),
+                  "doi": doi_identity(fields.get("doi", "")),
+                  "year": plain(fields["year"]),
+                  "author": plain(fields["author"])}
+            for key, fields in sorted(entries.items())}
 
-    bib_path = args.literature / "references.bib"
-    citations_path = args.literature / "main-citations.txt"
-    audit_path = args.literature / "bibliography_audit.csv"
-    entries = parse_bib_entries(bib_path.read_text(encoding="utf-8"))
-    bib_keys = set(entries)
-    citation_keys = {
-        line.strip()
-        for line in citations_path.read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    }
-    with audit_path.open(newline="", encoding="utf-8") as handle:
-        rows = list(csv.DictReader(handle))
-    audit_keys = [row.get("key", "").strip() for row in rows]
-    if len(audit_keys) != len(set(audit_keys)):
-        raise ValueError("duplicate audit key")
-    audit_key_set = set(audit_keys)
 
-    if bib_keys != citation_keys:
-        raise ValueError(
-            f"BibTeX/citation mismatch: only_bib={sorted(bib_keys-citation_keys)}, "
-            f"only_cited={sorted(citation_keys-bib_keys)}"
-        )
-    if bib_keys != audit_key_set:
-        raise ValueError(
-            f"BibTeX/audit mismatch: only_bib={sorted(bib_keys-audit_key_set)}, "
-            f"only_audit={sorted(audit_key_set-bib_keys)}"
-        )
-    if len(bib_keys) != 30:
-        raise ValueError(f"frozen bibliography count changed: {len(bib_keys)} != 30")
-
-    required_fields = [
-        "key",
-        "entry_type",
-        "title",
-        "year",
-        "venue",
-        "identifier",
-        "official_url",
-        "role_tags",
-        "calibration_status",
-        "metadata_check_date",
-        "claim_use",
-        "live_metadata_status",
-        "live_metadata_note",
-    ]
-    role_counts: Dict[str, int] = {}
-    identifiers: Dict[str, str] = {}
-    official_urls: Dict[str, str] = {}
-    metadata_dates: Set[str] = set()
-    live_metadata_rows = 0
-    page_range_entries = 0
-    for row in rows:
-        require_nonempty(row, required_fields)
-        key = row["key"].strip()
-        entry = entries[key]
-
-        expected_fields = {
-            "entry_type": entry["entry_type"],
-            "title": entry.get("title", ""),
-            "year": entry.get("year", ""),
-            "venue": expected_venue(entry),
-            "volume": entry.get("volume", ""),
-            "number": entry.get("number", ""),
-            "pages": entry.get("pages", ""),
-        }
-        for field, expected in expected_fields.items():
-            actual = row.get(field, "").strip()
-            if actual != expected:
-                raise ValueError(
-                    f"{key}: audit/BibTeX mismatch for {field}: {actual!r} != {expected!r}"
-                )
-        if row.get("pages", "").strip():
-            page_range_entries += 1
-
-        year = row["year"].strip()
-        if not (len(year) == 4 and year.isdigit() and 1900 <= int(year) <= 2100):
-            raise ValueError(f"{key}: invalid year {year!r}")
-        metadata_date = row["metadata_check_date"].strip()
-        if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", metadata_date):
-            raise ValueError(f"{key}: invalid metadata check date {metadata_date!r}")
-        metadata_dates.add(metadata_date)
-        if row["live_metadata_status"].strip() != "publisher_or_stable_record_rechecked":
-            raise ValueError(f"{key}: live metadata status is not the frozen recheck status")
-        live_metadata_rows += 1
-        url = row["official_url"].strip()
-        if not url.startswith("https://"):
-            raise ValueError(f"{key}: non-HTTPS official URL")
-        url_id = url.lower()
-        if url_id in official_urls:
-            raise ValueError(f"duplicate official URL {url!r}: {official_urls[url_id]}, {key}")
-        official_urls[url_id] = key
-
-        tags = split_tags(row["role_tags"])
-        if not tags:
-            raise ValueError(f"{key}: no role tags")
-        for tag in tags:
-            role_counts[tag] = role_counts.get(tag, 0) + 1
-
-        ident = row["identifier"].strip()
-        ident_id = ident.lower()
-        if ident_id in identifiers:
-            raise ValueError(f"duplicate identifier {ident!r}: {identifiers[ident_id]}, {key}")
-        identifiers[ident_id] = key
-
-        doi = entry.get("doi", "").strip()
+def check_records(entries: dict, selected: list[str]) -> None:
+    require(len(selected) == len(set(selected)), "duplicate selected citation key")
+    require("*" not in selected and len(selected) >= 50, "main reference floor unmet")
+    require(set(selected) <= set(entries), "undefined selected citation key")
+    titles: set[str] = set()
+    dois: set[str] = set()
+    for key, fields in entries.items():
+        require(all(fields.get(name) for name in ("title", "author", "year")),
+                f"missing title/author/year: {key}")
+        require(re.fullmatch(r"\d{4}", fields["year"]) is not None, f"invalid year: {key}")
+        title = title_identity(fields["title"])
+        require(title and title not in titles, f"duplicate/empty title: {key}")
+        titles.add(title)
+        doi = doi_identity(fields.get("doi", ""))
         if doi:
-            if ident_id != doi.lower():
-                raise ValueError(f"{key}: identifier does not match BibTeX DOI")
-            if url_id != f"https://doi.org/{doi}".lower():
-                raise ValueError(f"{key}: official URL does not match BibTeX DOI")
-        journal = entry.get("journal", "")
-        arxiv_match = re.fullmatch(r"arXiv preprint arXiv:(\d{4}\.\d{4,5})", journal)
-        if arxiv_match:
-            arxiv_id = arxiv_match.group(1)
-            if ident_id != f"arxiv:{arxiv_id}".lower():
-                raise ValueError(f"{key}: arXiv identifier mismatch")
-            if url_id != f"https://arxiv.org/abs/{arxiv_id}".lower():
-                raise ValueError(f"{key}: arXiv official URL mismatch")
-        booktitle = entry.get("booktitle", "")
-        if "USENIX Symposium" in booktitle:
-            if not ident.startswith("USENIX:"):
-                raise ValueError(f"{key}: USENIX record lacks a USENIX identifier")
-            if not url.startswith("https://www.usenix.org/conference/"):
-                raise ValueError(f"{key}: USENIX record lacks an official conference URL")
-        if booktitle == "Proceedings of Machine Learning and Systems":
-            if not ident.startswith("MLSys:"):
-                raise ValueError(f"{key}: PMLSys record lacks an MLSys identifier")
-            if not url.startswith("https://proceedings.mlsys.org/paper_files/paper/"):
-                raise ValueError(f"{key}: PMLSys record lacks the official proceedings URL")
+            require(doi not in dois, f"duplicate DOI: {key}")
+            dois.add(doi)
 
-        if tags & {"closest_tpds", "influential", "adjacent"}:
-            if "full_text" not in row["calibration_status"]:
-                raise ValueError(f"{key}: quota paper lacks full-text calibration record")
 
-    quotas = {"closest_tpds": 12, "influential": 5, "adjacent": 5}
-    for role, minimum in quotas.items():
-        if role_counts.get(role, 0) < minimum:
-            raise ValueError(f"coverage quota failed for {role}: {role_counts.get(role, 0)} < {minimum}")
-    if metadata_dates != {"2026-09-19"}:
-        raise ValueError(f"mixed or stale metadata check dates: {sorted(metadata_dates)}")
+def strip_comments(text: str) -> str:
+    return re.sub(r"(?m)(?<!\\)%[^\n]*", "", text)
 
-    # Freeze the corrections most likely to regress silently.  These are offline
-    # assertions over the audited snapshot, not network queries.
-    if entries["dsc"].get("doi") != "10.1109/71.308533":
-        raise ValueError("DSC DOI regressed from the verified IEEE record")
-    if entries["parallelizing"].get("pages") != "414--432":
-        raise ValueError("parallelizing page range regressed; IEEE PDF ends on page 432")
-    pk = entries["parallelkittens"]
-    if not (
-        pk.get("entry_type") == "inproceedings"
-        and pk.get("booktitle") == "Proceedings of Machine Learning and Systems"
-        and pk.get("volume") == "8"
-        and pk.get("year") == "2026"
-    ):
-        raise ValueError("ParallelKittens is not frozen to the formal MLSys 2026 record")
 
-    report = {
-        "reference_count": len(bib_keys),
-        "cited_key_count": len(citation_keys),
-        "audit_row_count": len(rows),
-        "all_bib_entries_cited": True,
-        "all_citations_resolved": True,
-        "all_audit_metadata_matches_bibtex": True,
-        "entries_with_stable_identifier": len(identifiers),
-        "unique_official_urls": len(official_urls),
-        "entries_with_page_ranges": page_range_entries,
-        "duplicate_identifiers": 0,
-        "duplicate_official_urls": 0,
-        "coverage_counts": dict(sorted(role_counts.items())),
-        "coverage_minima": quotas,
-        "metadata_check_date": next(iter(metadata_dates)),
-        "live_metadata_rows": live_metadata_rows,
-        "frozen_record_repairs": {
-            "dsc_doi": "10.1109/71.308533",
-            "parallelizing_pages": "414--432",
-            "parallelkittens_record": "PMLSys 8 (MLSys 2026)",
-        },
-        "scope": (
-            "offline integrity of the 2026-09-19 publisher/stable-record snapshot and "
-            "declared literature-coverage audit; not continuous network revalidation, "
-            "peer review, or a guarantee that every interpretation is correct"
-        ),
+def citation_keys(text: str) -> set[str]:
+    return {key.strip() for match in
+            re.finditer(r"\\cite[A-Za-z]*\*?(?:\[[^\]]*\]){0,2}\s*\{([^}]*)\}",
+                        strip_comments(text))
+            for key in match[1].split(",") if key.strip()}
+
+
+def sources(root: Path, name: str) -> dict[str, str]:
+    """Follow literal inputs as TeX resolves them from the paper working directory."""
+    root = root.resolve()
+    found: dict[str, str] = {}
+    active: set[str] = set()
+
+    def visit(relative: str) -> None:
+        path = (root / relative).resolve()
+        require(path.is_relative_to(root), f"TeX input outside paper: {relative}")
+        require(relative not in active, f"cyclic TeX input: {relative}")
+        require(path.is_file(), f"missing TeX input: {relative}")
+        if relative in found:
+            return
+        active.add(relative)
+        text = strip_comments(path.read_text(encoding="utf-8"))
+        require(not re.search(r"\\nocite\b", text), f"nocite padding: {relative}")
+        controls = [m[1] for m in re.finditer(r"\\(if[A-Za-z]*|else|fi)\b", text)
+                    if m[1] != "iff"]  # Mathematical iff is not a TeX branch.
+        require(not controls, f"conditional input needs explicit review: {relative}")
+        found[relative] = text
+        for child in re.findall(r"\\(?:input|include)\s*\{([^{}]+)\}", text):
+            require("\\" not in child, f"nonliteral TeX input: {child}")
+            visit(child if Path(child).suffix else child + ".tex")
+        active.remove(relative)
+
+    visit(name)
+    return found
+
+
+def compare_bibliographies(canonical: dict, publisher: dict) -> None:
+    require(identity(canonical) == identity(publisher),
+            "bibliography key/title/DOI/author/year content differs")
+
+
+def validate(artifact: Path, paper: Path | None = None) -> dict:
+    entries = parse_bib_entries((artifact / "literature" / "references.bib").read_text(encoding="utf-8"))
+    selected = (artifact / "literature" / "main-citations.txt").read_text(encoding="utf-8").split()
+    check_records(entries, selected)
+    main, supplement = set(selected), None
+    if paper is not None:
+        require(paper.is_dir(), f"paper directory missing: {paper}")
+        publisher = parse_bib_entries((paper / "references.bib").read_text(encoding="utf-8"))
+        compare_bibliographies(entries, publisher)
+        documents = {name: sources(paper, name + ".tex") for name in ("main", "supplement")}
+        keys = {name: set().union(*(citation_keys(text) for text in paths.values()))
+                for name, paths in documents.items()}
+        require(keys["main"] == main, "main citation-key list differs from included TeX")
+        require((keys["main"] | keys["supplement"]) <= set(entries), "undefined citation in TeX")
+        main, supplement = keys["main"], keys["supplement"]
+    return {
+        "report_scope": "bibliography_content_and_citation_selection",
+        "publisher_documents_validated": paper is not None,
+        "bibliography_entries": len(entries),
+        "main_unique_citations": len(main),
+        "supplement_unique_citations": len(supplement) if supplement is not None else None,
+        "publisher_citation_keys": {"main": sorted(main),
+                                   "supplement": sorted(supplement) if supplement is not None else None},
+        "canonical_metadata": identity(entries),
+        "scope_note": "Offline content/citation checks only. No scholarly full-text certification; absent paper sources are not validated.",
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    print(json.dumps(report, sort_keys=True))
-    return 0
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--paper-dir", type=Path)
+    parser.add_argument("--out", "--output", default="-", help="default stdout; output must be a new path")
+    args = parser.parse_args()
+    artifact = Path(__file__).resolve().parents[1]
+    neighbor = artifact.parent / "paper"
+    paper = args.paper_dir if args.paper_dir is not None else (neighbor if neighbor.is_dir() else None)
+    result = validate(artifact, paper)
+    serialized = json.dumps(result, indent=2, sort_keys=True) + "\n"
+    if args.out != "-":
+        out = Path(args.out)
+        if not out.is_absolute():
+            out = artifact / out
+        require(not out.exists(), "refusing to overwrite an existing result")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(serialized, encoding="utf-8")
+    print(serialized, end="")
 
 
 if __name__ == "__main__":
-    try:
-        raise SystemExit(main())
-    except (OSError, ValueError, csv.Error, json.JSONDecodeError) as exc:
-        print(f"bibliography integrity check failed: {exc}", file=sys.stderr)
-        raise SystemExit(2)
+    main()

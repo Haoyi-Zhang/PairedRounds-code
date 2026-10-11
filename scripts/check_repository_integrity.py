@@ -51,6 +51,7 @@ def main() -> int:
         "claim_evidence_ledger.csv", "external_resources.csv",
         "literature/references.bib", "literature/main-citations.txt",
         "literature/bibliography_audit.csv",
+        "tests/test_bibliography.py",
     ]
     missing = [rel for rel in required if not (root / rel).is_file()]
     if missing:

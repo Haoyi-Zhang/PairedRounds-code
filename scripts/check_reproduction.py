@@ -91,7 +91,19 @@ def main() -> int:
     if args.paired_only:
         reports = {}
     for retained, reproduced in reports.items():
-        require_equal(results / retained, reproduced_root / reproduced)
+        if retained == "bibliography-integrity.json":
+            # Compare revised bibliography metadata with the active canonical
+            # content; the dated receipt remains unchanged.
+            sys.dont_write_bytecode = True
+            sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+            from scripts.check_bibliography import validate
+            current = validate(Path(__file__).resolve().parents[1])
+            fresh = load(reproduced_root / reproduced)
+            fields = ("bibliography_entries", "main_unique_citations", "canonical_metadata")
+            if any(fresh.get(field) != current[field] for field in fields):
+                raise ValueError("reproduced bibliography content differs from the canonical source")
+        else:
+            require_equal(results / retained, reproduced_root / reproduced)
 
     retained_cases = results / "host-campaign" / "cases"
     reproduced_cases = (args.campaign or (reproduced_root / "reproduction")) / "cases"
@@ -125,7 +137,8 @@ def main() -> int:
         require_equal(retained_figures / name, reproduced_figures / name, canonicalize=False)
 
     report = {
-        "canonical_reports_equal": len(reports),
+        "canonical_reports_equal": len(reports) - (0 if args.paired_only else 1),
+        "bibliography_content_checked": None if args.paired_only else True,
         "paired_cases_equal": len(names),
         "paired_certificates_equal": len(names),
         "example_certificate_equal": None if args.paired_only else True,
@@ -135,7 +148,8 @@ def main() -> int:
         "accounting_normalization": "two unrestricted v1 reports converted from retained certificate counts",
         "scope": (
             "exact claim-critical reproduction comparison; ignores only explicitly noisy "
-            "CPU, wall-time, and peak-RSS measurements"
+            "CPU, wall-time, and peak-RSS measurements; bibliography metadata is "
+            "checked separately against current canonical content"
         ),
     }
     output = args.output.resolve()

@@ -57,8 +57,9 @@ python scripts/check_repository_integrity.py --output runs/local/reproduction-re
 ```
 
 `scripts/check_reproduction.py` compares all exact claim-critical report fields, all
-36 paired case records and certificates, the example certificate, bibliography
-integrity result, and all generated paper-data sources.  It ignores only the three
+36 paired case records and certificates, the example certificate and all generated paper-data sources. Bibliography
+metadata is checked separately against the canonical bibliography, not against
+the older retained bibliography receipt.  It ignores only the three
 explicitly noisy measurement fields: process CPU time, elapsed wall time, and peak
 RSS.  `scripts/check_repository_integrity.py` excludes its own output file from its
 static scan, so repeated execution has stable scope.
@@ -212,13 +213,20 @@ comparison to all shuffles.
   tables, and raw evidence.
 - `external_resources.csv`: scholarly/official sources, access mode, and
   redistribution boundary.
-- `literature/`: the frozen 30-entry manuscript bibliography, citation-key snapshot,
-  and per-entry metadata/claim audit. The audit records a dated 19 September 2026
-  publisher/stable-record recheck, including the corrected DSC DOI and the formal
-  MLSys 2026 ParallelKittens record while preserving the exact arXiv v1 source-reading
-  boundary. Run `python scripts/check_bibliography.py` to verify exact key coverage,
-  duplicate identifiers, frozen metadata, and the 14-TPDS / 5-influential /
-  6-adjacent quotas offline; this integrity check is not a network or peer review.
+- `literature/references.bib`: the single canonical bibliography, with 51
+  distinct works selected in `literature/main-citations.txt` and cited in the main
+  article. Existing audit records retain their original reading scope.
+
+```sh
+python -B scripts/check_bibliography.py --out -
+python -B tests/test_bibliography.py -v
+```
+
+The bibliography check rejects duplicate keys/titles/DOIs, unresolved citations
+and wildcard padding. When publisher sources are present, it follows their
+literal TeX inputs and compares parsed bibliography content, not file hashes or
+formatting. Use `--paper-dir PATH` for another paper directory. An artifact-only
+run validates the citation-key list but does not validate absent publisher text.
 
 `results/reproduction-report.json` records the final fresh standalone extraction, and
 `results/reproduction-comparison.json` is the machine-generated exact-field comparison.
