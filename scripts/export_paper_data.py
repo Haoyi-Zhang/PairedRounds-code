@@ -64,8 +64,10 @@ def main() -> None:
     for key, label in [('merge','Merge frontier'),('checker','Checker'),('sort','Sorting frontier'),
                        ('branch-bound','Branch-and-bound'),('oracle','Full-DAG oracle')]:
         timing = summary['timing'][key]
-        rows.append(label+' & '+' & '.join(f'{timing[k]:,.1f}' for k in
-             ['median_case_us','min_case_us','max_case_us'])+r'\\')
+        # The median across 36 per-case medians can end in a half tenth.
+        # Preserve its hundredth rather than silently changing a .95 value.
+        rows.append(label+' & '+f"{timing['median_case_us']:,.2f}"+' & '+' & '.join(
+             f'{timing[k]:,.1f}' for k in ['min_case_us','max_case_us'])+r'\\')
     write_table(args.output/'timing-table.tex','lrrr',
                 'Method & Median case & Min. case & Max. case',rows)
     rows = []
