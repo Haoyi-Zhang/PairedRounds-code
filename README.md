@@ -240,3 +240,14 @@ review replay is disclosed separately in `results/post-handoff-audit.json`; it c
 no scientific input or result and is not used to obscure the original campaign ceiling.
 None of these records is a submission decision, external review, or hardware
 validation.
+
+## Render retained frontier widths
+
+Install `requirements-figures.txt` in a separate plotting environment and use
+`python scripts/plot_retained.py --output-dir /tmp/pairedrounds-figures` with
+an installed pdfLaTeX and the template fonts on PATH. The optional Python
+renderer preserves all twelve retained sharp-family depths and both analytic
+reference curves. It runs no scheduling campaign or hardware experiment.
+`python -B -S scripts/test_plot_sources.py -v` checks its retained input route
+without plotting dependencies. The repository scanner verifies that Matplotlib
+is explicitly declared and imported inside this plotting CLI, not by the core.

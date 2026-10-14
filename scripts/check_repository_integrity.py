@@ -32,6 +32,15 @@ def iter_files(
     )
 
 
+def declared_plot_import(node: ast.AST, tree: ast.Module, relative: str,
+                         name: str, requirements: set[str]) -> bool:
+    """A declared dependency is optional only inside this explicit CLI entry."""
+    if relative != "scripts/plot_retained.py" or name != "matplotlib" or requirements != {"matplotlib==3.10.8"}:
+        return False
+    return any(node in tuple(ast.walk(function)) for function in tree.body
+               if isinstance(function, ast.FunctionDef) and function.name == "main")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("."))
@@ -75,6 +84,10 @@ def main() -> int:
     local_modules |= {"src", "scripts", "tests"}
     stdlib = set(getattr(sys, "stdlib_module_names", ()))
     unresolved_imports: list[tuple[str, str]] = []
+    optional_imports: list[tuple[str, str, int]] = []
+    figure_requirements_path = root / "requirements-figures.txt"
+    figure_requirements = {line.strip() for line in figure_requirements_path.read_text(encoding="utf-8").splitlines()
+                           if line.strip() and not line.lstrip().startswith("#")} if figure_requirements_path.is_file() else set()
     syntax_checked = 0
     banned_matches: list[tuple[str, str]] = []
     banned = re.compile(r"TODO|FIXME|TBD|PLACEHOLDER|/mnt/data|anonymous\.4open|example\.com")
@@ -99,7 +112,11 @@ def main() -> int:
                 if not name or name == "__future__":
                     continue
                 if name not in stdlib and name not in local_modules:
-                    unresolved_imports.append((str(path.relative_to(root)), name))
+                    relative = path.relative_to(root).as_posix()
+                    if declared_plot_import(node, tree, relative, name, figure_requirements):
+                        optional_imports.append((relative, name, node.lineno))
+                    else:
+                        unresolved_imports.append((relative, name))
     if unresolved_imports or banned_matches:
         raise ValueError(f"source scan failed: unresolved={unresolved_imports}, banned={banned_matches}")
 
@@ -128,6 +145,9 @@ def main() -> int:
         "required_files": len(required),
         "python_files_syntax_checked": syntax_checked,
         "unresolved_imports": 0,
+        "declared_optional_plot_imports": optional_imports,
+        "optional_dependency_requirements": sorted(figure_requirements),
+        "optional_dependency_environment_executed": False,
         "json_files_parsed_with_duplicate_key_rejection": len(json_files),
         "csv_files_rectangular": len(csv_files),
         "csv_data_rows": csv_rows,
